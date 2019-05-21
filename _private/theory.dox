@@ -1,0 +1,157 @@
+/**
+\page theory  Theory Page
+
+This page is detailed theory of operation page.
+
+
+-----------------------------------------------------
+AUL_Initialization()
+
+For special case hardware that has not been defined and accepted at the driver level
+we should be able to use the hardware_definition_file.  This has not been fully tested.
+
+How should this work?  If a hardware definition file is used, there
+must be some function we call to enable its use.  Also, the information, under special
+authorization, must be propagated down to the driver and verified to be within certain
+very tight restricted use.  In other words, the hardware definition is only available under
+certain circumstances.
+
+-----------------------------------------------------
+Externally defined device components
+
+?
+
+For EGS version, thinking we simply defined a new STX104
+
+
+
+
+-----------------------------------------------------
+Security
+
+Any special features within the driver ought to be only accessible
+via some form of access key.
+
+Most likely special function/commands that accept keys which allow broader
+or less operation.  These keys are only valid for a particular amount of 
+time and/or require pinging to preserve their use.  
+
+
+-----------------------------------------------------
+Licensing
+
+The concept is to use IAR Visual-State to produce an obviscated state machine
+to process various keys.  We could use FPGA space to support these features.
+
+Within the FPGA level the plan is to use a state-machine that generates a hash
+output that will produce up to a 32-bit word.  The state machine will accept 
+a 128-character string that is used to produce a hash output that is used only internally.
+In order to verify that wishbone modules have been enabled, these are verified at time
+of inventory cycle that the driver does to determine the components within the device.
+The application becomes aware of the inventory by way of capabilities report.
+
+The character string is passed into the library via the application layer.  It can also
+be possible for this information to reside directly in the hardware space, say in spare
+FRAM or internal Flash space.  Perhaps within the FPGA tag memory which is 79 bytes in length.
+
+
+-----------------------------------------------------
+-----------------------------------------------------
+TODO:
+
+-----------------------------------------------------
+Components - Dynamic allocation
+
+1. Component must maintain its own register information.  The register acronyms must be introduced.
+
+2. Must register its list of status values.  The actual status values will have layers of stuff added
+   but then can be stripped off I suppose.
+   
+3. Must register its list of commands.  The define becomes a list
+   that is submitted and deposited into the proper locations.
+   
+4. The component_<name>_definition must be passed to a function, or
+   individual parts to eventually create such definition.
+   
+4.a. Must register into the component cmp_avail.c component_available_type  component_available_list[]
+4.b. Must register into the command   cmd.c       command_dataset           command_ds_list[].   
+4.c. Must register into the statua    status.c    status_dataset            status_ds_list[]
+
+4.d. What about enumerations for commands and status????
+
+4.e. Must pass a valid componentlogical_ID, which is typically been
+     a macro.  In this case, a function is called and the 
+     ID is set.  From that point onward it hold this identity. From 
+     that we build all the final status and command numbers...same 
+     as what is done in the preprocessor.
+     
+     
+     
+May have to post generate. In other words, when first connected,
+we generate all that data!
+
+The STX104 functions must be able to deal with different versions
+of the firmware.  
+
+  
+Component_Register( component_definition_type * component_definition )
+
+AUL_Component_Request( const char * component_name,
+					   size_t *     logical_id       );
+					  
+AUL_Component_Register( size_t  				logical_id,
+						struct status_dataset * status_list,  // (local) code and name
+						struct command_dataset * command_list, // (local) code and name plus jump table info
+						component_definition_type * definition, // or bits of it might be better.
+					    const char * device_acronym_name  // what device this is intended.
+					  );
+					  
+AUL_Component_Unregister( size_t logical_id );  // this may be optional?
+
+a) If the device does not support this component, it will be rejected.
+   It is a way to provide security and integrity.  It will test the 
+   drv_stx104, drv_tracere, etc. to see if the component is supported.
+   
+   Alternatively, the drv_<name> simply creates a place-holder for it.
+   
+   
+   
+   
+b) If a logical_id cannot be created, then we do not support it.  
+
+c) During the register process, the component information is 
+   assessed for its validity.  For example, if the jump table
+   in the definition contains null values for ones defined then
+   a warning code is produced.  All the data must make sense in
+   order for a component to be completely registered.
+   
+   The SVN revision is optional, instead compilation date will be used
+   if nothing else available.
+   
+   
+   
+d) unregistering.  At any time AUL_Termination() is run, all components that have been registered
+   are now unregistered.
+						
+c) STX104 portions must be updated to include support for legacy STX104
+   in particular i8254 sample timing support.
+   
+d) 
+
+
+
+-----------------------------------------------------
+Commands:
+write_register <device>.<component>.<register>
+read_register <device>.<component>.<register>
+
+Example:
+	set tracere.led 0xf      <-- IOCTL( CMD_TRACERE_LED_SET )
+	get tracere.led          <-- IOCTL( CMD_TRACERE_LED_GET ) 
+	write tracere.dio_bit <adr> <value>
+	 tracere.dio_bit <adr>
+	
+
+
+
+*/

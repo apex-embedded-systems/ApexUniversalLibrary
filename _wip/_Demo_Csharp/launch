@@ -1,0 +1,9 @@
+#!/bin/bash
+export MONO_IOMAP=all
+# As long as this script and the executable reside in the same directory, and you have Mono istalled, you should not have to change anything.
+
+SCRIPT=$(readlink -f $0)
+SCRIPTPATH=$(dirname $SCRIPT)
+echo $SCRIPT
+echo $SCRIPTPATH
+mono $SCRIPTPATH/CSharp_Demo.exe "$@"

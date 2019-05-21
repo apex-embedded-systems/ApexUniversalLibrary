@@ -1,0 +1,6 @@
+11:43:38 **** Incremental Build of configuration _Out_Debug for project demo_tracere_simple ****
+make all 
+makefile:31: *** multiple target patterns.  Stop.
+
+11:43:38 Build Finished (took 169ms)
+

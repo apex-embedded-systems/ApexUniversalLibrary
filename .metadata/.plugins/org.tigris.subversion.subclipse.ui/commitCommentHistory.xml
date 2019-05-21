@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommitComments>	<CommitComment>Added &quot;sysval.h&quot; and &quot;dev_avail_module.h&quot; to the EGS_BEGIN sed portions involving EGS</CommitComment>
+	<CommitComment>Initial import.</CommitComment>
+	<CommitComment>work in progress - not fully functional.  idi.c will move to Borland temporarily.</CommitComment>
+</CommitComments>

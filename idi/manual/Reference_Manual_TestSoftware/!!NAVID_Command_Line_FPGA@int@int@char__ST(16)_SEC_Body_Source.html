@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Body Source</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;!!NAVID_Command_Line_FPGA@int@int@char__ST(16)_SEC_Body_Source.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!FUNCTIONS.html" target="topic">Functions</a> &gt; <a href="Command_Line_FPGA@int@int@char_.html" target="topic">Command_Line_FPGA Function</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+</td></tr></table><div class="Element39">
+Body Source</div>
+<div class="Element40">
+<a href="Command_Line_FPGA@int@int@char_.html" target="topic">Command_Line_FPGA Function</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<div class="Element14">
+Body Source</div>
+<div class="Element11">
+<div class="Element10">
+<div class="Element170">
+<a href="#" onclick="CopyElementToClipboard(&#39;code00355&#39;);">Copy Code</a></div>
+<div class="Element13"><div class="Element12" id="code00355"><pre class="Element12"> 1: <strong><span style="color: #008000;">int</span></strong> Command_Line_FPGA( <strong><span style="color: #008000;">int</span></strong> board_id, <strong><span style="color: #008000;">int</span></strong> argc, <strong><span style="color: #008000;">char</span></strong>* argv[] )
+ 2: {
+ 3: 	<strong><span style="color: #008000;">int</span></strong>			error_code;
+ 4: 	FILE *		out;
+ 5: 	<a href="uint32_t.html" target="topic">uint32_t</a> 	date_svn;
+ 6: 	<a href="uint32_t.html" target="topic">uint32_t</a> 	date_compilation;
+ 7: 	(<strong><span style="color: #008000;">void</span></strong>)		argc;
+ 8: 	(<strong><span style="color: #008000;">void</span></strong>)		argv;
+ 9: 
+10: 	error_code = <a href="FPGA_Date_Time_Information@int@uint32_t__@uint32_t__.html" target="topic">FPGA_Date_Time_Information</a>( board_id, &amp;date_svn, &amp;date_compilation );
+11: 	<strong><span style="color: #008000;">if</span></strong> ( error_code &lt; SUCCESS ) <strong><span style="color: #008000;">goto</span></strong> Command_Line_FPGA_Exit;
+12: 
+13: 	out = stdout;
+14: 
+15: 	fprintf( out, &quot;FPGA: &quot; );
+16: 
+17: 	<strong><span style="color: #008000;">if</span></strong> ( 0 == date_svn )
+18: 	{
+19: 		fprintf( out, &quot;SVN = unavailable&quot; );
+20: 	}
+21: 	<strong><span style="color: #008000;">else</span></strong>
+22: 	{
+23: <strong><span style="color: #008000;">#if</span></strong> defined( __MSDOS__ )
+24: 		fprintf( out, &quot;SVN =    %08lu&quot;, date_svn );
+25: <strong><span style="color: #008000;">#else</span></strong>
+26: 		fprintf( out, &quot;SVN =    %08u&quot;, date_svn );
+27: <strong><span style="color: #008000;">#endif</span></strong>
+28: 	}
+29: 
+30: 	<strong><span style="color: #008000;">if</span></strong> ( 0 == date_compilation )
+31: 	{
+32: 		fprintf( out, &quot;, Compilation = unavailable\n&quot; );
+33: 	}
+34: 	<strong><span style="color: #008000;">else</span></strong>
+35: 	{
+36: <strong><span style="color: #008000;">#if</span></strong> defined( __MSDOS__ )
+37: 		fprintf( out, &quot;, Compilation = %08lu\n&quot;, date_compilation );
+38: <strong><span style="color: #008000;">#else</span></strong>
+39: 		fprintf( out, &quot;, Compilation = %08u\n&quot;, date_compilation );
+40: <strong><span style="color: #008000;">#endif</span></strong>
+41: 	}
+42: 
+43: Command_Line_FPGA_Exit:
+44: 	<strong><span style="color: #008000;">return</span></strong> error_code;
+45: }
+</pre></div></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

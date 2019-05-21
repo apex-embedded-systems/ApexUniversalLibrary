@@ -1,0 +1,13 @@
+[CMake]
+BuildDirs=/home/mike/workspace/KDevelop_Demo/simple/build
+CMakeDir=/usr/share/cmake-2.8/Modules
+Current CMake Binary=file:///usr/bin/cmake
+CurrentBuildDir=file:///home/mike/workspace/KDevelop_Demo/simple/build
+CurrentBuildType=Debug
+CurrentInstallDir=file:///usr/local
+Environment Profile=default
+Extra Arguments=
+ProjectRootRelative=./
+
+[MakeBuilder]
+Number Of Jobs=1

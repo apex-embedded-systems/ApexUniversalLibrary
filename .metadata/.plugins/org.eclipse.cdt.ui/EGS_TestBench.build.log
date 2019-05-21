@@ -1,0 +1,30 @@
+08:57:23 **** Build of configuration Debug for project EGS_TestBench ****
+make all 
+Building target: EGS_TestBench
+Invoking: Cross GCC Linker
+gcc  -o "EGS_TestBench"  ./EGS_TestBench.o   
+./EGS_TestBench.o: In function `main':
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:95: undefined reference to `AUL_Library_Name'
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:95:(.text+0x15): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `AUL_Library_Name'
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:97: undefined reference to `AUL_Initialization'
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:97:(.text+0x2e): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `AUL_Initialization'
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:100: undefined reference to `AUL_Error_String'
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:100:(.text+0x41): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `AUL_Error_String'
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:104: undefined reference to `AUL_Driver_Name'
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:104:(.text+0x6b): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `AUL_Driver_Name'
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:107: undefined reference to `AUL_Device_Open'
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:107:(.text+0x8d): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `AUL_Device_Open'
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:110: undefined reference to `AUL_Error_String'
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:110:(.text+0xa0): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `AUL_Error_String'
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:121: undefined reference to `AUL_Device_Close'
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:121:(.text+0xc7): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `AUL_Device_Close'
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:125: undefined reference to `AUL_Termination'
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:125:(.text+0xd8): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `AUL_Termination'
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:128: undefined reference to `AUL_Error_String'
+/cygdrive/e/aes_eclipse/EGS_TestBench/Debug/../EGS_TestBench.c:128:(.text+0xeb): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `AUL_Error_String'
+collect2: error: ld returned 1 exit status
+makefile:29: recipe for target 'EGS_TestBench' failed
+make: *** [EGS_TestBench] Error 1
+
+08:57:24 Build Finished (took 729ms)
+

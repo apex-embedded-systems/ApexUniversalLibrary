@@ -1,0 +1,1279 @@
+!SESSION 2016-02-10 14:47:03.061 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+This is a continuation of log file E:\aes_eclipse\.metadata\.bak_0.log
+Created Time: 2016-02-10 14:47:44.840
+!SESSION 2016-02-10 14:47:03.061 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-10 14:47:44.841
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-10 14:47:44.843
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mike.AESENG'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-02-15 14:58:56.954 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-15 14:59:20.937
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-15 14:59:20.957
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mike.AESENG'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-03-01 13:37:32.133 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-03-01 13:38:15.840
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-03-01 13:38:15.858
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mike.AESENG'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2016-03-01 13:39:06.867
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-01 13:39:06.867
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@475fb7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@475fb7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-01 13:39:06.867
+!MESSAGE A conflict occurred for CTRL+SHIFT+G:
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@41db6e4b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@41db6e4b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-01 13:39:06.867
+!MESSAGE A conflict occurred for CTRL+G:
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5367d46f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5367d46f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-01 13:39:06.867
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6c4eccd2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6c4eccd2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-01 13:39:06.867
+!MESSAGE A conflict occurred for CTRL+SHIFT+H:
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@564e9c0b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@564e9c0b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-01 13:39:06.867
+!MESSAGE A conflict occurred for F4:
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4c7d19bf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4c7d19bf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-01 13:39:06.867
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@21d478f3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@21d478f3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-01 13:39:06.867
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3be60847,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3be60847,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-01 13:39:06.867
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@19ea65f4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@19ea65f4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SESSION 2016-03-16 16:42:15.084 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-03-16 16:42:43.584
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-03-16 16:42:44.137
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mike.AESENG'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-03-23 15:00:05.255 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-03-23 15:01:26.715
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-03-23 15:01:26.725
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mike.AESENG'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2016-03-23 15:01:38.906
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 15:01:38.907
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b1d1558,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b1d1558,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 15:01:38.907
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6cc022ac,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6cc022ac,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 15:01:38.907
+!MESSAGE A conflict occurred for F4:
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7f219e84,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7f219e84,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 15:01:38.907
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@42eaf47f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@42eaf47f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 15:01:38.907
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@312e8eaf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@312e8eaf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 15:01:38.907
+!MESSAGE A conflict occurred for CTRL+SHIFT+G:
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5c960f64,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5c960f64,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 15:01:38.907
+!MESSAGE A conflict occurred for CTRL+G:
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2f307fcc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2f307fcc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 15:01:38.907
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3aec2f59,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3aec2f59,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 15:01:38.907
+!MESSAGE A conflict occurred for CTRL+SHIFT+H:
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7f72855d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7f72855d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SESSION 2016-03-23 17:11:58.064 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-03-23 17:12:08.745
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-03-23 17:12:08.746
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mike.AESENG'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2016-03-23 17:12:16.816
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 17:12:16.816
+!MESSAGE A conflict occurred for CTRL+SHIFT+G:
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@63661fc7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@63661fc7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 17:12:16.816
+!MESSAGE A conflict occurred for CTRL+G:
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@65130cf2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@65130cf2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 17:12:16.816
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@19412eef,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@19412eef,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 17:12:16.816
+!MESSAGE A conflict occurred for CTRL+SHIFT+H:
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@542b27af,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@542b27af,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 17:12:16.816
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7e092ca,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7e092ca,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 17:12:16.816
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7ae97a58,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7ae97a58,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 17:12:16.816
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6a4f15bc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6a4f15bc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 17:12:16.816
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@67544105,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@67544105,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-23 17:12:16.816
+!MESSAGE A conflict occurred for F4:
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6421e9e7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6421e9e7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SESSION 2016-04-01 16:22:25.414 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-04-01 16:26:42.332
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-04-01 16:26:42.353
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mike.AESENG'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2016-04-01 16:26:56.321
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-01 16:26:56.321
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@665574fb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@665574fb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-01 16:26:56.321
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3eb7ff78,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3eb7ff78,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-01 16:26:56.321
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6b83ec49,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6b83ec49,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-01 16:26:56.321
+!MESSAGE A conflict occurred for CTRL+SHIFT+G:
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@50ad5625,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@50ad5625,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-01 16:26:56.321
+!MESSAGE A conflict occurred for CTRL+G:
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1d921267,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1d921267,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-01 16:26:56.321
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1c5f6292,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1c5f6292,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-01 16:26:56.321
+!MESSAGE A conflict occurred for CTRL+SHIFT+H:
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@684a34f4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@684a34f4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-01 16:26:56.321
+!MESSAGE A conflict occurred for F4:
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@52ec5ba6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@52ec5ba6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-01 16:26:56.321
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5f606ab6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5f606ab6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SESSION 2016-04-05 21:28:27.266 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-04-05 21:28:55.199
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-04-05 21:28:55.218
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mike.AESENG'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2016-04-05 21:29:12.267
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-05 21:29:12.267
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@198a653,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@198a653,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-05 21:29:12.267
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3119fcad,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3119fcad,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-05 21:29:12.267
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6d7005e2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6d7005e2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-05 21:29:12.267
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@33a39d7e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@33a39d7e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-05 21:29:12.267
+!MESSAGE A conflict occurred for F4:
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@77cd1f67,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@77cd1f67,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-05 21:29:12.267
+!MESSAGE A conflict occurred for CTRL+SHIFT+G:
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@94f79a7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@94f79a7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-05 21:29:12.267
+!MESSAGE A conflict occurred for CTRL+G:
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@647d3279,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@647d3279,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-05 21:29:12.267
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4b9a1be5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4b9a1be5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-04-05 21:29:12.267
+!MESSAGE A conflict occurred for CTRL+SHIFT+H:
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@54b313d6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@54b313d6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SESSION 2017-09-10 11:20:14.252 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -product org.eclipse.epp.package.cpp.product -product org.eclipse.epp.package.cpp.product -product org.eclipse.epp.package.cpp.product -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -product org.eclipse.epp.package.cpp.product -product org.eclipse.epp.package.cpp.product -product org.eclipse.epp.package.cpp.product -data E:\aes_eclipse -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.jface 2 0 2017-09-10 11:20:42.898
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-09-10 11:20:42.898
+!MESSAGE A conflict occurred for ALT+CTRL+C:
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(org.eclipse.linuxtools.changelog.core.actions.KeyActionCommand,Insert ChangeLog entry,
+		Insert a ChangeLog entry,
+		Category(org.eclipse.linuxtools.changelog,Changelog,Changelog key bindings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@13553828,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(AnyEdit.capitalize.command,Capitalize,
+		,
+		Category(AnyEdit.category,AnyEdit Tools,AnyEdit Tools key bindings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@670e6fa3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-09-10 11:20:44.368
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mike.AESENG'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.tigris.subversion.clientadapter.javahl 1 0 2017-09-10 11:20:47.629
+!MESSAGE Failed to load JavaHL Library.
+These are the errors that were encountered:
+no libapr-1 in java.library.path
+no libapriconv-1 in java.library.path
+C:\Aldec\Active-HDL 9.1\BIN\libeay32.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform
+C:\Xilinx\9.2i\bin\nt\ssleay32.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform
+no libaprutil-1 in java.library.path
+no libsasl in java.library.path
+no libsvn_subr-1 in java.library.path
+no libsvn_delta-1 in java.library.path
+no libsvn_diff-1 in java.library.path
+no libsvn_wc-1 in java.library.path
+no libsvn_fs-1 in java.library.path
+no libsvn_repos-1 in java.library.path
+no libsvn_ra-1 in java.library.path
+no libsvn_client-1 in java.library.path
+no libsvnjavahl-1 in java.library.path
+no svnjavahl-1 in java.library.path
+no svnjavahl in java.library.path
+java.library.path = C:\eclipse_oxygen;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\ispLEVER_Classic2_0\ispcpld\bin;C:\ispLEVER_Classic2_0\ispFPGA\bin\nt;C:\ispLEVER_Classic2_0\active-hdl\BIN;C:\LatticeMico8\cygwin\bin;C:\ProgramData\Oracle\Java\javapath;C:\Xilinx\10.1\ISE\bin\nt;C:\Xilinx\10.1\ISE\lib\nt;C:\Xilinx\10.1\ISE\smartmodel\nt\installed_nt\lib\pcnt.lib;C:\Program Files (x86)\Common Files\Intel\Shared Files\cpp\bin\Intel64;C:\MentorGraphics\9.3PADS\SDD_HOME\common\win32\bin;C:\MentorGraphics\9.3PADS\SDD_HOME\common\win32\lib;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\DMIX;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;c:\cygwin64\bin;C:\ispLEVER_Classic1_8\ispcpld\bin;C:\ispLEVER_Classic1_8\ispFPGA\bin\nt;C:\ispLEVER_Classic1_8\active-hdl\BIN;C:\MENTOR~1\LICENS~2;C:\MentorGraphics\9.3PADS\MGC_HOME.ixn\bin;C:\MentorGraphics\9.3PADS\MGC_HOME.ixn\lib;C:\MentorGraphics\9.3PADS\MGC_HOME.ixn\bin;C:\MentorGraphics\9.3PADS\MGC_HOME.ixn\lib;C:\Aldec\Active-HDL 9.1\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\HxComp;C:\Xilinx\9.2i\bin\nt;C:\Aldec\Active-HDL 9.2\bin;C:\Program Files (x86)\Lua\5.1;C:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\doxygen\bin;C:\Aldec\Active-HDL 9.3\bin;C:\Program Files (x86)\IVI Foundation\IVI\bin;C:\Program Files\IVI Foundation\IVI\bin;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files\IVI Foundation\VISA\Win64\Bin\;C:\Program Files (x86)\GNU\GnuPG\pub;C:\Program Files\TortoiseSVN\bin
+;C:\Aldec\Active-HDL 10.1 64-bit\bin;C:\Aldec\Active-HDL 10.1\bin;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Program Files\SafeNet\Authentication\SAC\x64;C:\Program Files\SafeNet\Authentication\SAC\x32;C:\Aldec\Active-HDL-10.2\bin;C:\Program Files\IronCAD\2015\bin\;C:\Program Files\Calibre2\;c:\MinGW\bin;C:\Program Files\MATLAB\R2016b\bin;C:\Program Files (x86)\Pandoc\;C:\Program Files (x86)\EaseUS\Todo Backup\bin;C:\Program Files\Microsoft Windows Performance Toolkit\;C:\Aldec\Active-HDL-10.4a\bin;C:\SPARK\2016\bin;C:\GNAT\2016\bin;C:\Tcl\bin;C:\Program Files (x86)\IDM Computer Solutions\UEStudio\;C:\Program Files (x86)\IDM Computer Solutions\UltraCompare\;C:\Program Files (x86)\IDM Computer Solutions\UltraSentry\;C:\Program Files (x86)\EaseUS\Todo Backup\bin\x64\;C:\eclipse_oxygen;;.
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-09-10 11:20:57.767
+!MESSAGE Indexed 'aul_tree' (35 sources, 259 headers) in 7.8 sec: 29,050 declarations; 83,737 references; 1 unresolved inclusions; 4 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-09-10 11:20:58.568
+!MESSAGE Indexed 'command' (7 sources, 50 headers) in 0.558 sec: 2,356 declarations; 4,927 references; 12 unresolved inclusions; 0 syntax errors; 38 unresolved names (0.52%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-09-10 11:20:59.258
+!MESSAGE Indexed 'demo_basic' (1 sources, 108 headers) in 0.55 sec: 3,777 declarations; 14,456 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-09-10 11:20:59.943
+!MESSAGE Indexed 'demo_stx104_fast' (1 sources, 132 headers) in 0.652 sec: 5,261 declarations; 17,108 references; 0 unresolved inclusions; 0 syntax errors; 2 unresolved names (0.0089%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-09-10 11:21:00.426
+!MESSAGE Indexed 'drv_aul_x86' (3 sources, 57 headers) in 0.371 sec: 2,440 declarations; 12,358 references; 22 unresolved inclusions; 24 syntax errors; 415 unresolved names (2.7%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-09-10 11:21:01.228
+!MESSAGE Indexed 'idi' (2 sources, 61 headers) in 0.705 sec: 5,053 declarations; 16,486 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-09-10 11:21:01.978
+!MESSAGE Indexed 'lib_report' (1 sources, 111 headers) in 0.658 sec: 4,056 declarations; 14,475 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2017-09-21 22:16:15.107 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.jface 2 0 2017-09-21 22:17:09.233
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-09-21 22:17:09.233
+!MESSAGE A conflict occurred for ALT+CTRL+C:
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(org.eclipse.linuxtools.changelog.core.actions.KeyActionCommand,Insert ChangeLog entry,
+		Insert a ChangeLog entry,
+		Category(org.eclipse.linuxtools.changelog,Changelog,Changelog key bindings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1400984b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(AnyEdit.capitalize.command,Capitalize,
+		,
+		Category(AnyEdit.category,AnyEdit Tools,AnyEdit Tools key bindings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@17c7cc93,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-09-21 22:17:10.980
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mike.AESENG'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.tigris.subversion.clientadapter.javahl 1 0 2017-09-21 22:17:21.485
+!MESSAGE Failed to load JavaHL Library.
+These are the errors that were encountered:
+no libapr-1 in java.library.path
+no libapriconv-1 in java.library.path
+C:\Aldec\Active-HDL 9.1\BIN\libeay32.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform
+C:\Xilinx\9.2i\bin\nt\ssleay32.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform
+no libaprutil-1 in java.library.path
+no libsasl in java.library.path
+no libsvn_subr-1 in java.library.path
+no libsvn_delta-1 in java.library.path
+no libsvn_diff-1 in java.library.path
+no libsvn_wc-1 in java.library.path
+no libsvn_fs-1 in java.library.path
+no libsvn_repos-1 in java.library.path
+no libsvn_ra-1 in java.library.path
+no libsvn_client-1 in java.library.path
+no libsvnjavahl-1 in java.library.path
+no svnjavahl-1 in java.library.path
+no svnjavahl in java.library.path
+java.library.path = C:\eclipse_oxygen;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\ispLEVER_Classic2_0\ispcpld\bin;C:\ispLEVER_Classic2_0\ispFPGA\bin\nt;C:\ispLEVER_Classic2_0\active-hdl\BIN;C:\LatticeMico8\cygwin\bin;C:\ProgramData\Oracle\Java\javapath;C:\Xilinx\10.1\ISE\bin\nt;C:\Xilinx\10.1\ISE\lib\nt;C:\Xilinx\10.1\ISE\smartmodel\nt\installed_nt\lib\pcnt.lib;C:\Program Files (x86)\Common Files\Intel\Shared Files\cpp\bin\Intel64;C:\MentorGraphics\9.3PADS\SDD_HOME\common\win32\bin;C:\MentorGraphics\9.3PADS\SDD_HOME\common\win32\lib;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\DMIX;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;c:\cygwin64\bin;C:\ispLEVER_Classic1_8\ispcpld\bin;C:\ispLEVER_Classic1_8\ispFPGA\bin\nt;C:\ispLEVER_Classic1_8\active-hdl\BIN;C:\MENTOR~1\LICENS~2;C:\MentorGraphics\9.3PADS\MGC_HOME.ixn\bin;C:\MentorGraphics\9.3PADS\MGC_HOME.ixn\lib;C:\MentorGraphics\9.3PADS\MGC_HOME.ixn\bin;C:\MentorGraphics\9.3PADS\MGC_HOME.ixn\lib;C:\Aldec\Active-HDL 9.1\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\HxComp;C:\Xilinx\9.2i\bin\nt;C:\Aldec\Active-HDL 9.2\bin;C:\Program Files (x86)\Lua\5.1;C:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\doxygen\bin;C:\Aldec\Active-HDL 9.3\bin;C:\Program Files (x86)\IVI Foundation\IVI\bin;C:\Program Files\IVI Foundation\IVI\bin;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files\IVI Foundation\VISA\Win64\Bin\;C:\Program Files (x86)\GNU\GnuPG\pub;C:\Program Files\TortoiseSVN\bin
+;C:\Aldec\Active-HDL 10.1 64-bit\bin;C:\Aldec\Active-HDL 10.1\bin;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Program Files\SafeNet\Authentication\SAC\x64;C:\Program Files\SafeNet\Authentication\SAC\x32;C:\Aldec\Active-HDL-10.2\bin;C:\Program Files\IronCAD\2015\bin\;C:\Program Files\Calibre2\;c:\MinGW\bin;C:\Program Files\MATLAB\R2016b\bin;C:\Program Files (x86)\Pandoc\;C:\Program Files (x86)\EaseUS\Todo Backup\bin;C:\Program Files\Microsoft Windows Performance Toolkit\;C:\Aldec\Active-HDL-10.4a\bin;C:\SPARK\2016\bin;C:\GNAT\2016\bin;C:\Tcl\bin;C:\Program Files (x86)\IDM Computer Solutions\UEStudio\;C:\Program Files (x86)\IDM Computer Solutions\UltraCompare\;C:\Program Files (x86)\IDM Computer Solutions\UltraSentry\;C:\MentorGraphics\9.3PADS\SDD_HOME\common\win32\lib;C:\ispLEVER_Classic2_0\ispcpld\bin;C:\ispLEVER_Classic2_0\ispFPGA\bin\nt;C:\ispLEVER_Classic2_0\active-hdl\BIN;C:\LatticeMico8\cygwin\bin;C:\ProgramData\Oracle\Java\javapath;C:\Xilinx\10.1\ISE\bin\nt;C:\Xilinx\10.1\ISE\lib\nt;C:\Xilinx\10.1\ISE\smartmodel\nt\installed_nt\lib\pcnt.lib;C:\Program Files (x86)\Common Files\Intel\Shared Files\cpp\bin\Intel64;C:\MentorGraphics\9.3PADS\SDD_HOME\common\win32\bin;C:\MentorGraphics\9.3PADS\SDD_HOME\common\win32\lib;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\DMIX;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;c:\cygwin64\bin;C:\ispLEVER_Classic1_8\ispcpld\bin;C:\ispLEVER_Classic1_8\ispFPGA\bin\nt;C:\ispLEVER_Classic1_8\active-hdl\BIN;C:\MENTOR~1\LICENS~2;C:\MentorGraphics\9.3PADS\MGC_HOME.ixn\bin;C:\MentorGraphics\9.3PADS\MGC_HOME.ixn\lib;C:\MentorGraphics\9.3PADS\MGC_HOME.ixn\bin;C:\MentorGraphics\9.3PADS\MGC_HOME.ixn\lib;C:\Aldec\Active-HDL 9.1\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\HxComp;C:\Xilinx\9.2i\bin\nt;C:\Aldec\Active-HDL 9.2\bin;C:\Program Files (x86)\Lua\5.1;C:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\doxygen\bin;C:\Aldec\Active-HDL 9.3\bin;C:\Program Files (x86)\IVI Foundation\IVI\bin;C:\Program Files\IVI Foundation\IVI\bin;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files\IVI Foundation\VISA\Win64\Bin\;C:\Program Files (x86)\GNU\GnuPG\pub;C:\Program Files\TortoiseSVN\bin
+;C:\Aldec\Active-HDL 10.1 64-bit\bin;C:\Aldec\Active-HDL 10.1\bin;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Program Files\SafeNet\Authentication\SAC\x64;C:\Program Files\SafeNet\Authentication\SAC\x32;C:\Aldec\Active-HDL-10.2\bin;C:\Program Files\IronCAD\2015\bin\;C:\Program Files\Calibre2\;c:\MinGW\bin;C:\Program Files\MATLAB\R2016b\bin;C:\Program Files (x86)\Pandoc\;C:\Program Files (x86)\EaseUS\Todo Backup\bin;C:\Program Files\Microsoft Windows Performance Toolkit\;C:\Aldec\Active-HDL-10.4a\bin;C:\eclipse_oxygen;;.
+
+!ENTRY org.eclipse.epp.mpc.ui 1 0 2017-09-21 22:18:10.246
+!MESSAGE Performing Marketplace install request from http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=87
+
+!ENTRY org.eclipse.epp.mpc.ui 1 0 2017-09-21 22:19:34.007
+!MESSAGE Performing Marketplace install request from http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=87
+!SESSION 2017-09-21 22:32:09.572 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.jface 2 0 2017-09-21 22:32:40.629
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-09-21 22:32:40.630
+!MESSAGE A conflict occurred for ALT+CTRL+C:
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(org.eclipse.linuxtools.changelog.core.actions.KeyActionCommand,Insert ChangeLog entry,
+		Insert a ChangeLog entry,
+		Category(org.eclipse.linuxtools.changelog,Changelog,Changelog key bindings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@440309c5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(AnyEdit.capitalize.command,Capitalize,
+		,
+		Category(AnyEdit.category,AnyEdit Tools,AnyEdit Tools key bindings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@50c442a5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-09-21 22:32:43.161
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mike.AESENG'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-07-27 13:25:05.232 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.jface 2 0 2018-07-27 13:26:21.473
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-07-27 13:26:21.474
+!MESSAGE A conflict occurred for ALT+CTRL+C:
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(org.eclipse.linuxtools.changelog.core.actions.KeyActionCommand,Insert ChangeLog entry,
+		Insert a ChangeLog entry,
+		Category(org.eclipse.linuxtools.changelog,Changelog,Changelog key bindings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@346d8002,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(AnyEdit.capitalize.command,Capitalize,
+		,
+		Category(AnyEdit.category,AnyEdit Tools,AnyEdit Tools key bindings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1368ed98,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-07-27 13:26:30.522
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mike.AESENG'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.tigris.subversion.clientadapter.javahl 1 0 2018-07-27 13:26:35.257
+!MESSAGE Failed to load JavaHL Library.
+These are the errors that were encountered:
+no libapr-1 in java.library.path
+no libapriconv-1 in java.library.path
+C:\Aldec\Active-HDL 9.1\BIN\libeay32.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform
+C:\Xilinx\9.2i\bin\nt\ssleay32.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform
+no libaprutil-1 in java.library.path
+no libsasl in java.library.path
+no libsvn_subr-1 in java.library.path
+no libsvn_delta-1 in java.library.path
+no libsvn_diff-1 in java.library.path
+no libsvn_wc-1 in java.library.path
+no libsvn_fs-1 in java.library.path
+no libsvn_repos-1 in java.library.path
+no libsvn_ra-1 in java.library.path
+no libsvn_client-1 in java.library.path
+no libsvnjavahl-1 in java.library.path
+no svnjavahl-1 in java.library.path
+no svnjavahl in java.library.path
+java.library.path = C:\eclipse_oxygen;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\Users\mike.AESENG\AppData\Local\Programs\Python\Python36-32;C:\ISPLEV~2\ispcpld\bin;C:\ISPLEV~2\ispFPGA\bin\nt;C:\ISPLEV~2\ACTIVE~1\BIN;C:\LATTIC~2\cygwin\bin;C:\PROGRA~3\Oracle\Java\javapath;C:\Xilinx\10.1\ISE\bin\nt;C:\Xilinx\10.1\ISE\lib\nt;%LMC_HOME%\lib\pcnt.lib;C:\PROGRA~2\COMMON~1\Intel\SHARED~1\cpp\bin\Intel64;C:\MENTOR~1\9281E~1.3PA\SDD_HOME\common\win32\bin;C:\MENTOR~1\9281E~1.3PA\SDD_HOME\common\win32\lib;C:\PROGRA~2\NVIDIA~1\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WINDOW~1\v1.0\;C:\PROGRA~1\Intel\DMIX;C:\PROGRA~2\MI3EDC~1\100\Tools\Binn\;C:\PROGRA~1\MI3EDC~1\100\Tools\Binn\;C:\PROGRA~1\MI3EDC~1\100\DTS\Binn\;c:\cygwin64\bin;C:\MENTOR~1\LICENS~2;C:\MENTOR~1\9281E~1.3PA\MGC_HOME.ixn\bin;C:\MENTOR~1\9281E~1.3PA\MGC_HOME.ixn\lib;C:\Aldec\ACTIVE~1.1\bin;C:\PROGRA~2\QUICKT~1\QTSystem\;C:\PROGRA~2\HxComp;C:\Xilinx\9.2i\bin\nt;C:\Aldec\ACTIVE~1.2\bin;C:\PROGRA~2\Lua\5.1;C:\PROGRA~2\Lua\5.1\clibs;C:\PROGRA~1\doxygen\bin;C:\Aldec\ACTIVE~2.3\bin;C:\PROGRA~2\IVIFOU~1\IVI\bin;C:\PROGRA~1\IVIFOU~1\IVI\bin;C:\PROGRA~2\IVIFOU~1\VISA\WinNT\Bin;C:\PROGRA~1\IVIFOU~1\VISA\Win64\Bin\;C:\PROGRA~2\GNU\GnuPG\pub;C:\Program Files\TortoiseSVN\bin
+;C:\Aldec\Active-HDL 10.1 64-bit\bin;C:\Aldec\ACTIVE~2.1\bin;C:\PROGRA~1\MIKTEX~1.9\miktex\bin\x64\;C:\PROGRA~1\SafeNet\AUTHEN~1\SAC\x64;C:\PROGRA~1\SafeNet\AUTHEN~1\SAC\x32;C:\Aldec\ACTIVE~2.2\bin;C:\PROGRA~1\IronCAD\2015\bin\;C:\PROGRA~1\Calibre2\;c:\MinGW\bin;C:\PROGRA~1\MATLAB\R2016b\bin;C:\PROGRA~2\Pandoc\;C:\PROGRA~2\EaseUS\TODOBA~1\bin;C:\PROGRA~1\MIB362~1\;C:\Aldec\ACTIVE~1.4A\bin;C:\Windows\system32\config\systemprofile\.dnx\bin;C:\PROGRA~1\MI8460~1\Dnvm\;C:\PROGRA~1\MI3EDC~1\130\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\GNAT\2017\bin;C:\lscc\iCEcube2.2017.08\Aldec\Active-HDL\BIN;C:\SPARK\2016\bin;C:\GNAT\2016\bin;C:\Tcl\bin;C:\Program Files (x86)\IDM Computer Solutions\UEStudio\;C:\Program Files (x86)\IDM Computer Solutions\UltraCompare\;C:\Program Files (x86)\IDM Computer Solutions\UltraSentry\;C:\MentorGraphics\9.3PADS\SDD_HOME\common\win32\lib;C:\Users\mike.AESENG\AppData\Local\Programs\Python\Python36-32;C:\ISPLEV~2\ispcpld\bin;C:\ISPLEV~2\ispFPGA\bin\nt;C:\ISPLEV~2\ACTIVE~1\BIN;C:\LATTIC~2\cygwin\bin;C:\PROGRA~3\Oracle\Java\javapath;C:\Xilinx\10.1\ISE\bin\nt;C:\Xilinx\10.1\ISE\lib\nt;%LMC_HOME%\lib\pcnt.lib;C:\PROGRA~2\COMMON~1\Intel\SHARED~1\cpp\bin\Intel64;C:\MENTOR~1\9281E~1.3PA\SDD_HOME\common\win32\bin;C:\MENTOR~1\9281E~1.3PA\SDD_HOME\common\win32\lib;C:\PROGRA~2\NVIDIA~1\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WINDOW~1\v1.0\;C:\PROGRA~1\Intel\DMIX;C:\PROGRA~2\MI3EDC~1\100\Tools\Binn\;C:\PROGRA~1\MI3EDC~1\100\Tools\Binn\;C:\PROGRA~1\MI3EDC~1\100\DTS\Binn\;c:\cygwin64\bin;C:\MENTOR~1\LICENS~2;C:\MENTOR~1\9281E~1.3PA\MGC_HOME.ixn\bin;C:\MENTOR~1\9281E~1.3PA\MGC_HOME.ixn\lib;C:\Aldec\ACTIVE~1.1\bin;C:\PROGRA~2\QUICKT~1\QTSystem\;C:\PROGRA~2\HxComp;C:\Xilinx\9.2i\bin\nt;C:\Aldec\ACTIVE~1.2\bin;C:\PROGRA~2\Lua\5.1;C:\PROGRA~2\Lua\5.1\clibs;C:\PROGRA~1\doxygen\bin;C:\Aldec\ACTIVE~2.3\bin;C:\PROGRA~2\IVIFOU~1\IVI\bin;C:\PROGRA~1\IVIFOU~1\IVI\bin;C:\PROGRA~2\IVIFOU~1\VISA\WinNT\Bin;C:\PROGRA~1\IVIFOU~1\VISA\Win64\Bin\;C:\PROGRA~2\GNU\GnuPG\pub;C:\Program Files\TortoiseSVN\bin
+;C:\Aldec\Active-HDL 10.1 64-bit\bin;C:\Aldec\ACTIVE~2.1\bin;C:\PROGRA~1\MIKTEX~1.9\miktex\bin\x64\;C:\PROGRA~1\SafeNet\AUTHEN~1\SAC\x64;C:\PROGRA~1\SafeNet\AUTHEN~1\SAC\x32;C:\Aldec\ACTIVE~2.2\bin;C:\PROGRA~1\IronCAD\2015\bin\;C:\PROGRA~1\Calibre2\;c:\MinGW\bin;C:\PROGRA~1\MATLAB\R2016b\bin;C:\PROGRA~2\Pandoc\;C:\PROGRA~2\EaseUS\TODOBA~1\bin;C:\PROGRA~1\MIB362~1\;C:\Aldec\ACTIVE~1.4A\bin;C:\Windows\system32\config\systemprofile\.dnx\bin;C:\PROGRA~1\MI8460~1\Dnvm\;C:\PROGRA~1\MI3EDC~1\130\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\eclipse_oxygen;;.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2018-07-27 13:26:35.951
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Connect to dev.eclipse.org:443 [dev.eclipse.org/198.41.30.200] timed out. ; version: 2.0.5.v20170613-1207
+!STACK 0
+org.apache.http.conn.ConnectTimeoutException: Connect to dev.eclipse.org:443 [dev.eclipse.org/198.41.30.200] timed out
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:150)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.http.client.fluent.Request.internalExecute(Request.java:173)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:262)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:170)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:64)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException
+	at java.net.SocksSocketImpl.remainingMillis(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:337)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	... 17 more

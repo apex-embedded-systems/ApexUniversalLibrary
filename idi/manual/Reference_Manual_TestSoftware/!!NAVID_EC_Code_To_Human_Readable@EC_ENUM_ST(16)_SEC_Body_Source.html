@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Body Source</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;!!NAVID_EC_Code_To_Human_Readable@EC_ENUM_ST(16)_SEC_Body_Source.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!FUNCTIONS.html" target="topic">Functions</a> &gt; <a href="EC_Code_To_Human_Readable@EC_ENUM.html" target="topic">EC_Code_To_Human_Readable Function</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+</td></tr></table><div class="Element39">
+Body Source</div>
+<div class="Element40">
+<a href="EC_Code_To_Human_Readable@EC_ENUM.html" target="topic">EC_Code_To_Human_Readable Function</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<div class="Element14">
+Body Source</div>
+<div class="Element11">
+<div class="Element10">
+<div class="Element170">
+<a href="#" onclick="CopyElementToClipboard(&#39;code00376&#39;);">Copy Code</a></div>
+<div class="Element13"><div class="Element12" id="code00376"><pre class="Element12"> 1: <strong><span style="color: #008000;">const</span></strong> <strong><span style="color: #008000;">char</span></strong> * EC_Code_To_Human_Readable( <a href="EC_ENUM.html" target="topic">EC_ENUM</a> error_code )
+ 2: {
+ 3: 	<strong><span style="color: #008000;">int</span></strong> index;
+ 4: 
+ 5: 	<strong><span style="color: #008000;">if</span></strong> ( error_code &lt; 0 ) error_code = -error_code;
+ 6: 
+ 7: 	index = 0;
+ 8: 	<strong><span style="color: #008000;">while</span></strong>( NULL != <a href="ec_human_readable.html" target="topic">ec_human_readable</a>[index].message )
+ 9: 	{
+10: 		<strong><span style="color: #008000;">if</span></strong> ( ((<a href="EC_ENUM.html" target="topic">EC_ENUM</a>) error_code) == <a href="ec_human_readable.html" target="topic">ec_human_readable</a>[index].error_code )
+11: 		{
+12: 			<strong><span style="color: #008000;">return</span></strong> <a href="ec_human_readable.html" target="topic">ec_human_readable</a>[index].message;
+13: 		}
+14: 		index++;
+15: 	}
+16: 	<strong><span style="color: #008000;">return</span></strong> <a href="ec_unknown.html" target="topic">ec_unknown</a>;
+17: }
+</pre></div></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

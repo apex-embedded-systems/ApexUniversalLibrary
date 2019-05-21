@@ -1,0 +1,448 @@
+DEBUG Mon Nov 24 16:12:22 2014: AUL_Library_Revision: entry
+DEBUG Mon Nov 24 16:12:22 2014: AUL_Library_Revision: exit success
+DEBUG Mon Nov 24 16:12:22 2014: AUL_Library_Is_Debug_Active: entry
+DEBUG Mon Nov 24 16:12:22 2014: AUL_Library_Is_Debug_Active: exit success
+DEBUG Mon Nov 24 16:12:22 2014: AUL_Ioctl: entry
+DEBUG Mon Nov 24 16:12:22 2014: IO_Ioctl: entry
+DEBUG Mon Nov 24 16:12:22 2014: IO_LLG_Ioctl: entry
+DEBUG Mon Nov 24 16:12:22 2014: module io, function IO_LLG_Ioctl, line 375, error: core uninitialized
+DEBUG Mon Nov 24 16:12:22 2014: IO_LLG_Ioctl: exit ec=core uninitialized
+DEBUG Mon Nov 24 16:12:22 2014: module (null), function IO_Ioctl, line 745, error: core uninitialized
+DEBUG Mon Nov 24 16:12:22 2014: IO_Ioctl: exit ec=core uninitialized
+DEBUG Mon Nov 24 16:12:22 2014: module aul, function AUL_Ioctl, line 567, error: core uninitialized
+DEBUG Mon Nov 24 16:12:22 2014: AUL_Ioctl: exit ec=core uninitialized
+DEBUG Mon Nov 24 16:12:25 2014: //--------------------------------------------
+DEBUG Mon Nov 24 16:12:25 2014: AUL_Initialization: entry
+DEBUG Mon Nov 24 16:12:25 2014: Module_Initialize: entry
+DEBUG Mon Nov 24 16:12:25 2014:  INIT MODULES:
+DEBUG Mon Nov 24 16:12:25 2014:   --> status           ec=0
+DEBUG Mon Nov 24 16:12:25 2014:   --> debug            ec=0
+DEBUG Mon Nov 24 16:12:25 2014:   --> mem              ec=0
+DEBUG Mon Nov 24 16:12:25 2014:   --> error            ec=0
+DEBUG Mon Nov 24 16:12:25 2014:   --> module           ec=0
+DEBUG Mon Nov 24 16:12:25 2014: IO_Initialize: entry
+DEBUG Mon Nov 24 16:12:25 2014: IO_LLG_Initialize: entry
+DEBUG Mon Nov 24 16:12:25 2014: module io, function IO_LLG_Initialize, line 534, error: No such file or directory
+DEBUG Mon Nov 24 16:12:25 2014: IO_LLG_Initialize: exit ec=No such file or directory
+DEBUG Mon Nov 24 16:12:25 2014: module io_llg, function IO_Initialize, line 932, error: No such file or directory
+DEBUG Mon Nov 24 16:12:25 2014: IO_Initialize: exit ec=No such file or directory
+DEBUG Mon Nov 24 16:12:25 2014:   --> io_llg           ec=-2
+DEBUG Mon Nov 24 16:12:25 2014: Module_Initialize: exit failed
+DEBUG Mon Nov 24 16:12:25 2014: module aul, function AUL_Initialization, line 447, error: No such file or directory
+DEBUG Mon Nov 24 16:12:25 2014: AUL_Initialization: exit ec=No such file or directory
+DEBUG Mon Nov 24 16:12:30 2014: //--------------------------------------------
+DEBUG Mon Nov 24 16:12:30 2014: AUL_Initialization: entry
+DEBUG Mon Nov 24 16:12:30 2014: Module_Initialize: entry
+DEBUG Mon Nov 24 16:12:30 2014:  INIT MODULES:
+DEBUG Mon Nov 24 16:12:30 2014:   --> status           ec=0
+DEBUG Mon Nov 24 16:12:30 2014:   --> debug            ec=0
+DEBUG Mon Nov 24 16:12:30 2014:   --> mem              ec=0
+DEBUG Mon Nov 24 16:12:30 2014:   --> error            ec=0
+DEBUG Mon Nov 24 16:12:30 2014:   --> module           ec=0
+DEBUG Mon Nov 24 16:12:30 2014: IO_Initialize: entry
+DEBUG Mon Nov 24 16:12:30 2014: IO_LLG_Initialize: entry
+DEBUG Mon Nov 24 16:12:30 2014: module io, function IO_LLG_Initialize, line 534, error: No such file or directory
+DEBUG Mon Nov 24 16:12:30 2014: IO_LLG_Initialize: exit ec=No such file or directory
+DEBUG Mon Nov 24 16:12:30 2014: module io_llg, function IO_Initialize, line 932, error: No such file or directory
+DEBUG Mon Nov 24 16:12:30 2014: IO_Initialize: exit ec=No such file or directory
+DEBUG Mon Nov 24 16:12:30 2014:   --> io_llg           ec=-2
+DEBUG Mon Nov 24 16:12:30 2014: Module_Initialize: exit failed
+DEBUG Mon Nov 24 16:12:30 2014: module aul, function AUL_Initialization, line 447, error: No such file or directory
+DEBUG Mon Nov 24 16:12:30 2014: AUL_Initialization: exit ec=No such file or directory
+DEBUG Mon Nov 24 16:17:46 2014: AUL_Library_Revision: entry
+DEBUG Mon Nov 24 16:17:46 2014: AUL_Library_Revision: exit success
+DEBUG Mon Nov 24 16:17:46 2014: AUL_Library_Is_Debug_Active: entry
+DEBUG Mon Nov 24 16:17:46 2014: AUL_Library_Is_Debug_Active: exit success
+DEBUG Mon Nov 24 16:17:46 2014: AUL_Ioctl: entry
+DEBUG Mon Nov 24 16:17:46 2014: IO_Ioctl: entry
+DEBUG Mon Nov 24 16:17:46 2014: IO_LLG_Ioctl: entry
+DEBUG Mon Nov 24 16:17:46 2014: module io, function IO_LLG_Ioctl, line 375, error: core uninitialized
+DEBUG Mon Nov 24 16:17:46 2014: IO_LLG_Ioctl: exit ec=core uninitialized
+DEBUG Mon Nov 24 16:17:46 2014: module (null), function IO_Ioctl, line 745, error: core uninitialized
+DEBUG Mon Nov 24 16:17:46 2014: IO_Ioctl: exit ec=core uninitialized
+DEBUG Mon Nov 24 16:17:46 2014: module aul, function AUL_Ioctl, line 567, error: core uninitialized
+DEBUG Mon Nov 24 16:17:46 2014: AUL_Ioctl: exit ec=core uninitialized
+DEBUG Mon Nov 24 16:17:48 2014: //--------------------------------------------
+DEBUG Mon Nov 24 16:17:48 2014: AUL_Initialization: entry
+DEBUG Mon Nov 24 16:17:48 2014: Module_Initialize: entry
+DEBUG Mon Nov 24 16:17:48 2014:  INIT MODULES:
+DEBUG Mon Nov 24 16:17:48 2014:   --> status           ec=0
+DEBUG Mon Nov 24 16:17:48 2014:   --> debug            ec=0
+DEBUG Mon Nov 24 16:17:48 2014:   --> mem              ec=0
+DEBUG Mon Nov 24 16:17:48 2014:   --> error            ec=0
+DEBUG Mon Nov 24 16:17:48 2014:   --> module           ec=0
+DEBUG Mon Nov 24 16:17:48 2014: IO_Initialize: entry
+DEBUG Mon Nov 24 16:17:48 2014: IO_LLG_Initialize: entry
+DEBUG Mon Nov 24 16:17:48 2014: IO_LLG_Initialize: exit success
+DEBUG Mon Nov 24 16:17:48 2014: IO_Initialize: exit success
+DEBUG Mon Nov 24 16:17:48 2014:   --> io_llg           ec=0
+DEBUG Mon Nov 24 16:17:48 2014:   --> reg              ec=0
+DEBUG Mon Nov 24 16:17:48 2014:   --> cmp_mgr          ec=0
+DEBUG Mon Nov 24 16:17:48 2014:   --> dev_mgr          ec=0
+DEBUG Mon Nov 24 16:17:48 2014:   --> aul              ec=0
+DEBUG Mon Nov 24 16:17:48 2014:   --> aul_hwdef        ec=0
+DEBUG Mon Nov 24 16:17:48 2014:   --> acgr             ec=0
+DEBUG Mon Nov 24 16:17:48 2014:   --> i8255m0          ec=0
+DEBUG Mon Nov 24 16:17:48 2014:   --> i8254            ec=0
+DEBUG Mon Nov 24 16:17:48 2014:   --> indirect         ec=0
+DEBUG Mon Nov 24 16:17:48 2014:   --> tracere          ec=0
+DEBUG Mon Nov 24 16:17:48 2014:   --> stx104           ec=0
+DEBUG Mon Nov 24 16:17:48 2014:  Module list:
+DEBUG Mon Nov 24 16:17:48 2014:   0) 0x00000002 status
+DEBUG Mon Nov 24 16:17:48 2014:   1) 0x00000003 debug
+DEBUG Mon Nov 24 16:17:48 2014:   2) 0x00000004 mem
+DEBUG Mon Nov 24 16:17:48 2014:   3) 0x00000005 error
+DEBUG Mon Nov 24 16:17:48 2014:   4) 0x00000001 module
+DEBUG Mon Nov 24 16:17:48 2014:   5) 0x00000008 io_llg
+DEBUG Mon Nov 24 16:17:48 2014:   6) 0x00000009 reg
+DEBUG Mon Nov 24 16:17:48 2014:   7) 0x0000000B cmp_mgr
+DEBUG Mon Nov 24 16:17:48 2014:   8) 0x0000000C dev_mgr
+DEBUG Mon Nov 24 16:17:48 2014:   9) 0x0000000D aul
+DEBUG Mon Nov 24 16:17:48 2014:  10) 0x0000000E aul_hwdef
+DEBUG Mon Nov 24 16:17:48 2014:  11) 0x0000000F acgr
+DEBUG Mon Nov 24 16:17:48 2014:  12) 0x00000010 i8255m0
+DEBUG Mon Nov 24 16:17:48 2014:  13) 0x00000013 i8254
+DEBUG Mon Nov 24 16:17:48 2014:  14) 0x00000015 indirect
+DEBUG Mon Nov 24 16:17:48 2014:  15) 0x00000011 tracere
+DEBUG Mon Nov 24 16:17:48 2014:  16) 0x00000012 stx104
+DEBUG Mon Nov 24 16:17:48 2014: Module_Initialize: exit success
+DEBUG Mon Nov 24 16:17:48 2014: AUL_Initialization: exit success
+DEBUG Mon Nov 24 16:17:48 2014: AUL_Driver_Revision: entry
+DEBUG Mon Nov 24 16:17:48 2014: IO_Version: entry
+DEBUG Mon Nov 24 16:17:48 2014: IO_Version_Command: entry
+DEBUG Mon Nov 24 16:17:48 2014: IO_Version_Command: exit success
+DEBUG Mon Nov 24 16:17:48 2014: IO_Version: exit success
+DEBUG Mon Nov 24 16:17:48 2014: AUL_Driver_Revision: exit success
+DEBUG Mon Nov 24 16:17:48 2014: AUL_Driver_Is_Debug_Active: entry
+DEBUG Mon Nov 24 16:17:48 2014: AUL_Ioctl: entry
+DEBUG Mon Nov 24 16:17:48 2014: IO_Ioctl: entry
+DEBUG Mon Nov 24 16:17:48 2014: IO_LLG_Ioctl: entry
+DEBUG Mon Nov 24 16:17:48 2014: IO_LLG_Ioctl: exit success
+DEBUG Mon Nov 24 16:17:48 2014: IO_Ioctl: exit success
+DEBUG Mon Nov 24 16:17:48 2014: AUL_Ioctl: exit success
+DEBUG Mon Nov 24 16:17:48 2014: AUL_Driver_Is_Debug_Active: exit success
+DEBUG Mon Nov 24 16:17:48 2014: AUL_Device_List_Get: entry
+DEBUG Mon Nov 24 16:17:48 2014: AUL_Ioctl: entry
+DEBUG Mon Nov 24 16:17:48 2014: IO_Ioctl: entry
+DEBUG Mon Nov 24 16:17:48 2014: IO_LLG_Ioctl: entry
+DEBUG Mon Nov 24 16:17:48 2014: IO_LLG_Ioctl: exit success
+DEBUG Mon Nov 24 16:17:48 2014: IO_Ioctl: exit success
+DEBUG Mon Nov 24 16:17:48 2014: AUL_Ioctl: exit success
+DEBUG Mon Nov 24 16:17:48 2014: AUL_Device_List_Get: exit success
+DEBUG Mon Nov 24 16:17:52 2014: AUL_Device_Logical_Get: entry
+DEBUG Mon Nov 24 16:17:52 2014: IO_Is_Definition_Available: entry
+DEBUG Mon Nov 24 16:17:52 2014: IO_Definition_Available_Command: entry
+DEBUG Mon Nov 24 16:17:52 2014: IO_LLG_Definition_Available: entry
+DEBUG Mon Nov 24 16:17:52 2014: IO_LLG_Definition_Available: exit success
+DEBUG Mon Nov 24 16:17:52 2014: IO_Definition_Available_Command: exit success
+DEBUG Mon Nov 24 16:17:52 2014: IO_Is_Definition_Available: exit success
+DEBUG Mon Nov 24 16:17:52 2014: IO_Definition_Get: entry
+DEBUG Mon Nov 24 16:17:52 2014: IO_Definition_Get_Command: entry
+DEBUG Mon Nov 24 16:17:52 2014: IO_LLG_Definition_Get: entry
+DEBUG Mon Nov 24 16:17:52 2014: IO_LLG_Definition_Get: exit success
+DEBUG Mon Nov 24 16:17:52 2014: IO_Definition_Get_Command: exit success
+DEBUG Mon Nov 24 16:17:52 2014: IO_Definition_Get: exit success
+DEBUG Mon Nov 24 16:17:52 2014: AUL_Device_Open: entry
+DEBUG Mon Nov 24 16:17:52 2014: IO_Is_Definition_Available: entry
+DEBUG Mon Nov 24 16:17:52 2014: IO_Definition_Available_Command: entry
+DEBUG Mon Nov 24 16:17:52 2014: IO_LLG_Definition_Available: entry
+DEBUG Mon Nov 24 16:17:52 2014: IO_LLG_Definition_Available: exit success
+DEBUG Mon Nov 24 16:17:52 2014: IO_Definition_Available_Command: exit success
+DEBUG Mon Nov 24 16:17:52 2014: IO_Is_Definition_Available: exit success
+DEBUG Mon Nov 24 16:17:52 2014: IO_Definition_Get: entry
+DEBUG Mon Nov 24 16:17:52 2014: IO_Definition_Get_Command: entry
+DEBUG Mon Nov 24 16:17:52 2014: IO_LLG_Definition_Get: entry
+DEBUG Mon Nov 24 16:17:52 2014: IO_LLG_Definition_Get: exit success
+DEBUG Mon Nov 24 16:17:52 2014: IO_Definition_Get_Command: exit success
+DEBUG Mon Nov 24 16:17:52 2014: IO_Definition_Get: exit success
+DEBUG Mon Nov 24 16:17:52 2014: IO_Open: entry
+DEBUG Mon Nov 24 16:17:52 2014: IO_LLG_Open: entry
+DEBUG Mon Nov 24 16:17:52 2014: IO_LLG_Open: exit success
+DEBUG Mon Nov 24 16:17:52 2014: IO_Open: exit success
+DEBUG Mon Nov 24 16:17:52 2014: AUL_Device_Open: exit success
+DEBUG Mon Nov 24 16:18:10 2014: AUL_Library_Revision: entry
+DEBUG Mon Nov 24 16:18:10 2014: AUL_Library_Revision: exit success
+DEBUG Mon Nov 24 16:18:10 2014: AUL_Library_Is_Debug_Active: entry
+DEBUG Mon Nov 24 16:18:10 2014: AUL_Library_Is_Debug_Active: exit success
+DEBUG Mon Nov 24 16:18:10 2014: AUL_Ioctl: entry
+DEBUG Mon Nov 24 16:18:10 2014: IO_Ioctl: entry
+DEBUG Mon Nov 24 16:18:10 2014: IO_LLG_Ioctl: entry
+DEBUG Mon Nov 24 16:18:10 2014: module io, function IO_LLG_Ioctl, line 375, error: core uninitialized
+DEBUG Mon Nov 24 16:18:10 2014: IO_LLG_Ioctl: exit ec=core uninitialized
+DEBUG Mon Nov 24 16:18:10 2014: module (null), function IO_Ioctl, line 745, error: core uninitialized
+DEBUG Mon Nov 24 16:18:10 2014: IO_Ioctl: exit ec=core uninitialized
+DEBUG Mon Nov 24 16:18:10 2014: module aul, function AUL_Ioctl, line 567, error: core uninitialized
+DEBUG Mon Nov 24 16:18:10 2014: AUL_Ioctl: exit ec=core uninitialized
+DEBUG Mon Nov 24 16:18:12 2014: //--------------------------------------------
+DEBUG Mon Nov 24 16:18:12 2014: AUL_Initialization: entry
+DEBUG Mon Nov 24 16:18:12 2014: Module_Initialize: entry
+DEBUG Mon Nov 24 16:18:12 2014:  INIT MODULES:
+DEBUG Mon Nov 24 16:18:12 2014:   --> status           ec=0
+DEBUG Mon Nov 24 16:18:12 2014:   --> debug            ec=0
+DEBUG Mon Nov 24 16:18:12 2014:   --> mem              ec=0
+DEBUG Mon Nov 24 16:18:12 2014:   --> error            ec=0
+DEBUG Mon Nov 24 16:18:12 2014:   --> module           ec=0
+DEBUG Mon Nov 24 16:18:12 2014: IO_Initialize: entry
+DEBUG Mon Nov 24 16:18:12 2014: IO_LLG_Initialize: entry
+DEBUG Mon Nov 24 16:18:12 2014: IO_LLG_Initialize: exit success
+DEBUG Mon Nov 24 16:18:12 2014: IO_Initialize: exit success
+DEBUG Mon Nov 24 16:18:12 2014:   --> io_llg           ec=0
+DEBUG Mon Nov 24 16:18:12 2014:   --> reg              ec=0
+DEBUG Mon Nov 24 16:18:12 2014:   --> cmp_mgr          ec=0
+DEBUG Mon Nov 24 16:18:12 2014:   --> dev_mgr          ec=0
+DEBUG Mon Nov 24 16:18:12 2014:   --> aul              ec=0
+DEBUG Mon Nov 24 16:18:12 2014:   --> aul_hwdef        ec=0
+DEBUG Mon Nov 24 16:18:12 2014:   --> acgr             ec=0
+DEBUG Mon Nov 24 16:18:12 2014:   --> i8255m0          ec=0
+DEBUG Mon Nov 24 16:18:12 2014:   --> i8254            ec=0
+DEBUG Mon Nov 24 16:18:12 2014:   --> indirect         ec=0
+DEBUG Mon Nov 24 16:18:12 2014:   --> tracere          ec=0
+DEBUG Mon Nov 24 16:18:12 2014:   --> stx104           ec=0
+DEBUG Mon Nov 24 16:18:12 2014:  Module list:
+DEBUG Mon Nov 24 16:18:12 2014:   0) 0x00000002 status
+DEBUG Mon Nov 24 16:18:12 2014:   1) 0x00000003 debug
+DEBUG Mon Nov 24 16:18:12 2014:   2) 0x00000004 mem
+DEBUG Mon Nov 24 16:18:12 2014:   3) 0x00000005 error
+DEBUG Mon Nov 24 16:18:12 2014:   4) 0x00000001 module
+DEBUG Mon Nov 24 16:18:12 2014:   5) 0x00000008 io_llg
+DEBUG Mon Nov 24 16:18:12 2014:   6) 0x00000009 reg
+DEBUG Mon Nov 24 16:18:12 2014:   7) 0x0000000B cmp_mgr
+DEBUG Mon Nov 24 16:18:12 2014:   8) 0x0000000C dev_mgr
+DEBUG Mon Nov 24 16:18:12 2014:   9) 0x0000000D aul
+DEBUG Mon Nov 24 16:18:12 2014:  10) 0x0000000E aul_hwdef
+DEBUG Mon Nov 24 16:18:12 2014:  11) 0x0000000F acgr
+DEBUG Mon Nov 24 16:18:12 2014:  12) 0x00000010 i8255m0
+DEBUG Mon Nov 24 16:18:12 2014:  13) 0x00000013 i8254
+DEBUG Mon Nov 24 16:18:12 2014:  14) 0x00000015 indirect
+DEBUG Mon Nov 24 16:18:12 2014:  15) 0x00000011 tracere
+DEBUG Mon Nov 24 16:18:12 2014:  16) 0x00000012 stx104
+DEBUG Mon Nov 24 16:18:12 2014: Module_Initialize: exit success
+DEBUG Mon Nov 24 16:18:12 2014: AUL_Initialization: exit success
+DEBUG Mon Nov 24 16:18:12 2014: AUL_Driver_Revision: entry
+DEBUG Mon Nov 24 16:18:12 2014: IO_Version: entry
+DEBUG Mon Nov 24 16:18:12 2014: IO_Version_Command: entry
+DEBUG Mon Nov 24 16:18:12 2014: IO_Version_Command: exit success
+DEBUG Mon Nov 24 16:18:12 2014: IO_Version: exit success
+DEBUG Mon Nov 24 16:18:12 2014: AUL_Driver_Revision: exit success
+DEBUG Mon Nov 24 16:18:12 2014: AUL_Driver_Is_Debug_Active: entry
+DEBUG Mon Nov 24 16:18:12 2014: AUL_Ioctl: entry
+DEBUG Mon Nov 24 16:18:12 2014: IO_Ioctl: entry
+DEBUG Mon Nov 24 16:18:12 2014: IO_LLG_Ioctl: entry
+DEBUG Mon Nov 24 16:18:12 2014: IO_LLG_Ioctl: exit success
+DEBUG Mon Nov 24 16:18:12 2014: IO_Ioctl: exit success
+DEBUG Mon Nov 24 16:18:12 2014: AUL_Ioctl: exit success
+DEBUG Mon Nov 24 16:18:12 2014: AUL_Driver_Is_Debug_Active: exit success
+DEBUG Mon Nov 24 16:18:12 2014: AUL_Device_List_Get: entry
+DEBUG Mon Nov 24 16:18:12 2014: AUL_Ioctl: entry
+DEBUG Mon Nov 24 16:18:12 2014: IO_Ioctl: entry
+DEBUG Mon Nov 24 16:18:12 2014: IO_LLG_Ioctl: entry
+DEBUG Mon Nov 24 16:18:12 2014: IO_LLG_Ioctl: exit success
+DEBUG Mon Nov 24 16:18:12 2014: IO_Ioctl: exit success
+DEBUG Mon Nov 24 16:18:12 2014: AUL_Ioctl: exit success
+DEBUG Mon Nov 24 16:18:12 2014: AUL_Device_List_Get: exit success
+DEBUG Mon Nov 24 16:18:15 2014: AUL_Device_Logical_Get: entry
+DEBUG Mon Nov 24 16:18:15 2014: IO_Is_Definition_Available: entry
+DEBUG Mon Nov 24 16:18:15 2014: IO_Definition_Available_Command: entry
+DEBUG Mon Nov 24 16:18:15 2014: IO_LLG_Definition_Available: entry
+DEBUG Mon Nov 24 16:18:15 2014: IO_LLG_Definition_Available: exit success
+DEBUG Mon Nov 24 16:18:15 2014: IO_Definition_Available_Command: exit success
+DEBUG Mon Nov 24 16:18:15 2014: IO_Is_Definition_Available: exit success
+DEBUG Mon Nov 24 16:18:15 2014: IO_Definition_Get: entry
+DEBUG Mon Nov 24 16:18:15 2014: IO_Definition_Get_Command: entry
+DEBUG Mon Nov 24 16:18:15 2014: IO_LLG_Definition_Get: entry
+DEBUG Mon Nov 24 16:18:15 2014: IO_LLG_Definition_Get: exit success
+DEBUG Mon Nov 24 16:18:15 2014: IO_Definition_Get_Command: exit success
+DEBUG Mon Nov 24 16:18:15 2014: IO_Definition_Get: exit success
+DEBUG Mon Nov 24 16:18:15 2014: AUL_Device_Open: entry
+DEBUG Mon Nov 24 16:18:15 2014: IO_Is_Definition_Available: entry
+DEBUG Mon Nov 24 16:18:15 2014: IO_Definition_Available_Command: entry
+DEBUG Mon Nov 24 16:18:15 2014: IO_LLG_Definition_Available: entry
+DEBUG Mon Nov 24 16:18:15 2014: IO_LLG_Definition_Available: exit success
+DEBUG Mon Nov 24 16:18:15 2014: IO_Definition_Available_Command: exit success
+DEBUG Mon Nov 24 16:18:15 2014: IO_Is_Definition_Available: exit success
+DEBUG Mon Nov 24 16:18:15 2014: IO_Definition_Get: entry
+DEBUG Mon Nov 24 16:18:15 2014: IO_Definition_Get_Command: entry
+DEBUG Mon Nov 24 16:18:15 2014: IO_LLG_Definition_Get: entry
+DEBUG Mon Nov 24 16:18:15 2014: IO_LLG_Definition_Get: exit success
+DEBUG Mon Nov 24 16:18:15 2014: IO_Definition_Get_Command: exit success
+DEBUG Mon Nov 24 16:18:15 2014: IO_Definition_Get: exit success
+DEBUG Mon Nov 24 16:18:15 2014: IO_Open: entry
+DEBUG Mon Nov 24 16:18:15 2014: IO_LLG_Open: entry
+DEBUG Mon Nov 24 16:18:15 2014: IO_LLG_Open: exit success
+DEBUG Mon Nov 24 16:18:15 2014: IO_Open: exit success
+DEBUG Mon Nov 24 16:18:15 2014: AUL_Device_Open: exit success
+DEBUG Mon Nov 24 16:18:28 2014: IO_Close: enter
+DEBUG Mon Nov 24 16:18:28 2014: IO_LLG_Close: enter
+DEBUG Mon Nov 24 16:18:28 2014: IO_LLG_Close: exit success
+DEBUG Mon Nov 24 16:18:28 2014: IO_Close: exit success
+DEBUG Mon Nov 24 16:18:28 2014: module aul, function AUL_Board, line 142, error: board dataset null
+DEBUG Mon Nov 24 16:18:28 2014: module stx104, function STX104_Gen_Revision_Get, line 112, error: board dataset null
+DEBUG Mon Nov 24 16:18:28 2014: AUL_Termination: entry
+DEBUG Mon Nov 24 16:18:28 2014:  TERMINATE MODULES:
+DEBUG Mon Nov 24 16:18:28 2014:   --> stx104           ec=0
+DEBUG Mon Nov 24 16:18:28 2014:   --> tracere          ec=0
+DEBUG Mon Nov 24 16:18:28 2014:   --> indirect         ec=0
+DEBUG Mon Nov 24 16:18:28 2014:   --> i8254            ec=0
+DEBUG Mon Nov 24 16:18:28 2014:   --> i8255m0          ec=0
+DEBUG Mon Nov 24 16:18:28 2014:   --> acgr             ec=0
+DEBUG Mon Nov 24 16:18:28 2014:   --> aul_hwdef        ec=0
+DEBUG Mon Nov 24 16:18:28 2014:   --> aul              ec=0
+DEBUG Mon Nov 24 16:18:28 2014:   --> dev_mgr          ec=0
+DEBUG Mon Nov 24 16:18:28 2014:   --> cmp_mgr          ec=0
+DEBUG Mon Nov 24 16:18:28 2014:   --> reg              ec=0
+DEBUG Mon Nov 24 16:18:28 2014: IO_Terminate: entry
+DEBUG Mon Nov 24 16:18:28 2014: IO_LLG_Terminate: entry
+DEBUG Mon Nov 24 16:18:28 2014: IO_LLG_Terminate: exit success
+DEBUG Mon Nov 24 16:18:28 2014: IO_Terminate: exit success
+DEBUG Mon Nov 24 16:18:28 2014:   --> io_llg           ec=0
+DEBUG Mon Nov 24 16:18:28 2014:   --> module           ec=0
+DEBUG Mon Nov 24 16:18:28 2014:   --> error            ec=0
+DEBUG Mon Nov 24 16:18:28 2014:   --> mem              ec=0
+DEBUG Mon Nov 24 16:18:28 2014:   --> debug            ec=0
+DEBUG Mon Nov 24 16:18:28 2014:   --> status           ec=0
+DEBUG Mon Nov 24 16:18:28 2014: 
+DEBUG Mon Nov 24 16:18:28 2014: Module_Terminate: exit ec=success
+DEBUG Mon Nov 24 16:18:28 2014: AUL_Termination: exit success
+DEBUG Mon Nov 24 16:21:01 2014: AUL_Library_Revision: entry
+DEBUG Mon Nov 24 16:21:01 2014: AUL_Library_Revision: exit success
+DEBUG Mon Nov 24 16:21:01 2014: AUL_Library_Is_Debug_Active: entry
+DEBUG Mon Nov 24 16:21:01 2014: AUL_Library_Is_Debug_Active: exit success
+DEBUG Mon Nov 24 16:21:01 2014: AUL_Ioctl: entry
+DEBUG Mon Nov 24 16:21:01 2014: IO_Ioctl: entry
+DEBUG Mon Nov 24 16:21:01 2014: IO_LLG_Ioctl: entry
+DEBUG Mon Nov 24 16:21:01 2014: module io, function IO_LLG_Ioctl, line 375, error: core uninitialized
+DEBUG Mon Nov 24 16:21:01 2014: IO_LLG_Ioctl: exit ec=core uninitialized
+DEBUG Mon Nov 24 16:21:01 2014: module (null), function IO_Ioctl, line 745, error: core uninitialized
+DEBUG Mon Nov 24 16:21:01 2014: IO_Ioctl: exit ec=core uninitialized
+DEBUG Mon Nov 24 16:21:01 2014: module aul, function AUL_Ioctl, line 567, error: core uninitialized
+DEBUG Mon Nov 24 16:21:01 2014: AUL_Ioctl: exit ec=core uninitialized
+DEBUG Mon Nov 24 16:21:03 2014: //--------------------------------------------
+DEBUG Mon Nov 24 16:21:03 2014: AUL_Initialization: entry
+DEBUG Mon Nov 24 16:21:03 2014: Module_Initialize: entry
+DEBUG Mon Nov 24 16:21:03 2014:  INIT MODULES:
+DEBUG Mon Nov 24 16:21:03 2014:   --> status           ec=0
+DEBUG Mon Nov 24 16:21:03 2014:   --> debug            ec=0
+DEBUG Mon Nov 24 16:21:03 2014:   --> mem              ec=0
+DEBUG Mon Nov 24 16:21:03 2014:   --> error            ec=0
+DEBUG Mon Nov 24 16:21:03 2014:   --> module           ec=0
+DEBUG Mon Nov 24 16:21:03 2014: IO_Initialize: entry
+DEBUG Mon Nov 24 16:21:03 2014: IO_LLG_Initialize: entry
+DEBUG Mon Nov 24 16:21:03 2014: IO_LLG_Initialize: exit success
+DEBUG Mon Nov 24 16:21:03 2014: IO_Initialize: exit success
+DEBUG Mon Nov 24 16:21:03 2014:   --> io_llg           ec=0
+DEBUG Mon Nov 24 16:21:03 2014:   --> reg              ec=0
+DEBUG Mon Nov 24 16:21:03 2014:   --> cmp_mgr          ec=0
+DEBUG Mon Nov 24 16:21:03 2014:   --> dev_mgr          ec=0
+DEBUG Mon Nov 24 16:21:03 2014:   --> aul              ec=0
+DEBUG Mon Nov 24 16:21:03 2014:   --> aul_hwdef        ec=0
+DEBUG Mon Nov 24 16:21:03 2014:   --> acgr             ec=0
+DEBUG Mon Nov 24 16:21:03 2014:   --> i8255m0          ec=0
+DEBUG Mon Nov 24 16:21:03 2014:   --> i8254            ec=0
+DEBUG Mon Nov 24 16:21:03 2014:   --> indirect         ec=0
+DEBUG Mon Nov 24 16:21:03 2014:   --> tracere          ec=0
+DEBUG Mon Nov 24 16:21:03 2014:   --> stx104           ec=0
+DEBUG Mon Nov 24 16:21:03 2014:  Module list:
+DEBUG Mon Nov 24 16:21:03 2014:   0) 0x00000002 status
+DEBUG Mon Nov 24 16:21:03 2014:   1) 0x00000003 debug
+DEBUG Mon Nov 24 16:21:03 2014:   2) 0x00000004 mem
+DEBUG Mon Nov 24 16:21:03 2014:   3) 0x00000005 error
+DEBUG Mon Nov 24 16:21:03 2014:   4) 0x00000001 module
+DEBUG Mon Nov 24 16:21:03 2014:   5) 0x00000008 io_llg
+DEBUG Mon Nov 24 16:21:03 2014:   6) 0x00000009 reg
+DEBUG Mon Nov 24 16:21:03 2014:   7) 0x0000000B cmp_mgr
+DEBUG Mon Nov 24 16:21:03 2014:   8) 0x0000000C dev_mgr
+DEBUG Mon Nov 24 16:21:03 2014:   9) 0x0000000D aul
+DEBUG Mon Nov 24 16:21:03 2014:  10) 0x0000000E aul_hwdef
+DEBUG Mon Nov 24 16:21:03 2014:  11) 0x0000000F acgr
+DEBUG Mon Nov 24 16:21:03 2014:  12) 0x00000010 i8255m0
+DEBUG Mon Nov 24 16:21:03 2014:  13) 0x00000013 i8254
+DEBUG Mon Nov 24 16:21:03 2014:  14) 0x00000015 indirect
+DEBUG Mon Nov 24 16:21:03 2014:  15) 0x00000011 tracere
+DEBUG Mon Nov 24 16:21:03 2014:  16) 0x00000012 stx104
+DEBUG Mon Nov 24 16:21:03 2014: Module_Initialize: exit success
+DEBUG Mon Nov 24 16:21:03 2014: AUL_Initialization: exit success
+DEBUG Mon Nov 24 16:21:03 2014: AUL_Driver_Revision: entry
+DEBUG Mon Nov 24 16:21:03 2014: IO_Version: entry
+DEBUG Mon Nov 24 16:21:03 2014: IO_Version_Command: entry
+DEBUG Mon Nov 24 16:21:03 2014: IO_Version_Command: exit success
+DEBUG Mon Nov 24 16:21:03 2014: IO_Version: exit success
+DEBUG Mon Nov 24 16:21:03 2014: AUL_Driver_Revision: exit success
+DEBUG Mon Nov 24 16:21:03 2014: AUL_Driver_Is_Debug_Active: entry
+DEBUG Mon Nov 24 16:21:03 2014: AUL_Ioctl: entry
+DEBUG Mon Nov 24 16:21:03 2014: IO_Ioctl: entry
+DEBUG Mon Nov 24 16:21:03 2014: IO_LLG_Ioctl: entry
+DEBUG Mon Nov 24 16:21:03 2014: IO_LLG_Ioctl: exit success
+DEBUG Mon Nov 24 16:21:03 2014: IO_Ioctl: exit success
+DEBUG Mon Nov 24 16:21:03 2014: AUL_Ioctl: exit success
+DEBUG Mon Nov 24 16:21:03 2014: AUL_Driver_Is_Debug_Active: exit success
+DEBUG Mon Nov 24 16:21:03 2014: AUL_Device_List_Get: entry
+DEBUG Mon Nov 24 16:21:03 2014: AUL_Ioctl: entry
+DEBUG Mon Nov 24 16:21:03 2014: IO_Ioctl: entry
+DEBUG Mon Nov 24 16:21:03 2014: IO_LLG_Ioctl: entry
+DEBUG Mon Nov 24 16:21:03 2014: IO_LLG_Ioctl: exit success
+DEBUG Mon Nov 24 16:21:03 2014: IO_Ioctl: exit success
+DEBUG Mon Nov 24 16:21:03 2014: AUL_Ioctl: exit success
+DEBUG Mon Nov 24 16:21:03 2014: AUL_Device_List_Get: exit success
+DEBUG Mon Nov 24 16:21:05 2014: AUL_Device_Logical_Get: entry
+DEBUG Mon Nov 24 16:21:05 2014: IO_Is_Definition_Available: entry
+DEBUG Mon Nov 24 16:21:05 2014: IO_Definition_Available_Command: entry
+DEBUG Mon Nov 24 16:21:05 2014: IO_LLG_Definition_Available: entry
+DEBUG Mon Nov 24 16:21:05 2014: IO_LLG_Definition_Available: exit success
+DEBUG Mon Nov 24 16:21:05 2014: IO_Definition_Available_Command: exit success
+DEBUG Mon Nov 24 16:21:05 2014: IO_Is_Definition_Available: exit success
+DEBUG Mon Nov 24 16:21:05 2014: IO_Definition_Get: entry
+DEBUG Mon Nov 24 16:21:05 2014: IO_Definition_Get_Command: entry
+DEBUG Mon Nov 24 16:21:05 2014: IO_LLG_Definition_Get: entry
+DEBUG Mon Nov 24 16:21:05 2014: IO_LLG_Definition_Get: exit success
+DEBUG Mon Nov 24 16:21:05 2014: IO_Definition_Get_Command: exit success
+DEBUG Mon Nov 24 16:21:05 2014: IO_Definition_Get: exit success
+DEBUG Mon Nov 24 16:21:05 2014: AUL_Device_Open: entry
+DEBUG Mon Nov 24 16:21:05 2014: IO_Is_Definition_Available: entry
+DEBUG Mon Nov 24 16:21:05 2014: IO_Definition_Available_Command: entry
+DEBUG Mon Nov 24 16:21:05 2014: IO_LLG_Definition_Available: entry
+DEBUG Mon Nov 24 16:21:05 2014: IO_LLG_Definition_Available: exit success
+DEBUG Mon Nov 24 16:21:05 2014: IO_Definition_Available_Command: exit success
+DEBUG Mon Nov 24 16:21:05 2014: IO_Is_Definition_Available: exit success
+DEBUG Mon Nov 24 16:21:05 2014: IO_Definition_Get: entry
+DEBUG Mon Nov 24 16:21:05 2014: IO_Definition_Get_Command: entry
+DEBUG Mon Nov 24 16:21:05 2014: IO_LLG_Definition_Get: entry
+DEBUG Mon Nov 24 16:21:05 2014: IO_LLG_Definition_Get: exit success
+DEBUG Mon Nov 24 16:21:05 2014: IO_Definition_Get_Command: exit success
+DEBUG Mon Nov 24 16:21:05 2014: IO_Definition_Get: exit success
+DEBUG Mon Nov 24 16:21:05 2014: IO_Open: entry
+DEBUG Mon Nov 24 16:21:05 2014: IO_LLG_Open: entry
+DEBUG Mon Nov 24 16:21:05 2014: IO_LLG_Open: exit success
+DEBUG Mon Nov 24 16:21:05 2014: IO_Open: exit success
+DEBUG Mon Nov 24 16:21:05 2014: AUL_Device_Open: exit success
+DEBUG Mon Nov 24 16:21:24 2014: IO_Close: enter
+DEBUG Mon Nov 24 16:21:24 2014: IO_LLG_Close: enter
+DEBUG Mon Nov 24 16:21:24 2014: IO_LLG_Close: exit success
+DEBUG Mon Nov 24 16:21:24 2014: IO_Close: exit success
+DEBUG Mon Nov 24 16:21:24 2014: module aul, function AUL_Board, line 142, error: board dataset null
+DEBUG Mon Nov 24 16:21:24 2014: module stx104, function STX104_Gen_Revision_Get, line 112, error: board dataset null
+DEBUG Mon Nov 24 16:21:24 2014: AUL_Termination: entry
+DEBUG Mon Nov 24 16:21:24 2014:  TERMINATE MODULES:
+DEBUG Mon Nov 24 16:21:24 2014:   --> stx104           ec=0
+DEBUG Mon Nov 24 16:21:24 2014:   --> tracere          ec=0
+DEBUG Mon Nov 24 16:21:24 2014:   --> indirect         ec=0
+DEBUG Mon Nov 24 16:21:24 2014:   --> i8254            ec=0
+DEBUG Mon Nov 24 16:21:24 2014:   --> i8255m0          ec=0
+DEBUG Mon Nov 24 16:21:24 2014:   --> acgr             ec=0
+DEBUG Mon Nov 24 16:21:24 2014:   --> aul_hwdef        ec=0
+DEBUG Mon Nov 24 16:21:24 2014:   --> aul              ec=0
+DEBUG Mon Nov 24 16:21:24 2014:   --> dev_mgr          ec=0
+DEBUG Mon Nov 24 16:21:24 2014:   --> cmp_mgr          ec=0
+DEBUG Mon Nov 24 16:21:24 2014:   --> reg              ec=0
+DEBUG Mon Nov 24 16:21:24 2014: IO_Terminate: entry
+DEBUG Mon Nov 24 16:21:24 2014: IO_LLG_Terminate: entry
+DEBUG Mon Nov 24 16:21:24 2014: IO_LLG_Terminate: exit success
+DEBUG Mon Nov 24 16:21:24 2014: IO_Terminate: exit success
+DEBUG Mon Nov 24 16:21:24 2014:   --> io_llg           ec=0
+DEBUG Mon Nov 24 16:21:24 2014:   --> module           ec=0
+DEBUG Mon Nov 24 16:21:24 2014:   --> error            ec=0
+DEBUG Mon Nov 24 16:21:24 2014:   --> mem              ec=0
+DEBUG Mon Nov 24 16:21:24 2014:   --> debug            ec=0
+DEBUG Mon Nov 24 16:21:24 2014:   --> status           ec=0
+DEBUG Mon Nov 24 16:21:24 2014: 
+DEBUG Mon Nov 24 16:21:24 2014: Module_Terminate: exit ec=success
+DEBUG Mon Nov 24 16:21:24 2014: AUL_Termination: exit success

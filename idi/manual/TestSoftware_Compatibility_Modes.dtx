@@ -1,0 +1,41 @@
+
+@@Compatibility Selection and Extended Functions
+Summary
+The mode jumpers provide upwardly compatible feature
+additions/enhancements without affecting existing hardware
+installations. In other words, expand features and software
+as the user might need.
+Description
+\ \ 
+
+Currently no modes are implemented.
+
+
+
+If 10-bit addressing and IOEXP is always ignored, then A3
+jumper can be re-purposed to a mode jumper M2 to allow up to
+eight possible hardware configuration/enhancement modes.
+
+<table>
+MODE                                      A3 /           M1   M0
+                                           IGNORE_IOEXP        
+                                           / M2<p />(If        
+                                           functioning         
+                                           as M2)              
+----------------------------------------  =============  ===  ===
+LPM-OUT48 compatibility                   0              0    0
+LPM-OUT48 compatibility, SPI &amp; FRAM   0              0    1
+LPM-OUT48 compatibility, SPI &amp; FRAM   0              1    0
+LPM-OUT48 compatibility, SPI &amp; FRAM   0              1    1
+LPM-OUT48 compatibility, SPI &amp; FRAM   1              0    0
+LPM-OUT48 compatibility, SPI &amp; FRAM   1              0    1
+LPM-OUT48 compatibility, SPI &amp; FRAM   1              1    0
+LPM-OUT48 compatibility, SPI &amp; FRAM   1              1    1
+</table>
+\Note: 0 = Jumper installed, 1 = Jumper not installed.
+
+
+
+
+
+* - -- -- -- - *

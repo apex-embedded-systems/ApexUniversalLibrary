@@ -1,0 +1,46 @@
+#!/bin/bash
+
+#NOTE: THIS IS OLD --> USE 'fixup_aes_ws' instead.
+
+
+# Remove all of the following files:
+# 1. dmesg.txt
+# 2. any *.o files
+
+#echo "deploy demo_multiple_boards"
+#cd ~/aes_eclipse/demo_multiple_boards
+#find . -depth -print | cpio -panVd ~/aes_ws/demo_multiple_boards
+
+#echo "deploy demo_stx104_fast"
+#cd ~/aes_eclipse/demo_stx104_fast
+#find . -depth -print | cpio -panVd ~/aes_ws/demo_stx104_fast
+
+#echo "deploy demo_stx104_simple"
+#cd ~/aes_eclipse/demo_stx104_simple
+#find . -depth -print | cpio -panVd ~/aes_ws/demo_stx104_simple
+
+#echo "deploy drv_aul_sim"
+#cd ~/aes_eclipse/drv_aul_sim
+#find . -depth -print | cpio -panVd ~/aes_ws/drv_aul_sim
+
+#echo "deploy drv_aul_x86"
+#cd ~/aes_eclipse/drv_aul_x86
+#find . -depth -print | cpio -panVd ~/aes_ws/drv_aul_x86
+
+#echo "deploy lib_report"
+#cd ~/aes_eclipse/lib_report
+#find . -depth -print | cpio -panVd ~/aes_ws/lib_report
+
+#echo "deploy aul_tree"
+#cd ~/aes_eclipse/aul_tree
+#find . -depth -print | cpio -panVd ~/aes_ws/aul_tree
+
+
+rm -rf ./array
+rm -rf ./aul_lib_dll
+rm -rf ./demo
+rm -rf ./AppTestDLL
+#rm -rf ./_Out_Executable_AulTest_Debug
+#rm -rf ./WinDriver
+#rm -rf ./test
+##rm ./Unique_IDs.ods

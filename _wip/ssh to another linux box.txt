@@ -1,0 +1,4 @@
+SSH
+
+Debian machine.
+ssh -X mike@192.168.7.205

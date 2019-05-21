@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<psf version="2.0">
+<provider id="org.tigris.subversion.subclipse.core.svnnature">
+<project reference="0.9.3,https://108.242.46.195:44300/svn/Apex/ApexUniversalLibrary/aul_tree,aul_tree"/>
+<project reference="0.9.3,https://108.242.46.195:44300/svn/Apex/ApexUniversalLibrary/demo_basic,demo_basic"/>
+<project reference="0.9.3,https://108.242.46.195:44300/svn/Apex/ApexUniversalLibrary/demo_multiple_boards,demo_multiple_boards"/>
+<project reference="0.9.3,https://108.242.46.195:44300/svn/Apex/ApexUniversalLibrary/demo_stx104_fast,demo_stx104_fast"/>
+<project reference="0.9.3,https://108.242.46.195:44300/svn/Apex/ApexUniversalLibrary/demo_stx104_simple,demo_stx104_simple"/>
+<project reference="0.9.3,https://108.242.46.195:44300/svn/Apex/ApexUniversalLibrary/drv_aul_sim,drv_aul_sim"/>
+<project reference="0.9.3,https://108.242.46.195:44300/svn/Apex/ApexUniversalLibrary/drv_aul_x86,drv_aul_x86"/>
+<project reference="0.9.3,https://108.242.46.195:44300/svn/Apex/ApexUniversalLibrary/drv_test,drv_test"/>
+<project reference="0.9.3,https://108.242.46.195:44300/svn/Apex/ApexUniversalLibrary/lib_report,lib_report"/>
+</provider>
+</psf>

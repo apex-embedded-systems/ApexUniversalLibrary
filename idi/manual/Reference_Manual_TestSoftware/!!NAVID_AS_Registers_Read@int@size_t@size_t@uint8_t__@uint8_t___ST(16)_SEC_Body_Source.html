@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Body Source</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;!!NAVID_AS_Registers_Read@int@size_t@size_t@uint8_t__@uint8_t___ST(16)_SEC_Body_Source.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!FUNCTIONS.html" target="topic">Functions</a> &gt; <a href="AS_Registers_Read@int@size_t@size_t@uint8_t__@uint8_t__.html" target="topic">AS_Registers_Read Function</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+</td></tr></table><div class="Element39">
+Body Source</div>
+<div class="Element40">
+<a href="AS_Registers_Read@int@size_t@size_t@uint8_t__@uint8_t__.html" target="topic">AS_Registers_Read Function</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<div class="Element14">
+Body Source</div>
+<div class="Element11">
+<div class="Element10">
+<div class="Element170">
+<a href="#" onclick="CopyElementToClipboard(&#39;code00269&#39;);">Copy Code</a></div>
+<div class="Element13"><div class="Element12" id="code00269"><pre class="Element12"> 1: <strong><span style="color: #008000;">static</span></strong> <strong><span style="color: #008000;">int</span></strong> AS_Registers_Read( <strong><span style="color: #008000;">int</span></strong> board_id, size_t address, size_t count, <a href="uint8_t.html" target="topic">uint8_t</a> * tx_buf, <a href="uint8_t.html" target="topic">uint8_t</a> * rx_buf )
+ 2: {
+ 3: 	size_t		object_count;
+ 4: 	<strong><span style="color: #008000;">int</span></strong>			error_code;
+ 5: 
+ 6: <strong><span style="color: #008000;">#define</span></strong> FUNCTION_NAME__  &quot;AS_Registers_Read&quot;
+ 7: <strong><span style="color: #008000;">#if</span></strong> ( <a href="IO_TRACE_USE_AS_LOGGING.html" target="topic">IO_TRACE_USE_AS_LOGGING</a> == 1 )
+ 8: 	<a href="IO_Trace_Log_Function@char__@size_t@enum_IO_TRACE_ENUM@int@int.html" target="topic">IO_Trace_Log_Function</a>( FUNCTION_NAME__, __LINE__, IO_TRACE_AS, board_id, 0 );
+ 9: <strong><span style="color: #008000;">#endif</span></strong>
+10: <strong><span style="color: #008000;">#undef</span></strong> FUNCTION_NAME__
+11: 
+12: 	
+13: 	<strong><span style="color: #008000;">if</span></strong> ( ( address + count ) &gt; AS_ADS1259_REGISTER_QTY ) <strong><span style="color: #008000;">return</span></strong> -EC_REGISTER_ADDRESS_EXCEEDED;
+14: 	
+15: 	count   = 0x0F &amp; count;
+16: 	address = 0x0F &amp; address;
+17: 	tx_buf[0] = 0x20;
+18: 	tx_buf[0] = tx_buf[0] + ( (<a href="uint8_t.html" target="topic">uint8_t</a>) address );
+19: 	tx_buf[1] = tx_buf[1] + ( (<a href="uint8_t.html" target="topic">uint8_t</a>) count   );
+20: 
+21: 	
+22: 	object_count = count + 2;
+23: 	<a href="AS_Chip_Select_Route_Override@int.html" target="topic">AS_Chip_Select_Route_Override</a>( board_id );
+24: 	<a href="SPI_Configuration_Chip_Select_Behavior_Set@int@SPI_CSB_ENUM.html" target="topic">SPI_Configuration_Chip_Select_Behavior_Set</a>( board_id, CSB_BUFFER );
+25: 	error_code =  <a href="SPI_Data_Write_Read@int@size_t@size_t@void__@size_t@void__.html" target="topic">SPI_Data_Write_Read</a>(  board_id,		
+26: 										1,				
+27: 										object_count,	
+28: 										tx_buf, 		
+29: 										object_count,	
+30: 										rx_buf 			
+31: 							  	  	  );
+32: 	<a href="AS_Chip_Select_Route_Restore@int.html" target="topic">AS_Chip_Select_Route_Restore</a>( board_id );
+33: 	<strong><span style="color: #008000;">return</span></strong> error_code;
+34: }
+</pre></div></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

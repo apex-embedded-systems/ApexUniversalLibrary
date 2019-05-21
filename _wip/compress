@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Apex Universal Library
+# Apex Embedded Systems
+#
+# @file   fixup_aes_ws
+# @brief  deployment
+#
+# "$Date: 2015-07-31 06:28:01 -0500 (Fri, 31 Jul 2015) $"
+
+
+############### CUSTOMER SPECIFIC CODE REMOVAL FLAGS ####################
+
+#REMOVE_EGS=0
+REMOVE_EGS=1
+REMOVE_INTERNAL=1
+
+
+###################### SOURCE & DESTINATION FOLDER #########################
+
+SRC="aes_eclipse"
+DST="aes_ws"
+
+
+
+###################### ARCHIVE DST FOLDER #########################
+TIMESTAMP=$(date +"%Y%m%d%H%M%S")
+echo "##==> Archiving driver/library/applications"
+tar -zcvf ~/share/aes-$TIMESTAMP.tar.gz -C ~/ $DST
+echo "##==> Archived 'aes-$TIMESTAMP.tar.gz' completed.  Have a nice day." 
+
+
+
+

@@ -1,0 +1,49 @@
+
+@@Specifications
+\ \ 
+* Power Requirements *
+  * Power supply requirements: +5 V at 100 mA (estimated)
+* Digital Inputs *
+  * Opto&#45;isolator input current using 5V input signal and
+    2.2K input resistor is typically 1.8 mA over temperature
+    range.
+  * 12K for nominal 28V. Transition region measured typically
+    2.5 to 4.3 VDC over temperature range.
+    * 4V @ 0.25mA, +/&#45; 30mA over temperature range
+    * 20V @ 1.57mA, very consistent over temperature range.
+    * 37V @ 2.97mA, very consistent over temperature range.
+  * Isolated section to non&#45;isolated section voltage gap
+    greater than +/&#45;1100 Volts DC
+  * Contact us for variation in input resistance values
+    * 2.2K for nominal 5V. Transition region measured
+      typically 1.3 to 1.5 VDC over temperature range.
+      * typically 1.8 mA with 5V applied to input over
+        temperature range
+* Bus Interface *
+  * 10&#45;bit addressing modes. IOEXP can be optionally used
+    as part of the address decoding
+  * Contiguous I/O space is 16&#45;bytes. Note that A3 base
+    address select is unused and can be used for other purposes.
+    Refer to <link Compatibility Selection and Extended Functions>
+    for further details.
+  * 8&#45;bit or byte data width
+  * STD&#45;Bus CMOS bus compatible.
+    * Supports 5V logic levels: Vil_max \<= Vcc x 0.3,
+      Vih_min \>= Vcc x 0.7. See note &#35;1 below.
+      * Vcc = 4.8V: Vil_max = 1.4 V, Vih_min \>= 3.4 V (TTL
+        outputs, require pull&#45;up which are on CPU board)
+      * Vcc = 5.1V: Vil_max = 1.53 V, Vih_min \>= 3.6 V (TTL
+        outputs, require pull&#45;up which are on CPU board)
+      * Vcc = 3.3V: Vil_max = 0.8 V, Vih_min \>= 2 V
+        (completely LVTTL compatible). See note &#35;2 below.
+Notes:
+  1. The 586 CPU board issues signals that are at least 4Vpp.
+* Mechanical *
+  * Dimensions: 4.5 x 6.5 inches
+  * PCB is 4&#45;layer
+  * Jumpers for address and interrupt selection use 2mm
+    jumper shunts
+* Environmental *
+  * Operating temperature: <color Blue>&#45;40<sup>o</sup>C</color>
+    to <color Red>+85<sup>o</sup>C</color>
+  * Humidity: 5 to 95% (estimated)

@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Body Source</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;!!NAVID_IOKern_IRQ_Test_Helper@unsigned_int_ST(16)_SEC_Body_Source.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!FUNCTIONS.html" target="topic">Functions</a> &gt; <a href="IOKern_IRQ_Test_Helper@unsigned_int.html" target="topic">IOKern_IRQ_Test_Helper Function</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+</td></tr></table><div class="Element39">
+Body Source</div>
+<div class="Element40">
+<a href="IOKern_IRQ_Test_Helper@unsigned_int.html" target="topic">IOKern_IRQ_Test_Helper Function</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<div class="Element14">
+Body Source</div>
+<div class="Element11">
+<div class="Element10">
+<div class="Element170">
+<a href="#" onclick="CopyElementToClipboard(&#39;code00457&#39;);">Copy Code</a></div>
+<div class="Element13"><div class="Element12" id="code00457"><pre class="Element12"> 1: <strong><span style="color: #008000;">int</span></strong> IOKern_IRQ_Test_Helper( <strong><span style="color: #008000;">unsigned</span></strong> <strong><span style="color: #008000;">int</span></strong> irq )
+ 2: {
+ 3: 	<strong><span style="color: #008000;">int</span></strong> error_code = SUCCESS;
+ 4: <strong><span style="color: #008000;">#if</span></strong> defined( IOKERN_CPU_REGION_MAP )
+ 5: 	<strong><span style="color: #008000;">int</span></strong> index;
+ 6: 	
+ 7: 	index = 0;
+ 8: 	<strong><span style="color: #008000;">while</span></strong>( SYS_TYPE__NONE != iokern_irq_map_list[index].type )
+ 9: 	{
+10: 		<strong><span style="color: #008000;">if</span></strong> ( irq == iokern_irq_map_list[index].irq )
+11: 		{ 
+12: 			<strong><span style="color: #008000;">return</span></strong>( -((<strong><span style="color: #008000;">int</span></strong>)(index + 1)) );
+13: 		}
+14: 		index++;
+15: 	}
+16: <strong><span style="color: #008000;">#endif</span></strong>
+17: 
+18: 	<strong><span style="color: #008000;">switch</span></strong>( (<a href="IOKERN_IRQ_ENUM.html" target="topic">IOKERN_IRQ_ENUM</a>) irq )
+19: 	{
+20: 		<strong><span style="color: #008000;">case</span></strong> IOKERN_IRQ_NONE:
+21: 		
+22: 		<strong><span style="color: #008000;">case</span></strong> IOKERN_IRQ_1:
+23: 		
+24: 		<strong><span style="color: #008000;">case</span></strong> IOKERN_IRQ_3:
+25: 		<strong><span style="color: #008000;">case</span></strong> IOKERN_IRQ_4:
+26: 		<strong><span style="color: #008000;">case</span></strong> IOKERN_IRQ_5:
+27: 		<strong><span style="color: #008000;">case</span></strong> IOKERN_IRQ_6:
+28: 		<strong><span style="color: #008000;">case</span></strong> IOKERN_IRQ_7:
+29: 		<strong><span style="color: #008000;">case</span></strong> IOKERN_IRQ_9:
+30: 		<strong><span style="color: #008000;">case</span></strong> IOKERN_IRQ_10:
+31: 		<strong><span style="color: #008000;">case</span></strong> IOKERN_IRQ_11:
+32: 		<strong><span style="color: #008000;">case</span></strong> IOKERN_IRQ_12:
+33: 		
+34: 		<strong><span style="color: #008000;">case</span></strong> IOKERN_IRQ_14:
+35: 		<strong><span style="color: #008000;">case</span></strong> IOKERN_IRQ_15:
+36: 		
+37: 			<strong><span style="color: #008000;">break</span></strong>;
+38: 		<strong><span style="color: #008000;">default</span></strong>:
+39: 			error_code =  -EC_INTR_ERROR;
+40: 	}
+41: 
+42: 	<strong><span style="color: #008000;">return</span></strong> error_code;
+43: }
+</pre></div></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

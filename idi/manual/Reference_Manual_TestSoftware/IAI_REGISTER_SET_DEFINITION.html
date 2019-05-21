@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>IAI_REGISTER_SET_DEFINITION Macro</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;IAI_REGISTER_SET_DEFINITION.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!MACROS.html" target="topic">Macros</a> &gt; <a href="IAI_REGISTER_SET_DEFINITION.html" target="topic">IAI_REGISTER_SET_DEFINITION Macro</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="FRAM_BLOCK_SIZE.html" target="topic"><img src="btn_prev_midblue.gif" border="0" alt="Previous" title="Previous" onmouseover="switchImage(this, &#39;btn_prev_midblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_prev_midblue.gif&#39;);" /></a><a href="!!MACROS.html" target="topic"><img src="btn_up_midblue.gif" border="0" alt="Up" title="Up" onmouseover="switchImage(this, &#39;btn_up_midblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_up_midblue.gif&#39;);" /></a><a href="IDI_BANK_INFO_DEFINITION.html" target="topic"><img src="btn_next_midblue.gif" border="0" alt="Next" title="Next" onmouseover="switchImage(this, &#39;btn_next_midblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_next_midblue.gif&#39;);" /></a></div>
+</td></tr></table><div class="Element5">
+IAI_REGISTER_SET_DEFINITION Macro</div>
+<div class="Element7">
+<a href="idi_c.html" target="topic">idi.c</a> | <a href="!!MACROS.html" target="topic">Macros</a></div>
+<div class="Element731">
+<div class="Element730">
+<a onclick="ToggleAllElements(&#39;46696C65,546F646F,47726F7570,4C696E6B73&#39;, &#39;linkToggleAllElements&#39;, &#39;imgToggleAllElements&#39;, &#39;Collapse All&#39;, &#39;Expand All&#39;);"><img src="btn_collapse.gif" border="0" alt="" title="" id="imgToggleAllElements" /></a><a id="linkToggleAllElements" onclick="ToggleAllElements(&#39;46696C65,546F646F,47726F7570,4C696E6B73&#39;, &#39;linkToggleAllElements&#39;, &#39;imgToggleAllElements&#39;, &#39;Collapse All&#39;, &#39;Expand All&#39;);">Collapse All</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<a name="432B2B"></a><div class="Element99">
+C++</div>
+<div class="Element101"><div class="Element100"><pre class="Element100"><strong><span style="color: #008000;">#define</span></strong> <strong><span style="color: #660000;">IAI_REGISTER_SET_DEFINITION</span></strong>(_) \
+<em><span style="color: #0000FF;">/*    enum_symbol          	 logical   physical  byte   bus byte                                               */</span></em> \
+<em><span style="color: #0000FF;">/*    enum_symbol          	 address   offset    width  aperture   read/write      acronym	      bank	       */</span></em> \
+    <em><span style="color: #0000FF;">/** DATA REGISTERS ***/</span></em> \
+    _( IAI_AIN0,                 0,     0x00,        2,        1,        REG_DIR_READ,        &quot;ai1&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_AIN1,                 1,     0x02,        2,        1,        REG_DIR_READ,        &quot;ai2&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_AIN2,                 2,     0x04,        2,        1,        REG_DIR_READ,        &quot;ai3&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_AIN3,                 3,     0x06,        2,        1,        REG_DIR_READ,        &quot;ai4&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_AIN4,                 4,     0x20,        2,        1,        REG_DIR_READ,        &quot;ai5&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_AIN5,                 5,     0x22,        2,        1,        REG_DIR_READ,        &quot;ai6&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_AIN6,                 6,     0x24,        2,        1,        REG_DIR_READ,        &quot;ai7&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_AIN7,                 7,     0x26,        2,        1,        REG_DIR_READ,        &quot;ai8&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_AIN8,                 8,     0x40,        2,        1,        REG_DIR_READ,        &quot;ai9&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_AIN9,                 9,     0x42,        2,        1,        REG_DIR_READ,        &quot;ai10&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_AIN10,                10,     0x44,        2,        1,        REG_DIR_READ,        &quot;ai11&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_AIN11,                11,     0x46,        2,        1,        REG_DIR_READ,        &quot;ai12&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_AIN12,                12,     0x60,        2,        1,        REG_DIR_READ,        &quot;ai13&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_AIN13,                13,     0x62,        2,        1,        REG_DIR_READ,        &quot;ai14&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_AIN14,                14,     0x64,        2,        1,        REG_DIR_READ,        &quot;ai15&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_AIN15,                15,     0x66,        2,        1,        REG_DIR_READ,        &quot;ai16&quot;,        IAI_BANK_NONE    ) \
+    <em><span style="color: #0000FF;">/** FPGA INFORMATION ***/</span></em>\
+    _( IAI_FPGA_DATA,             7,        8,        1,        1,        REG_DIR_READ,        &quot;fd&quot;,        IDI_BANK_0        ) \
+    _( IAI_FPGA_INDEX,             8,        9,        1,        1,        REG_DIR_READ_WRITE,    &quot;fi&quot;,        IDI_BANK_0        ) \
+    <em><span style="color: #0000FF;">/** OTHER REGISTERS ***/</span></em> \
+    _( IAI_ID_LSB,                17,  0x6E,        1,        1,        REG_DIR_READ,        &quot;idlsb&quot;,    IAI_BANK_NONE    ) \
+    _( IAI_ID_MSB,                18,  0x6F,        1,        1,        REG_DIR_READ,        &quot;idmsb&quot;,    IAI_BANK_NONE    ) \
+    <em><span style="color: #0000FF;">/** SPI REGISTERS ***/</span></em>\
+    _( IAI_SPI_ID_LSB,            19,     0x70,        1,        1,        REG_DIR_READ,        &quot;sidlsb&quot;,    IAI_BANK_NONE    ) \
+    _( IAI_SPI_ID_MSB,            20,     0x71,        1,        1,        REG_DIR_READ,        &quot;sidmsb&quot;,    IAI_BANK_NONE    ) \
+    _( IAI_SPI_CONFIG,            21,     0x72,        1,        1,        REG_DIR_READ_WRITE,    &quot;scfg&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_SPI_ECD,                22,     0x73,        1,        1,        REG_DIR_READ_WRITE,    &quot;secd&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_SPI_HCI_LSB,            23,     0x74,        1,        1,        REG_DIR_READ_WRITE,    &quot;shclsb&quot;,    IAI_BANK_NONE    ) \
+    _( IAI_SPI_HCI_MSB,            24,     0x75,        1,        1,        REG_DIR_READ_WRITE,    &quot;shcmsb&quot;,    IAI_BANK_NONE    ) \
+    _( IAI_SPI_DATA,            25,     0x76,        1,        1,        REG_DIR_READ_WRITE,    &quot;sdata&quot;,    IAI_BANK_NONE    ) \
+    _( IAI_SPI_TX_STATUS,        26,     0x77,        1,        1,        REG_DIR_READ,        &quot;stxf&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_SPI_RX_STATUS,        27,     0x78,        1,        1,        REG_DIR_READ,        &quot;srxf&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_SPI_COMMIT,            28,     0x79,        1,        1,        REG_DIR_READ_WRITE,    &quot;scmt&quot;,        IAI_BANK_NONE    ) \
+    _( IAI_UNDEFINED,            29,        0,        0,        0,        REG_DIR_NONE,        &quot;&quot;,            IAI_BANK_UNDEFINED    )</pre></div></div>
+<a name="46696C65"></a><div class="Element14">
+<a onclick="toggleVisibilityStored(&#39;46696C65&#39;);" class="a_Element14"><img src="btn_collapse_large.gif" border="0" alt="" title="" id="img46696C65" />File</a></div>
+<div id="div46696C65">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="idi_c.html" target="topic">idi.c</a></p></div>
+</div>
+</div>
+<a name="546F646F"></a><div class="Element14">
+<a onclick="toggleVisibilityStored(&#39;546F646F&#39;);" class="a_Element14"><img src="btn_collapse_large.gif" border="0" alt="" title="" id="img546F646F" />Todo</a></div>
+<div id="div546F646F">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+incomplete IAI16 register set definition below</p></div>
+</div>
+</div>
+<a name="47726F7570"></a><div class="Element14">
+<a onclick="toggleVisibilityStored(&#39;47726F7570&#39;);" class="a_Element14"><img src="btn_collapse_large.gif" border="0" alt="" title="" id="img47726F7570" />Group</a></div>
+<div id="div47726F7570">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="!!MACROS.html" target="topic">Macros</a></p></div>
+</div>
+</div>
+<a name="4C696E6B73"></a><div class="Element14">
+<a onclick="toggleVisibilityStored(&#39;4C696E6B73&#39;);" class="a_Element14"><img src="btn_collapse_large.gif" border="0" alt="" title="" id="img4C696E6B73" />Links</a></div>
+<div id="div4C696E6B73">
+<div class="Element11">
+<div class="Element10">
+<a href="idi_c.html" target="topic">idi.c</a>, <a href="!!MACROS.html" target="topic">Macros</a></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic? <a href="#" onclick="sendFeedback('customer.service@apexembeddedsytems.com', 'STX104 Documentation Feedback', 'Project: STD-Bus Test Software Reference Manual%0ATopic ID: IAI_REGISTER_SET_DEFINITION%0ATitle: IAI_REGISTER_SET_DEFINITION Macro');"> Send feedback! </a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

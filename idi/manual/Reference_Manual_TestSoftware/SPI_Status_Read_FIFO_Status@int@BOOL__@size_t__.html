@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>SPI_Status_Read_FIFO_Status Function</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;SPI_Status_Read_FIFO_Status@int@BOOL__@size_t__.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!FUNCTIONS.html" target="topic">Functions</a> &gt; <a href="SPI_Status_Read_FIFO_Status@int@BOOL__@size_t__.html" target="topic">SPI_Status_Read_FIFO_Status Function</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="SPI_Status_Read_FIFO_Is_Not_Empty@int.html" target="topic"><img src="btn_prev_midblue.gif" border="0" alt="Previous" title="Previous" onmouseover="switchImage(this, &#39;btn_prev_midblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_prev_midblue.gif&#39;);" /></a><a href="!!FUNCTIONS.html" target="topic"><img src="btn_up_midblue.gif" border="0" alt="Up" title="Up" onmouseover="switchImage(this, &#39;btn_up_midblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_up_midblue.gif&#39;);" /></a><a href="SPI_Status_Write@int@struct_spi_status__.html" target="topic"><img src="btn_next_midblue.gif" border="0" alt="Next" title="Next" onmouseover="switchImage(this, &#39;btn_next_midblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_next_midblue.gif&#39;);" /></a></div>
+</td></tr></table><div class="Element5">
+SPI_Status_Read_FIFO_Status Function</div>
+<div class="Element7">
+<a href="idi_c.html" target="topic">idi.c</a> | <a href="!!FUNCTIONS.html" target="topic">Functions</a> | <a href="!!NAVID_SPI_Status_Read_FIFO_Status@int@BOOL__@size_t___ST(16)_SEC_Body_Source.html" target="topic">Body Source</a></div>
+<div class="Element731">
+<div class="Element730">
+<a onclick="ToggleAllElements(&#39;46696C65,52657475726E73,4465736372697074696F6E,426F647920536F75726365,47726F7570,4C696E6B73&#39;, &#39;linkToggleAllElements&#39;, &#39;imgToggleAllElements&#39;, &#39;Collapse All&#39;, &#39;Expand All&#39;);"><img src="btn_collapse.gif" border="0" alt="" title="" id="imgToggleAllElements" /></a><a id="linkToggleAllElements" onclick="ToggleAllElements(&#39;46696C65,52657475726E73,4465736372697074696F6E,426F647920536F75726365,47726F7570,4C696E6B73&#39;, &#39;linkToggleAllElements&#39;, &#39;imgToggleAllElements&#39;, &#39;Collapse All&#39;, &#39;Expand All&#39;);">Collapse All</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<a name="432B2B"></a><div class="Element99">
+C++</div>
+<div class="Element101"><div class="Element100"><pre class="Element100"><strong><span style="color: #008000;">void</span></strong> <strong><span style="color: #660000;">SPI_Status_Read_FIFO_Status</span></strong>(<strong><span style="color: #008000;">int</span></strong> <strong><span style="color: #800080;">board_id</span></strong>, <a href="BOOL.html" target="topic">BOOL</a> * <strong><span style="color: #800080;">empty</span></strong>, size_t * <strong><span style="color: #800080;">bytes_available</span></strong>);</pre></div></div>
+<a name="46696C65"></a><div class="Element14">
+<a onclick="toggleVisibilityStored(&#39;46696C65&#39;);" class="a_Element14"><img src="btn_collapse_large.gif" border="0" alt="" title="" id="img46696C65" />File</a></div>
+<div id="div46696C65">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="idi_c.html" target="topic">idi.c</a></p></div>
+</div>
+</div>
+<a name="52657475726E73"></a><div class="Element14">
+<a onclick="toggleVisibilityStored(&#39;52657475726E73&#39;);" class="a_Element14"><img src="btn_collapse_large.gif" border="0" alt="" title="" id="img52657475726E73" />Returns</a></div>
+<div id="div52657475726E73">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+nothing</p></div>
+</div>
+</div>
+<a name="4465736372697074696F6E"></a><div class="Element14">
+<a onclick="toggleVisibilityStored(&#39;4465736372697074696F6E&#39;);" class="a_Element14"><img src="btn_collapse_large.gif" border="0" alt="" title="" id="img4465736372697074696F6E" />Description</a></div>
+<div id="div4465736372697074696F6E">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+brief Returns the complete read/receive FIFO status.&#160;</p>
+<p class="Element10">
+The status register has the following format: status[7] full status[6] empty status[5] not used (future size expansion) status[4:0] number of bytes currently in the FIFO&#160;</p>
+<p class="Element10">
+param[out] empty FIFO empty flag param[out] bytes_available a count of the number of bytes in the FIFO </p></div>
+</div>
+</div>
+<a name="426F647920536F75726365"></a><div class="Element14">
+<a onclick="toggleVisibilityStored(&#39;426F647920536F75726365&#39;);" class="a_Element14"><img src="btn_collapse_large.gif" border="0" alt="" title="" id="img426F647920536F75726365" />Body Source</a></div>
+<div id="div426F647920536F75726365">
+<div class="Element11">
+<div class="Element10">
+<div class="Element170">
+<a href="#" onclick="CopyElementToClipboard(&#39;code00253&#39;);">Copy Code</a></div>
+<div class="Element13"><div class="Element12" id="code00253"><pre class="Element12"> 1: <strong><span style="color: #008000;">void</span></strong> SPI_Status_Read_FIFO_Status( <strong><span style="color: #008000;">int</span></strong> board_id, <a href="BOOL.html" target="topic">BOOL</a> * empty,  size_t * bytes_available )
+ 2: {
+ 3: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_XFR_DEBUG )
+ 4: 	<a href="uint8_t.html" target="topic">uint8_t</a> reg_value[4];
+ 5: 	size_t	index;
+ 6: 	size_t  scratch;
+ 7: 	<strong><span style="color: #008000;">int</span></strong>     error_code;
+ 8: <strong><span style="color: #008000;">#endif</span></strong>
+ 9: 	<a href="uint8_t.html" target="topic">uint8_t</a>	reg_rx_status;
+10: 
+11: <strong><span style="color: #008000;">#define</span></strong> FUNCTION_NAME__  &quot;SPI_Status_Read_FIFO_Status&quot;
+12: <strong><span style="color: #008000;">#if</span></strong> ( <a href="IO_TRACE_USE_SPI_LOGGING.html" target="topic">IO_TRACE_USE_SPI_LOGGING</a> == 1 )
+13: 	<a href="IO_Trace_Log_Function@char__@size_t@enum_IO_TRACE_ENUM@int@int.html" target="topic">IO_Trace_Log_Function</a>( FUNCTION_NAME__, __LINE__, IO_TRACE_SPI, board_id, 0 );
+14: <strong><span style="color: #008000;">#endif</span></strong>
+15: <strong><span style="color: #008000;">#undef</span></strong> FUNCTION_NAME__
+16: 
+17: 
+18: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_XFR_DEBUG )
+19: 	<strong><span style="color: #008000;">switch</span></strong> ( board_id )
+20: 	{
+21: 		<strong><span style="color: #008000;">case</span></strong> ID_IDI48:
+22: 			<strong><span style="color: #008000;">for</span></strong> ( index = 0; index &lt; 4; index++ )
+23: 				<a href="IO_Read_U8@int@size_t@int@uint8_t__.html" target="topic">IO_Read_U8</a>( board_id, __LINE__, IDI_SPI_RX_STATUS, &amp;(reg_value[index]) );
+24: 			<strong><span style="color: #008000;">break</span></strong>;
+25: 		<strong><span style="color: #008000;">case</span></strong> ID_IDO48:
+26: 			<strong><span style="color: #008000;">for</span></strong> ( index = 0; index &lt; 4; index++ )
+27: 				<a href="IO_Read_U8@int@size_t@int@uint8_t__.html" target="topic">IO_Read_U8</a>( board_id, __LINE__, IDO_SPI_RX_STATUS, &amp;(reg_value[index]) );
+28: 			<strong><span style="color: #008000;">break</span></strong>;
+29: 	}
+30: 
+31: 	error_code = 0;
+32: 	<strong><span style="color: #008000;">for</span></strong> ( index = 1; index &lt; 4; index++ )
+33: 	{
+34: 		scratch = (size_t)( reg_value[index] &amp; SPI_FIFO_SIZE_BIT_WIDTH );
+35: 		<strong><span style="color: #008000;">if</span></strong> ( scratch &lt; ( (size_t)( reg_value[0] &amp; SPI_FIFO_SIZE_BIT_WIDTH ) ) )
+36: 		{
+37: 			error_code = -1;
+38: 		}
+39: 
+40: 		scratch = (size_t) ( reg_value[index] &amp; 0x40 );
+41: 		<strong><span style="color: #008000;">if</span></strong> ( scratch != ( (size_t) ( reg_value[0] &amp; 0x40 ) ) )
+42: 		{
+43: 			error_code = -1;
+44: 		}
+45: 	}
+46: 
+47: 	<strong><span style="color: #008000;">if</span></strong> ( error_code &lt; 0 )
+48: 	{
+49: 		printf( &quot;###ERROR:  SPI_Status_Read_FIFO_Status: &quot; );
+50: 		<strong><span style="color: #008000;">for</span></strong> ( index = 0; index &lt; 4; index++ ) printf( &quot;, 0x%02X&quot;, reg_value[index] );
+51: 		printf( &quot;\n&quot; );
+52: 	}
+53: 	reg_rx_status = reg_value[0];
+54: <strong><span style="color: #008000;">#else</span></strong>
+55: 	<strong><span style="color: #008000;">switch</span></strong> ( board_id )
+56: 	{
+57: 		<strong><span style="color: #008000;">case</span></strong> ID_IDI48:
+58: 			<a href="IO_Read_U8@int@size_t@int@uint8_t__.html" target="topic">IO_Read_U8</a>( board_id, __LINE__, IDI_SPI_RX_STATUS, &amp;reg_rx_status );
+59: 			<strong><span style="color: #008000;">break</span></strong>;
+60: 		<strong><span style="color: #008000;">case</span></strong> ID_IDO48:
+61: 			<a href="IO_Read_U8@int@size_t@int@uint8_t__.html" target="topic">IO_Read_U8</a>( board_id, __LINE__, IDO_SPI_RX_STATUS, &amp;reg_rx_status );
+62: 			<strong><span style="color: #008000;">break</span></strong>;
+63: 	}
+64: <strong><span style="color: #008000;">#endif</span></strong>
+65: 
+66: 	
+67: 	*bytes_available = (size_t)( reg_rx_status &amp; SPI_FIFO_SIZE_BIT_WIDTH );
+68: 	*empty           = (<a href="BOOL.html" target="topic">BOOL</a>)( reg_rx_status &amp; 0x40 );
+69: }
+</pre></div></div>
+</div>
+</div>
+</div>
+<a name="47726F7570"></a><div class="Element14">
+<a onclick="toggleVisibilityStored(&#39;47726F7570&#39;);" class="a_Element14"><img src="btn_collapse_large.gif" border="0" alt="" title="" id="img47726F7570" />Group</a></div>
+<div id="div47726F7570">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="!!FUNCTIONS.html" target="topic">Functions</a></p></div>
+</div>
+</div>
+<a name="4C696E6B73"></a><div class="Element14">
+<a onclick="toggleVisibilityStored(&#39;4C696E6B73&#39;);" class="a_Element14"><img src="btn_collapse_large.gif" border="0" alt="" title="" id="img4C696E6B73" />Links</a></div>
+<div id="div4C696E6B73">
+<div class="Element11">
+<div class="Element10">
+<a href="idi_c.html" target="topic">idi.c</a>, <a href="!!FUNCTIONS.html" target="topic">Functions</a>, <a href="!!NAVID_SPI_Status_Read_FIFO_Status@int@BOOL__@size_t___ST(16)_SEC_Body_Source.html" target="topic">Body Source</a></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic? <a href="#" onclick="sendFeedback('customer.service@apexembeddedsytems.com', 'STX104 Documentation Feedback', 'Project: STD-Bus Test Software Reference Manual%0ATopic ID: SPI_Status_Read_FIFO_Status@int@BOOL *@size_t *%0ATitle: SPI_Status_Read_FIFO_Status Function');"> Send feedback! </a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

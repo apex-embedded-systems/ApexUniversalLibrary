@@ -1,0 +1,118 @@
+
+STDBus General Test Code
+Apex Embedded Systems
+SVN software revision: $Date: 2015-10-25 14:37:48 -0500 (Sun, 25 Oct 2015) $
+Supporting:
+IDI48 board supported
+ Examples:
+   idi dig0          <-- reports the digital input group 0 port.
+   idi loop dig0     <-- loops until key pressed
+   idi irq loop dig0 <-- loops while counting interrupts or until iqty reached
+   idi irq dig0      <-- does command once and uses interrupts for short time
+IDO48 board supported
+ Examples:
+   ido dog0          <-- reports the digital output group 0 port.
+   ido loop dog0     <-- loops until key pressed
+
+help - outputs help information
+
+irq  - allows commands to handle interrupts
+Press any key for more.....
+loop - any command loops until key pressed
+
+trace - enable trace functionality
+dump - Register information in CSV format
+set  - Set/Get main parameters
+       base     - params: [<address>]
+       io       - params: [<simulate>/<report>]
+       irq      - params: [<irq_number 0 to 15>]
+       iqty     - params: [<number>].  Number of interrupts.
+       framcs   - params: [<0/1>].  FRAM SPI chip select channel.
+       aics     - params: [<0/1>].  Analog Stick SPI chip select channel.
+       aimode   - params: [<buf/soft>]. Analog Stick SPI chip select mode.
+       as       - Analog Stick register or parameter read/write
+       trace    - params: [<start/stop/file>.
+              start    - begin trace on: < disable on error spi fram as >
+              stop     - stop trace on:  < none error ctrlc >
+              ignore   - ignore trace on:  < none spi io >
+              file     - file_name up to 32-characters
+
+       mode     - params: [<0/1/2/3].  Mode jumper settings
+
+spi  - SPI related functions
+       id       - wishbone id: params: none
+       cfg      - config dump: params: none
+       clk      - clk:         params: [<clock freq in hertz>]
+       ecd      - end delay:   params: [<time in seconds>]
+       mode     - mode:        params: [<0/1/2/3>]
+       sdi      - sdi pol:     params: [<true/1/false/0>]
+       sdo      - sdo pol:     params: [<true/1/false/0>]
+       wrap     - sdo-->sdi:   params: [<true/1/false/0>]
+       csb      - chip select behavior: params: [0/1/2/3/software/buffer/uint8_t/uint16_t]
+       csr      - chip select routing: params: [<true/1/false/0>]
+       status   - status of both TX and RX buffers
+       data     - read/write:  params: <data list: bytes/characters/strings>
+       fifo     - fifo r/w:    params: <data list: bytes/characters/strings>
+       commit   - causes spi transactions to start
+
+as   - Analog Stick related functions
+       wakeup   - ADS1259 exit sleep mode
+       sleep    - ADS1259 enter sleep mode
+       reset    - ADS1259 register and filter reset
+       start    - ADS1259 start conversion(s)
+       stop     - ADS1259 stop conversions
+       rdatac   - ADS1259 set read data continuous mode
+       sdatac   - ADS1259 stop read data continuous mode
+       rdata    - ADS1259 read data in stop continuous mode
+       rreg     - ADS1259 read N registers, rreg <address> <count>
+       wreg     - ADS1259 write N registers, wreg <adress> <value> [<value>]
+       ofscal   - ADS1259 perform offset calibration, apply zero input
+       gancal   - ADS1259 perform full-scale calibration, apply full-scale
+       wrn      - Write one or more registers by name, wrn <name> <value>
+       fsc      - read/write fullscale calibration
+       ofc      - read/write offset calibration
+       rsave    - save all registers to a file
+       rload    - restore all registers from file
+       param    - read/write parameter
+
+fram - FRAM related functions
+       dump     - params: <address> <length>
+       save     - params: <address> <length> <binary destination file>
+       load     - params: <address> <binary source file name>
+       write    - params: <address> <data list: bytes/characters/strings>
+       init     - params: [byte/character] [byte/character] ...
+       wren     - WRite Enable Latch Set
+       wrdi     - WRite DIsable
+       rdsr     - ReaD Status Register
+       wrsr     - WRite Status Register.  Params: <status>
+       rdid     - ReaD ID Register
+
+di   - Digital input related functions
+       id       - params: none.  Reports the DIN board/component ID.
+       chan     - params: <channel>
+       group    - params: [<group_channel | all>]
+       all      - reports all digital inputs in binary and hex
+       test     - semi-auto test functions
+              value    - loop, until all have toggled
+              re       - loop, rising-edge detect  (led perspective)
+              fe       - loop, falling-edge detect (led perspective)
+              interrupt - loop, test interrupt on all inputs
+
+
+do   - Digital output related functions
+       id       - params: none.  Reports the DOUT board/component ID.
+       chan     - params: <channel> <value>
+       group    - params: [<group_channel | all>]
+       all      - gets all digital outputs in binary and hex
+       test     - semi-auto test functions
+              onehot   - toggling one at a time forever
+              alternate - alternate pattern at all ports forever
+              loopback - IDI48 & IDO48 Loopback test
+
+
+o    - unrestricted I/O write <address> <data>
+i    - unrestricted I/O read  <address>
+wait - wait for any key press
+help - very brief command summary
+fpga - fpga compilation and svn dates
+

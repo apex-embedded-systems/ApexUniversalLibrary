@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Body Source</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;!!NAVID_Command_Line_Main__Board_Type_Status@char__@int___ST(16)_SEC_Body_Source.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!FUNCTIONS.html" target="topic">Functions</a> &gt; <a href="Command_Line_Main__Board_Type_Status@char__@int__.html" target="topic">Command_Line_Main__Board_Type_Status Function</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+</td></tr></table><div class="Element39">
+Body Source</div>
+<div class="Element40">
+<a href="Command_Line_Main__Board_Type_Status@char__@int__.html" target="topic">Command_Line_Main__Board_Type_Status Function</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<div class="Element14">
+Body Source</div>
+<div class="Element11">
+<div class="Element10">
+<div class="Element170">
+<a href="#" onclick="CopyElementToClipboard(&#39;code00367&#39;);">Copy Code</a></div>
+<div class="Element13"><div class="Element12" id="code00367"><pre class="Element12"> 1: <strong><span style="color: #008000;">static</span></strong> <strong><span style="color: #008000;">enum</span></strong> <a href="CLM_BTS.html" target="topic">CLM_BTS</a> Command_Line_Main__Board_Type_Status( <strong><span style="color: #008000;">const</span></strong> <strong><span style="color: #008000;">char</span></strong> * cmd_string, <strong><span style="color: #008000;">int</span></strong> * board_id )
+ 2: {
+ 3: 	<strong><span style="color: #008000;">int</span></strong>    	 		index;
+ 4: 	<strong><span style="color: #008000;">enum</span></strong> <a href="CLM_BTS.html" target="topic">CLM_BTS</a>	status;
+ 5: 	index     = 0;
+ 6: 	status    = CLM_BTS_NORMAL;
+ 7: 	*board_id = ID_BOARD_UNKNOWN;
+ 8: 	<strong><span style="color: #008000;">while</span></strong> ( NULL != <a href="cmd_top.html" target="topic">cmd_top</a>[index].cmd_fnc )
+ 9: 	{   
+16: 
+17: 		
+18: 		<strong><span style="color: #008000;">if</span></strong>      ( 0 == <a href="strcmpi.html" target="topic">strcmpi</a>( &quot;do&quot;, cmd_string )  )
+19: 		{
+20: 			*board_id = ID_IDO48;	status = CLM_BTS_IMPLIED;
+21: 		}
+22: 		<strong><span style="color: #008000;">else</span></strong> <strong><span style="color: #008000;">if</span></strong> ( 0 == <a href="strcmpi.html" target="topic">strcmpi</a>( &quot;di&quot;, cmd_string )  )
+23: 		{
+24: 			*board_id = ID_IDI48;	status = CLM_BTS_IMPLIED;
+25: 		}
+26: 
+27: 
+28: 		
+29: 		<strong><span style="color: #008000;">if</span></strong> ( 0 == <a href="strcmpi.html" target="topic">strcmpi</a>( <a href="cmd_top.html" target="topic">cmd_top</a>[index].name, cmd_string )  )
+30: 		{
+31: 			<strong><span style="color: #008000;">if</span></strong> ( <strong><span style="color: #008000;">false</span></strong> == <a href="cmd_top__board_type_required.html" target="topic">cmd_top__board_type_required</a>[index] )
+32: 			{
+33: 				<strong><span style="color: #008000;">if</span></strong> ( CLM_BTS_NORMAL == status ) status = CLM_BTS_NOT_REQUIRED;
+34: 			}
+35: 			<strong><span style="color: #008000;">return</span></strong> status;
+36: 		}
+37: 		index++;
+38: 	}
+39: 	<strong><span style="color: #008000;">return</span></strong> status;
+40: }
+</pre></div></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

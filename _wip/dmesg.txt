@@ -1,0 +1,285 @@
+DEBUG Thu May  8 22:13:11 2014: module acgr, function ACGR_Integrity_Test, line 672, error: success
+DEBUG Thu May  8 22:13:17 2014: //--------------------------------------------
+DEBUG Thu May  8 22:13:17 2014: AUL_Initialization: entry
+DEBUG Thu May  8 22:13:17 2014: Module_Initialize: entry
+DEBUG Thu May  8 22:13:17 2014:  INIT MODULES:
+DEBUG Thu May  8 22:13:17 2014:   --> status           ec=0
+DEBUG Thu May  8 22:13:17 2014:   --> debug            ec=0
+DEBUG Thu May  8 22:13:17 2014:   --> mem              ec=0
+DEBUG Thu May  8 22:13:17 2014:   --> error            ec=0
+DEBUG Thu May  8 22:13:17 2014:   --> module           ec=0
+DEBUG Thu May  8 22:13:17 2014: IO_Initialize: entry
+DEBUG Thu May  8 22:13:17 2014: IO_LLG_Initialize: entry
+DEBUG Thu May  8 22:13:17 2014: IO_LLG_Initialize: exit success
+DEBUG Thu May  8 22:13:17 2014: IO_Initialize: exit success
+DEBUG Thu May  8 22:13:17 2014:   --> io_llg           ec=0
+DEBUG Thu May  8 22:13:17 2014:   --> reg              ec=0
+DEBUG Thu May  8 22:13:17 2014:   --> cmp_mgr          ec=0
+DEBUG Thu May  8 22:13:17 2014:   --> dev_mgr          ec=0
+DEBUG Thu May  8 22:13:17 2014:   --> aul              ec=0
+DEBUG Thu May  8 22:13:17 2014:   --> aul_hwdef        ec=0
+DEBUG Thu May  8 22:13:17 2014:   --> acgr             ec=0
+DEBUG Thu May  8 22:13:17 2014:   --> i8255m0          ec=0
+DEBUG Thu May  8 22:13:17 2014:   --> tracere          ec=0
+DEBUG Thu May  8 22:13:17 2014:   --> stx104           ec=0
+DEBUG Thu May  8 22:13:17 2014:  Module list:
+DEBUG Thu May  8 22:13:17 2014:   0) 0x00000002 status
+DEBUG Thu May  8 22:13:17 2014:   1) 0x00000003 debug
+DEBUG Thu May  8 22:13:17 2014:   2) 0x00000004 mem
+DEBUG Thu May  8 22:13:17 2014:   3) 0x00000005 error
+DEBUG Thu May  8 22:13:17 2014:   4) 0x00000001 module
+DEBUG Thu May  8 22:13:17 2014:   5) 0x00000008 io_llg
+DEBUG Thu May  8 22:13:17 2014:   6) 0x00000009 reg
+DEBUG Thu May  8 22:13:17 2014:   7) 0x0000000B cmp_mgr
+DEBUG Thu May  8 22:13:17 2014:   8) 0x0000000C dev_mgr
+DEBUG Thu May  8 22:13:17 2014:   9) 0x0000000D aul
+DEBUG Thu May  8 22:13:17 2014:  10) 0x0000000E aul_hwdef
+DEBUG Thu May  8 22:13:17 2014:  11) 0x0000000F acgr
+DEBUG Thu May  8 22:13:17 2014:  12) 0x00000010 i8255m0
+DEBUG Thu May  8 22:13:17 2014:  13) 0x00000011 tracere
+DEBUG Thu May  8 22:13:17 2014:  14) 0x00000012 stx104
+DEBUG Thu May  8 22:13:17 2014: Module_Initialize: exit success
+DEBUG Thu May  8 22:13:17 2014: AUL_Initialization: exit success
+DEBUG Thu May  8 22:13:28 2014: AUL_Ioctl: entry
+DEBUG Thu May  8 22:13:28 2014: IO_Ioctl: entry
+DEBUG Thu May  8 22:13:28 2014: IO_LLG_Ioctl: entry
+DEBUG Thu May  8 22:13:28 2014: IO_LLG_Ioctl: exit success
+DEBUG Thu May  8 22:13:28 2014: IO_Ioctl: exit success
+DEBUG Thu May  8 22:13:28 2014: AUL_Ioctl: exit success
+DEBUG Thu May  8 22:13:29 2014: AUL_Revision: entry
+DEBUG Thu May  8 22:13:29 2014: AUL_Revision: exit success
+DEBUG Thu May  8 22:13:34 2014: AUL_Revision_Sys_File: entry
+DEBUG Thu May  8 22:13:34 2014: IO_Version: entry
+DEBUG Thu May  8 22:13:34 2014: IO_Version_Command: entry
+DEBUG Thu May  8 22:13:34 2014: IO_Version_Command: exit success
+DEBUG Thu May  8 22:13:34 2014: IO_Version: exit success
+DEBUG Thu May  8 22:13:34 2014: AUL_Revision_Sys_File: exit success
+DEBUG Thu May  8 22:13:46 2014: AUL_Device_Open: entry
+DEBUG Thu May  8 22:13:46 2014: IO_Is_Definition_Available: entry
+DEBUG Thu May  8 22:13:46 2014: IO_Definition_Available_Command: entry
+DEBUG Thu May  8 22:13:46 2014: IO_LLG_Definition_Available: entry
+DEBUG Thu May  8 22:13:46 2014: IO_LLG_Definition_Available: exit success
+DEBUG Thu May  8 22:13:46 2014: IO_Definition_Available_Command: exit success
+DEBUG Thu May  8 22:13:46 2014: IO_Is_Definition_Available: exit success
+DEBUG Thu May  8 22:13:46 2014: IO_Definition_Get: entry
+DEBUG Thu May  8 22:13:46 2014: IO_Definition_Get_Command: entry
+DEBUG Thu May  8 22:13:46 2014: IO_LLG_Definition_Get: entry
+DEBUG Thu May  8 22:13:46 2014: IO_LLG_Definition_Get: exit success
+DEBUG Thu May  8 22:13:46 2014: IO_Definition_Get_Command: exit success
+DEBUG Thu May  8 22:13:46 2014: IO_Definition_Get: exit success
+DEBUG Thu May  8 22:13:46 2014: module aul, function AUL_Device_Open, line 355, error: device not listed
+DEBUG Thu May  8 22:13:46 2014: AUL_Device_Open: exit ec=device not listed
+DEBUG Thu May  8 22:13:58 2014: AUL_Termination: entry
+DEBUG Thu May  8 22:13:58 2014:  TERMINATE MODULES:
+DEBUG Thu May  8 22:13:58 2014:   --> stx104           ec=0
+DEBUG Thu May  8 22:13:58 2014:   --> tracere          ec=0
+DEBUG Thu May  8 22:13:58 2014:   --> i8255m0          ec=0
+DEBUG Thu May  8 22:13:58 2014:   --> acgr             ec=0
+DEBUG Thu May  8 22:13:58 2014:   --> aul_hwdef        ec=0
+DEBUG Thu May  8 22:13:58 2014:   --> aul              ec=0
+DEBUG Thu May  8 22:13:58 2014:   --> dev_mgr          ec=0
+DEBUG Thu May  8 22:13:58 2014:   --> cmp_mgr          ec=0
+DEBUG Thu May  8 22:13:58 2014:   --> reg              ec=0
+DEBUG Thu May  8 22:13:58 2014: IO_Terminate: entry
+DEBUG Thu May  8 22:13:58 2014: IO_LLG_Terminate: entry
+DEBUG Thu May  8 22:13:58 2014: IO_LLG_Terminate: exit success
+DEBUG Thu May  8 22:13:58 2014: IO_Terminate: exit success
+DEBUG Thu May  8 22:13:58 2014:   --> io_llg           ec=0
+DEBUG Thu May  8 22:13:58 2014:   --> module           ec=0
+DEBUG Thu May  8 22:13:58 2014:   --> error            ec=0
+DEBUG Thu May  8 22:13:58 2014:   --> mem              ec=0
+DEBUG Thu May  8 22:13:58 2014:   --> debug            ec=0
+DEBUG Thu May  8 22:13:58 2014:   --> status           ec=0
+DEBUG Thu May  8 22:13:58 2014: 
+DEBUG Thu May  8 22:13:58 2014: Module_Terminate: exit ec=success
+DEBUG Thu May  8 22:13:58 2014: AUL_Termination: exit success
+DEBUG Thu May  8 22:15:23 2014: module acgr, function ACGR_Integrity_Test, line 672, error: success
+DEBUG Thu May  8 22:15:23 2014: //--------------------------------------------
+DEBUG Thu May  8 22:15:23 2014: AUL_Initialization: entry
+DEBUG Thu May  8 22:15:23 2014: Module_Initialize: entry
+DEBUG Thu May  8 22:15:23 2014:  INIT MODULES:
+DEBUG Thu May  8 22:15:23 2014:   --> status           ec=0
+DEBUG Thu May  8 22:15:23 2014:   --> debug            ec=0
+DEBUG Thu May  8 22:15:23 2014:   --> mem              ec=0
+DEBUG Thu May  8 22:15:23 2014:   --> error            ec=0
+DEBUG Thu May  8 22:15:23 2014:   --> module           ec=0
+DEBUG Thu May  8 22:15:23 2014: IO_Initialize: entry
+DEBUG Thu May  8 22:15:23 2014: IO_LLG_Initialize: entry
+DEBUG Thu May  8 22:15:23 2014: IO_LLG_Initialize: exit success
+DEBUG Thu May  8 22:15:23 2014: IO_Initialize: exit success
+DEBUG Thu May  8 22:15:23 2014:   --> io_llg           ec=0
+DEBUG Thu May  8 22:15:23 2014:   --> reg              ec=0
+DEBUG Thu May  8 22:15:23 2014:   --> cmp_mgr          ec=0
+DEBUG Thu May  8 22:15:23 2014:   --> dev_mgr          ec=0
+DEBUG Thu May  8 22:15:23 2014:   --> aul              ec=0
+DEBUG Thu May  8 22:15:23 2014:   --> aul_hwdef        ec=0
+DEBUG Thu May  8 22:15:23 2014:   --> acgr             ec=0
+DEBUG Thu May  8 22:15:23 2014:   --> i8255m0          ec=0
+DEBUG Thu May  8 22:15:23 2014:   --> tracere          ec=0
+DEBUG Thu May  8 22:15:23 2014:   --> stx104           ec=0
+DEBUG Thu May  8 22:15:23 2014:  Module list:
+DEBUG Thu May  8 22:15:23 2014:   0) 0x00000002 status
+DEBUG Thu May  8 22:15:23 2014:   1) 0x00000003 debug
+DEBUG Thu May  8 22:15:23 2014:   2) 0x00000004 mem
+DEBUG Thu May  8 22:15:23 2014:   3) 0x00000005 error
+DEBUG Thu May  8 22:15:23 2014:   4) 0x00000001 module
+DEBUG Thu May  8 22:15:23 2014:   5) 0x00000008 io_llg
+DEBUG Thu May  8 22:15:23 2014:   6) 0x00000009 reg
+DEBUG Thu May  8 22:15:23 2014:   7) 0x0000000B cmp_mgr
+DEBUG Thu May  8 22:15:23 2014:   8) 0x0000000C dev_mgr
+DEBUG Thu May  8 22:15:23 2014:   9) 0x0000000D aul
+DEBUG Thu May  8 22:15:23 2014:  10) 0x0000000E aul_hwdef
+DEBUG Thu May  8 22:15:23 2014:  11) 0x0000000F acgr
+DEBUG Thu May  8 22:15:23 2014:  12) 0x00000010 i8255m0
+DEBUG Thu May  8 22:15:23 2014:  13) 0x00000011 tracere
+DEBUG Thu May  8 22:15:23 2014:  14) 0x00000012 stx104
+DEBUG Thu May  8 22:15:23 2014: Module_Initialize: exit success
+DEBUG Thu May  8 22:15:23 2014: AUL_Initialization: exit success
+DEBUG Thu May  8 22:15:23 2014: AUL_Ioctl: entry
+DEBUG Thu May  8 22:15:23 2014: IO_Ioctl: entry
+DEBUG Thu May  8 22:15:23 2014: IO_LLG_Ioctl: entry
+DEBUG Thu May  8 22:15:23 2014: IO_LLG_Ioctl: exit success
+DEBUG Thu May  8 22:15:23 2014: IO_Ioctl: exit success
+DEBUG Thu May  8 22:15:23 2014: AUL_Ioctl: exit success
+DEBUG Thu May  8 22:15:23 2014: AUL_Revision: entry
+DEBUG Thu May  8 22:15:23 2014: AUL_Revision: exit success
+DEBUG Thu May  8 22:15:23 2014: AUL_Revision_Sys_File: entry
+DEBUG Thu May  8 22:15:23 2014: IO_Version: entry
+DEBUG Thu May  8 22:15:23 2014: IO_Version_Command: entry
+DEBUG Thu May  8 22:15:23 2014: IO_Version_Command: exit success
+DEBUG Thu May  8 22:15:23 2014: IO_Version: exit success
+DEBUG Thu May  8 22:15:23 2014: AUL_Revision_Sys_File: exit success
+DEBUG Thu May  8 22:15:37 2014: AUL_Device_Open: entry
+DEBUG Thu May  8 22:15:45 2014: IO_Is_Definition_Available: entry
+DEBUG Thu May  8 22:15:45 2014: IO_Definition_Available_Command: entry
+DEBUG Thu May  8 22:15:45 2014: IO_LLG_Definition_Available: entry
+DEBUG Thu May  8 22:15:45 2014: IO_LLG_Definition_Available: exit success
+DEBUG Thu May  8 22:15:45 2014: IO_Definition_Available_Command: exit success
+DEBUG Thu May  8 22:15:45 2014: IO_Is_Definition_Available: exit success
+DEBUG Thu May  8 22:15:47 2014: IO_Definition_Get: entry
+DEBUG Thu May  8 22:15:47 2014: IO_Definition_Get_Command: entry
+DEBUG Thu May  8 22:15:47 2014: IO_LLG_Definition_Get: entry
+DEBUG Thu May  8 22:15:47 2014: IO_LLG_Definition_Get: exit success
+DEBUG Thu May  8 22:15:47 2014: IO_Definition_Get_Command: exit success
+DEBUG Thu May  8 22:15:47 2014: IO_Definition_Get: exit success
+DEBUG Thu May  8 22:16:35 2014: module aul, function AUL_Device_Open, line 355, error: device not listed
+DEBUG Thu May  8 22:16:35 2014: AUL_Device_Open: exit ec=device not listed
+DEBUG Thu May  8 22:16:35 2014: AUL_Termination: entry
+DEBUG Thu May  8 22:16:35 2014:  TERMINATE MODULES:
+DEBUG Thu May  8 22:16:35 2014:   --> stx104           ec=0
+DEBUG Thu May  8 22:16:35 2014:   --> tracere          ec=0
+DEBUG Thu May  8 22:16:35 2014:   --> i8255m0          ec=0
+DEBUG Thu May  8 22:16:35 2014:   --> acgr             ec=0
+DEBUG Thu May  8 22:16:35 2014:   --> aul_hwdef        ec=0
+DEBUG Thu May  8 22:16:35 2014:   --> aul              ec=0
+DEBUG Thu May  8 22:16:35 2014:   --> dev_mgr          ec=0
+DEBUG Thu May  8 22:16:35 2014:   --> cmp_mgr          ec=0
+DEBUG Thu May  8 22:16:35 2014:   --> reg              ec=0
+DEBUG Thu May  8 22:16:35 2014: IO_Terminate: entry
+DEBUG Thu May  8 22:16:35 2014: IO_LLG_Terminate: entry
+DEBUG Thu May  8 22:16:35 2014: IO_LLG_Terminate: exit success
+DEBUG Thu May  8 22:16:35 2014: IO_Terminate: exit success
+DEBUG Thu May  8 22:16:35 2014:   --> io_llg           ec=0
+DEBUG Thu May  8 22:16:35 2014:   --> module           ec=0
+DEBUG Thu May  8 22:16:35 2014:   --> error            ec=0
+DEBUG Thu May  8 22:16:35 2014:   --> mem              ec=0
+DEBUG Thu May  8 22:16:35 2014:   --> debug            ec=0
+DEBUG Thu May  8 22:16:35 2014:   --> status           ec=0
+DEBUG Thu May  8 22:16:35 2014: 
+DEBUG Thu May  8 22:16:35 2014: Module_Terminate: exit ec=success
+DEBUG Thu May  8 22:16:35 2014: AUL_Termination: exit success
+DEBUG Thu May  8 22:24:26 2014: module acgr, function ACGR_Integrity_Test, line 672, error: success
+DEBUG Thu May  8 22:24:28 2014: //--------------------------------------------
+DEBUG Thu May  8 22:24:28 2014: AUL_Initialization: entry
+DEBUG Thu May  8 22:24:28 2014: Module_Initialize: entry
+DEBUG Thu May  8 22:24:28 2014:  INIT MODULES:
+DEBUG Thu May  8 22:24:28 2014:   --> status           ec=0
+DEBUG Thu May  8 22:24:28 2014:   --> debug            ec=0
+DEBUG Thu May  8 22:24:28 2014:   --> mem              ec=0
+DEBUG Thu May  8 22:24:28 2014:   --> error            ec=0
+DEBUG Thu May  8 22:24:28 2014:   --> module           ec=0
+DEBUG Thu May  8 22:24:28 2014: IO_Initialize: entry
+DEBUG Thu May  8 22:24:28 2014: IO_LLG_Initialize: entry
+DEBUG Thu May  8 22:24:28 2014: IO_LLG_Initialize: exit success
+DEBUG Thu May  8 22:24:28 2014: IO_Initialize: exit success
+DEBUG Thu May  8 22:24:28 2014:   --> io_llg           ec=0
+DEBUG Thu May  8 22:24:28 2014:   --> reg              ec=0
+DEBUG Thu May  8 22:24:28 2014:   --> cmp_mgr          ec=0
+DEBUG Thu May  8 22:24:28 2014:   --> dev_mgr          ec=0
+DEBUG Thu May  8 22:24:28 2014:   --> aul              ec=0
+DEBUG Thu May  8 22:24:28 2014:   --> aul_hwdef        ec=0
+DEBUG Thu May  8 22:24:28 2014:   --> acgr             ec=0
+DEBUG Thu May  8 22:24:28 2014:   --> i8255m0          ec=0
+DEBUG Thu May  8 22:24:28 2014:   --> tracere          ec=0
+DEBUG Thu May  8 22:24:28 2014:   --> stx104           ec=0
+DEBUG Thu May  8 22:24:28 2014:  Module list:
+DEBUG Thu May  8 22:24:28 2014:   0) 0x00000002 status
+DEBUG Thu May  8 22:24:28 2014:   1) 0x00000003 debug
+DEBUG Thu May  8 22:24:28 2014:   2) 0x00000004 mem
+DEBUG Thu May  8 22:24:28 2014:   3) 0x00000005 error
+DEBUG Thu May  8 22:24:28 2014:   4) 0x00000001 module
+DEBUG Thu May  8 22:24:28 2014:   5) 0x00000008 io_llg
+DEBUG Thu May  8 22:24:28 2014:   6) 0x00000009 reg
+DEBUG Thu May  8 22:24:28 2014:   7) 0x0000000B cmp_mgr
+DEBUG Thu May  8 22:24:28 2014:   8) 0x0000000C dev_mgr
+DEBUG Thu May  8 22:24:28 2014:   9) 0x0000000D aul
+DEBUG Thu May  8 22:24:28 2014:  10) 0x0000000E aul_hwdef
+DEBUG Thu May  8 22:24:28 2014:  11) 0x0000000F acgr
+DEBUG Thu May  8 22:24:28 2014:  12) 0x00000010 i8255m0
+DEBUG Thu May  8 22:24:28 2014:  13) 0x00000011 tracere
+DEBUG Thu May  8 22:24:28 2014:  14) 0x00000012 stx104
+DEBUG Thu May  8 22:24:28 2014: Module_Initialize: exit success
+DEBUG Thu May  8 22:24:28 2014: AUL_Initialization: exit success
+DEBUG Thu May  8 22:24:31 2014: AUL_Ioctl: entry
+DEBUG Thu May  8 22:24:31 2014: IO_Ioctl: entry
+DEBUG Thu May  8 22:24:31 2014: IO_LLG_Ioctl: entry
+DEBUG Thu May  8 22:24:31 2014: IO_LLG_Ioctl: exit success
+DEBUG Thu May  8 22:24:31 2014: IO_Ioctl: exit success
+DEBUG Thu May  8 22:24:31 2014: AUL_Ioctl: exit success
+DEBUG Thu May  8 22:24:31 2014: AUL_Revision: entry
+DEBUG Thu May  8 22:24:31 2014: AUL_Revision: exit success
+DEBUG Thu May  8 22:24:33 2014: AUL_Revision_Sys_File: entry
+DEBUG Thu May  8 22:24:33 2014: IO_Version: entry
+DEBUG Thu May  8 22:24:33 2014: IO_Version_Command: entry
+DEBUG Thu May  8 22:24:33 2014: IO_Version_Command: exit success
+DEBUG Thu May  8 22:24:33 2014: IO_Version: exit success
+DEBUG Thu May  8 22:24:33 2014: AUL_Revision_Sys_File: exit success
+DEBUG Thu May  8 22:24:38 2014: AUL_Device_Open: entry
+DEBUG Thu May  8 22:24:43 2014: IO_Is_Definition_Available: entry
+DEBUG Thu May  8 22:24:43 2014: IO_Definition_Available_Command: entry
+DEBUG Thu May  8 22:24:43 2014: IO_LLG_Definition_Available: entry
+DEBUG Thu May  8 22:24:43 2014: IO_LLG_Definition_Available: exit success
+DEBUG Thu May  8 22:24:43 2014: IO_Definition_Available_Command: exit success
+DEBUG Thu May  8 22:24:43 2014: IO_Is_Definition_Available: exit success
+DEBUG Thu May  8 22:24:44 2014: IO_Definition_Get: entry
+DEBUG Thu May  8 22:24:44 2014: IO_Definition_Get_Command: entry
+DEBUG Thu May  8 22:24:44 2014: IO_LLG_Definition_Get: entry
+DEBUG Thu May  8 22:24:44 2014: IO_LLG_Definition_Get: exit success
+DEBUG Thu May  8 22:24:44 2014: IO_Definition_Get_Command: exit success
+DEBUG Thu May  8 22:24:44 2014: IO_Definition_Get: exit success
+DEBUG Thu May  8 22:25:10 2014: module aul, function AUL_Device_Open, line 355, error: device not listed
+DEBUG Thu May  8 22:25:10 2014: AUL_Device_Open: exit ec=device not listed
+DEBUG Thu May  8 22:25:10 2014: AUL_Termination: entry
+DEBUG Thu May  8 22:25:10 2014:  TERMINATE MODULES:
+DEBUG Thu May  8 22:25:10 2014:   --> stx104           ec=0
+DEBUG Thu May  8 22:25:10 2014:   --> tracere          ec=0
+DEBUG Thu May  8 22:25:10 2014:   --> i8255m0          ec=0
+DEBUG Thu May  8 22:25:10 2014:   --> acgr             ec=0
+DEBUG Thu May  8 22:25:10 2014:   --> aul_hwdef        ec=0
+DEBUG Thu May  8 22:25:10 2014:   --> aul              ec=0
+DEBUG Thu May  8 22:25:10 2014:   --> dev_mgr          ec=0
+DEBUG Thu May  8 22:25:10 2014:   --> cmp_mgr          ec=0
+DEBUG Thu May  8 22:25:10 2014:   --> reg              ec=0
+DEBUG Thu May  8 22:25:10 2014: IO_Terminate: entry
+DEBUG Thu May  8 22:25:10 2014: IO_LLG_Terminate: entry
+DEBUG Thu May  8 22:25:10 2014: IO_LLG_Terminate: exit success
+DEBUG Thu May  8 22:25:10 2014: IO_Terminate: exit success
+DEBUG Thu May  8 22:25:10 2014:   --> io_llg           ec=0
+DEBUG Thu May  8 22:25:10 2014:   --> module           ec=0
+DEBUG Thu May  8 22:25:10 2014:   --> error            ec=0
+DEBUG Thu May  8 22:25:10 2014:   --> mem              ec=0
+DEBUG Thu May  8 22:25:10 2014:   --> debug            ec=0
+DEBUG Thu May  8 22:25:10 2014:   --> status           ec=0
+DEBUG Thu May  8 22:25:10 2014: 
+DEBUG Thu May  8 22:25:10 2014: Module_Terminate: exit ec=success
+DEBUG Thu May  8 22:25:10 2014: AUL_Termination: exit success

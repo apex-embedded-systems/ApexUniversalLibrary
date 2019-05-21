@@ -1,0 +1,20 @@
+
+@@Executive Summary
+Summary
+What is the %CARD_NAME%? The %CARD_NAME% is a 48-channel
+opto-isolated digital output card with selective
+edge-detection.
+Description
+\ \ 
+
+The %CARD_NAME% has the following positive attributes:
+
+  * 50&#45;pin connectors directly interface to Opto racks
+  * 8&#45;bit STD&#45;Bus interface
+  * FRAM non&#45;volatile memory available for customer use.
+    Primary purpose is for logging information with respect to
+    the board.
+  * Board ID register to ease software support of FPGA
+    firmware revision so that software can configure to support
+    specific revisions. The Board ID also assists in determining
+    board presence.

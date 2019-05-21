@@ -1,0 +1,746 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Commands</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;Commands.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; <a href="Commands.html" target="topic">Commands</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="C_Test_Code_-_DOS.html" target="topic"><img src="btn_prev_midblue.gif" border="0" alt="Previous" title="Previous" onmouseover="switchImage(this, &#39;btn_prev_midblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_prev_midblue.gif&#39;);" /></a><a href="C_Test_Code_-_DOS.html" target="topic"><img src="btn_up_midblue.gif" border="0" alt="Up" title="Up" onmouseover="switchImage(this, &#39;btn_up_midblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_up_midblue.gif&#39;);" /></a><a href="!!FUNCTIONS.html" target="topic"><img src="btn_next_midblue.gif" border="0" alt="Next" title="Next" onmouseover="switchImage(this, &#39;btn_next_midblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_next_midblue.gif&#39;);" /></a></div>
+</td></tr></table><div class="Element5">
+Commands</div>
+<div class="Element7">
+<a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a></div>
+<div class="Element731">
+<div class="Element730">
+<a onclick="ToggleAllElements(&#39;47726F7570,4C696E6B73&#39;, &#39;linkToggleAllElements&#39;, &#39;imgToggleAllElements&#39;, &#39;Collapse All&#39;, &#39;Expand All&#39;);"><img src="btn_collapse.gif" border="0" alt="" title="" id="imgToggleAllElements" /></a><a id="linkToggleAllElements" onclick="ToggleAllElements(&#39;47726F7570,4C696E6B73&#39;, &#39;linkToggleAllElements&#39;, &#39;imgToggleAllElements&#39;, &#39;Collapse All&#39;, &#39;Expand All&#39;);">Collapse All</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<a name="4465736372697074696F6E"></a><div class="Element11">
+<div class="Element10">
+<p class="Element10">
+ &#160;</p>
+<p class="Element10">
+NOTE:</p>
+<ol class="Element630">
+<li value="1" class="Element600">This software will merge into a more general structure to be used by all boards.</li>
+<li value="2" class="Element600">Refer to latest software for latest commands. This section may not be totally up to date.</li>
+</ol><p class="Element10">
+&#160;</p>
+<p class="Element10">
+This software is set up to test the following boards:</p>
+<ul class="Element630">
+<li class="Element600">STDBus Isolated Digital Input Board (IDI48)</li>
+<li class="Element600">STDBus Isolated Digital Output Board (IDO48)</li>
+</ul><p class="Element10">
+&#160;</p>
+<p class="Element10">
+The current application runs in DOS. Later it will be retargetted to MQX running on the K64F CPU board (ARM32).&#160;</p>
+<p class="Element10">
+&#160;</p>
+<p class="Element10">
+It is possible to write shell or batch scripts to build more complex testing scenarios which is supported via the &quot;sh&quot; command in MQX command line processor.&#160;</p>
+<p class="Element10">
+&#160;</p>
+<p class="Element10">
+&#160;</p><div class="Element15">
+Notes</div>
+<p class="Element10">
+1. the &#39;[&#39; and &#39;]&#39; are used to indicate an optional parameter.&#160;</p>
+<p class="Element10">
+2. the &#39;&lt;&#39; and &#39;&gt;&#39; indicate a required parameter&#160;</p>
+<p class="Element10">
+3. &lt;type&gt; to be replaced by &quot;idi&quot; or &quot;ido&quot; or &quot;IDI&quot; or &quot;IDO&quot; as the board type (without the quotes).&#160;</p>
+<p class="Element10">
+4. Software intended to drive only one board of each type.&#160;</p>
+<p class="Element10">
+5. &lt;bool&gt; can be any of the following &quot;0&quot;, &quot;1&quot;, &quot;t&quot;, &quot;T&quot;, &quot;f&quot;, &quot;F&quot;. The string can be more than one character, only the first character is tested.&#160;</p>
+<p class="Element10">
+&#160;</p>
+<p class="Element10">
+&#160;</p><div class="Element15">
+Command prefix</div>
+<p class="Element10">
+&#160;</p>
+<p class="Element10">
+Command prefixes allow for a variety of loops, tracing and so on to only be enabled for a particular command issued.&#160;</p>
+<p class="Element10">
+&#160;</p>
+<p class="Element10">
+b [prefix - see table below] ......remaining command.....&#160;</p>
+<p class="Element10">
+&#160;</p>
+<p class="Element10">
+&#160;</p><div class="Element63">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element65" valign="top" width="6%">
+<div class="Element66">
+Command Prefix&#160;</div></td><td class="Element65" valign="top" width="94%">
+<div class="Element66">
+Description&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="6%">
+<div class="Element68">
+[loop [count &lt;value&gt;] [delay &lt;milliseconds&gt;] [space] ]&#160;</div></td><td class="Element67" valign="top" width="94%">
+<div class="Element68">
+All commands except &#39;help&#39; can have a &quot;loop&quot; prefix such that the command is issued over and over until a key is pressed.<br /><br />Example:<br /><br />Loop as fast as you can or until a key is pressed at terminal:<br />b loop di all binary<br /><br />Loop with a 100mS delay or until a key is pressed at terminal:<br />b loop delay 100 di all binary<br /><br />Loop as fast as you can 10 times or until a key is pressed at terminal:<br />b loop count 10 di all binary<br /><br />Loop with a 100mS delay 10 times or until a key is pressed at terminal:<br />b loop delay 100 count 10 di all binary<br />or<br />b loop count 10 delay 100 di all binary<br /><br />Loop by cycling through same command when SPACEBAR is pressed:<br />b loop space di all binary<br /><br /><br />&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="6%">
+<div class="Element68">
+[trace]&#160;</div></td><td class="Element67" valign="top" width="94%">
+<div class="Element68">
+All commands except &#39;help&#39; can have a &quot;trace&quot; prefix, this means that it is possible to log I/O transactions.<br /><br />Example:<br /><br />Log a list of I/O transactions when retrieving the SPI interface ID value:<br />b trace idi spi id<br /><br /><br />&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="6%">
+<div class="Element68">
+[irq]&#160;</div></td><td class="Element67" valign="top" width="94%">
+<div class="Element68">
+All IDI48 related commands except &#39;help&#39; can pick up the predefined irq provided the &quot;irq&quot; prefix within the command is issued.<br /><br />Example:<br /><br />Example #1: &quot;idi irq loop din all binary&quot;. In this case we allow an interrupt to be used by the &quot;din all&quot; function.<br />Example #2: &quot;idi irq din all binary&quot;. In this case we allow an interrupt to occur during the short run of the &quot;din all&quot; function.<br />&#160;</div></td></tr></table></div></div>
+<p class="Element10">
+&#160;</p>
+<div class="Element15">
+Command List</div>
+<p class="Element10">
+Revised July 15, 2015 - combining IDO48 and IDI48 commands.&#160;</p>
+<p class="Element10">
+Revised August 15, 2015 - Added trace functionality </p><div class="Element63">
+<div class="TableDiv">
+<table cellspacing="0" class="Table1">
+<tr>
+<td class="Element65" valign="top" width="19%">
+<div class="Element66">
+Command&#160;</div></td><td class="Element65" valign="top" width="81%">
+<div class="Element66">
+Description&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+<strong>::::::::::: HELP :::::::::::</strong>&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+<strong>::::::::::: HELP :::::::::::</strong>&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [help] [&lt;file name&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Outputs human readable help to the terminal. If a file name is included in the command the help will be dumped directly to the file, otherwise it is dumped to the default terminal twenty lines at a time.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; dump [&lt;file name&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Outputs a textual list of register information in CSV format. If file name is not specified it is dumped to the terminal.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+<strong>::::::::::: SET :::::::::::</strong>&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+<strong>::::::::::: SET :::::::::::</strong><br /><strong>Note: </strong>These are application layer environment variables that are persistent.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; &lt;register acronym&gt; [&lt;value&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Reads or writes a register to/from the board specified. If &lt;value&gt; is not present, then a read is assumed. The ability to read or write is defined by the register set read/write column. The register acronym along with read/write access can be found by referring to <a href="IDO_REGISTER_SET_DEFINITION.html" target="topic">IDO_REGISTER_SET_DEFINITION</a> and <a href="IDO_REGISTER_SET_DEFINITION.html" target="topic">IDO_REGISTER_SET_DEFINITION</a> for further details or the register set summary.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; set&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Reports most of the parameters that are stored in IDO_INIT.BIN or IDO_INIT.BIN file.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; set&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Reports most of the parameters that are stored in the IDO_INIT.BIN file.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; set base&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Reports the base address. This is stored in a binary file which will NOT be compatible between 16-bit and 32-bit. However, it is easily reproduced.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; set base &lt;address&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Sets the base address from which we will use for all additional commands. This is stored in a binary file which will NOT be compatible between 16-bit and 32-bit due to padding. However, it is easily reproduced.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; set io&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+The &quot;io&quot; commands are intended for debugging purposes including situations where there is no hardware.<br />reports I/O simulation and reporting modes.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; set io simulate&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports the state of I/O simulation. If &quot;false&quot;, then we write to hardware, otherwise it prints the transaction to the terminal.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; set io simulate &lt;true/false&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+sets the I/O simulation mode.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; set io report&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports the state of I/O reporting. If &quot;false&quot;, then I/O is not reported, otherwise any I/O transaction is reported to the terminal.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; set io report &lt;true/false&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+sets the I/O reporting.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b idi set irq [&lt;irq number&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Writes or reads the IRQ number default for the application to use.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b idi set iqty [&lt;irq count quantity&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Writes or reads the maximum IRQ count before software exists. Currently, not used by any of the application.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; set framcs [&lt;0/1&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Write or read the FRAM over-ride SPI chip select route (either CS0 or CS1). The chip select routing is applied temporarily over SPI chip select routing. After the FRAM transaction is complete the SPI chip select route is restored.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; set aics [&lt;0/1&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Write or read the Analog Stick over-ride SPI chip select route (either CS0 or CS1). The chip select routing is applied temporarily over SPI chip select routing. After the Analog Stick transaction is complete the SPI chip select route is restored.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; set mode [&lt;legacy/0/1/2/3&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Sets the mode jumpers as stuffed onto the board. The word &quot;legacy&quot; can also be used to represent mode &quot;0&quot;.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; trace&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Returns all trace parameters. The purpose of the trace mechanism is to provide a high speed recording of the I/O bottom transactions (primarily). The depth is limited by&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; trace start [&lt;disable/on/error/spi/fram/as&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Set or return the trace start behavior. Possible entries are:<br />disable ==&gt; no logging.<br />on ==&gt; begins logging immediately<br />error ==&gt; begin logging on any error<br />spi ==&gt; begin logging on any SPI transactions<br />fram ==&gt; begin logging on any FRAM transactions<br />as ==&gt; begin logging on any Analog Stick transactions&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; trace stop [&lt;none/error/ctrlc&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Set or return the trace stop behavior. Possible entries are:<br />none ==&gt; never stop logging until end of executable.<br />error ==&gt; stop logging on an error<br />ctrlc ==&gt; stop logging on a break CTRL-C&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; trace file [&lt;file_name&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Set or return the file name in which the trace information will be dumped too. File is overwritten each time the executable is run.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+<strong>::::::::::: IDI48 :::::::::::</strong>&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+<strong>::::::::::: IDI48 :::::::::::</strong>&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [idi] di id&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports the digital input module ID as a 16-bit value. This can be considered the board revision/ID as well.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [idi] di&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports all digital input values&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [idi] di all [&lt;binary&gt;] [&lt;hex/group&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports all digital input values.<br />If &#39;binary&#39; specified then only binary representation is output. If &#39;hex&#39; or &#39;group&#39; is specified then only the hexadecimal byte values are output. If both or neither parameters are specified, then both formats are output.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [idi] di chan &lt;n&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Reports a digital input value at a given channel, where 0 &lt;= n &lt;= 47&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [idi] di group&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Reports all digital inputs at all groups&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [idi] di group all&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Reports all digital inputs at all groups&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [idi] di group &lt;n&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Reports a byte of digital inputs at the given group, where 0 &lt;= n &lt;= 5&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [idi] di test value [&lt;--append&gt;] [&lt;result file&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+As each input is toggled, the software logs until all inputs have been successfully toggled. Once all inputs are toggled, a &quot;PASS&quot; string is indicated. Pressing any key will stop the execution of the command followed by a &quot;FAIL&quot; string.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [idi] di test re&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+This test is checking specifically for rising-edge detection (LED perspective). As each input is toggled, the software logs until all inputs have been successfully toggled. Once all inputs are toggled, a &quot;PASS&quot; string is indicated. Pressing any key will stop the execution of the command followed by a &quot;FAIL&quot; string.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [idi] di test fe&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+This test is checking specifically for falling-edge detection (LED perspective). As each input is toggled, the software logs until all inputs have been successfully toggled. Once all inputs are toggled, a &quot;PASS&quot; string is indicated. Pressing any key will stop the execution of the command followed by a &quot;FAIL&quot; string.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [irq] [idi] di test interrupt [&lt;irq #&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+This test is checking specifically for rising-edge detection (LED perspective). This time interrupts are activated and used for detection. As each input is toggled, the software logs until all inputs have been successfully toggled. Once all inputs are toggled, a &quot;PASS&quot; string is indicated. Pressing any key will stop the execution of the command followed by a &quot;FAIL&quot; string.<br />Optional IRQ number can be given, otherwise it reverts to the IRQ number specified in the &quot;idi set irq&quot;&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+<strong>::::::::::: IDO48 :::::::::::</strong>&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+<strong>::::::::::: IDO48 :::::::::::</strong>&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [ido] do chan &lt;n&gt; [&lt;bool&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Read or write to the digital output channel, where 0 &lt;= n &lt;= 47.. If the boolean value is missing it is assumed to be a read, otherwise a write will occur.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [ido] do group [&lt;n&gt;] [&lt;value&gt; [&lt;value&gt;] [&lt;value&gt;] [&lt;value&gt;] [&lt;value&gt;] [&lt;value&gt;] ]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Read or write to the digital output group (8-bit data). If no values are present then it is assumed to be a read, otherwise a byte write operation will occur starting at group position n up to the last possible group number. Note that 0 &lt;= n &lt;= 5.<br /><br />Example: b do group 4 0xAA 0x55<br />In this case it is writing to register DOG4 and DOG5.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [ido] do all [&lt;binary&gt;] [&lt;hex/group&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Reports all digital output values in the format requested.<br />If &#39;binary&#39; specified then only binary representation is output. If &#39;hex&#39; or &#39;group&#39; is specified then only the hexadecimal byte values are output. If both or neither parameters are specified, then both formats are output.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [ido] do test onehot [&lt;on_time&gt;] [&lt;off_time&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Toggles each individual output one at a time. This test can be exited at any time by pressing any key. This can be easily observable using an LED panel.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [ido] do test alternate &lt;pattern&gt; time [&lt;time_normal&gt;] [&lt;time_inverted&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Outputs pattern on all groups (or ports). The pattern will be inverted.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [ido] do test loopback [&lt;--append&gt;] [&lt;result file&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Assumes IDI48 and interconnection cables have been installed. It assumes that the IDI48 base address has been properly set.<br />Output is directly to terminal or to file.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+<strong>::::::::::: SPI :::::::::::</strong>&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+<strong>::::::::::: SPI Communications :::::::::::</strong>&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi id&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports the spi wishbone component ID&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi cfg&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports the spi configuration as it exists within the hardware&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi clk&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports the spi clock frequency in hertz&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi clk &lt;freq hz&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+set the spi clock frequency in hertz&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi ecd&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports the spi end of cycle delay in seconds&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi ecd &lt;time in seconds&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+set the spi end of cycle delay in seconds&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi mode&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports the spi mode (i.e. clock phase and polarity combination)&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi mode &lt;0/1/2/3&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+set the spi mode, where the value is either 0,1,2, or 3.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi sdi&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports the spi sdi polarity. SDI is the serial data input.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi sdi &lt;true/1/false/0&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+sets the spi sdi polarity&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi sdo&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports the spi sdo polarity. SDO is the serial data output.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi sdo &lt;true/1/false/0&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+sets the spi sdo polarity.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi wrap&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports the spi wrap. If wrap='1' then the SDO is routed to SDI internally (i.e. loopback).&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi wrap &lt;true/1/false/0&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+sets the spi wrap, where false/0 =&gt; no wrap, true/1 =&gt; wrap.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi csr&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports the spi chip select routing. If '1', then chip select routed to physical CS1, otherwise CS0.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi csr &lt;true/1/false/0&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+set the spi chip select routing. If true or '1', then chip select is routed to physical CS1, otherwise CS0.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi csb&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports the spi chip select behavior&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi csb &lt;0/1/2/3&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+sets the spi chip select behavior&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi status&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports the spi read fifo status&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi status rx&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports the spi read fifo status&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi status tx&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports the spi write fifo status&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi status [tx] [rx]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports either tx fifo status or rx fifo status or both.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi data &lt;character/number&gt; [&lt;character/number&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+write/read one or more bytes. If the fifo becomes full prior to writing all the values, the remaining values will be ignored.<br /><br />Examples:<br /><br />write a single data byte and get a single byte in return.<br />idi spi data 0x55<br /><br />write 5 characters and receive five characters<br />idi spi data tx h e l l o&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi fifo&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reads out the remaining data sitting in the spi read fifo (until empty) and produces a report.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi fifo rx&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reads out the remaining data sitting in the spi read fifo (until empty) and produces a report.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi fifo rx [&lt;number&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reads out the remaining 'number' of bytes from the receive/read fifo (until empty) and produces a report.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi fifo tx &lt;character/number&gt; [&lt;character/number&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+writes data to the transmit/write fifo. If the fifo becomes full prior to writing all the values, the remaining values will be ignored.<br /><br />Examples:<br /><br />write a single data byte:<br />idi spi data tx 0x55<br /><br />write 5 characters to the fifo<br />idi spi data tx h e l l o<br /><br />The data can be single characters, decimal or hex numbers. Examples: a, 0x55, 125,.<br />The data can also be a double quote encased string. Example: &quot;this is a sample string&quot;.<br />&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; spi fifo commit [&lt;1/0&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Depending on chip select behavior this will either set/clear the chip select or tell the SPI module to begin transmitting any data sitting in the write/transmit FIFO.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+<strong>::::::::::: FRAM :::::::::::</strong>&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+<strong>::::::::::: FRAM using SPI :::::::::::</strong><br /><strong>Notes:</strong>
+<ol class="Element630">
+<li value="1" class="Element600">Resistors must be installed correctly for FRAM to work correctly.</li>
+<li value="2" class="Element600">The &quot;framcs&quot; must be set correctly to point to the correct chip select channel.</li>
+</ol>&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; fram dump &lt;address&gt; [&lt;length&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+reports the data from the starting address of the FRAM for a given length or number of bytes. The report is typical of any memory dump where it posts for each line a starting address, up to 16 hexadecimal values followed by ASCII representation. If length is not specified, then up to 16-bytes (or until end of the FRAM) is reported. This report does not wrap around the end of the FRAM, just reports up to the end.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; fram save &lt;address&gt; &lt;length&gt; &lt;binary file name&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Saves the portion of FRAM to a given file name. There is no limit on the length as the range can be from 0 (nothing written) to FRAM_DENSITY_BYTES (=8192 bytes).&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; fram load &lt;address&gt; &lt;binary file name&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Reads data from the binary file and loads it into the FRAM starting at the address location. If the length is set to 0, then it will read all of the file up to the end of the FRAM. If length is specified, then it is possible to only load a portion of a binary file.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; fram init [&lt;character/number&gt; [&lt;character/number&gt;]]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Initializes the FRAM with a given pattern. If no pattern is specified, it will be filled with all zeros. The pattern can be any number of characters. Only the first 16 values will be used, any additional values will be ignored. This allows one to create a unique pattern especially for implementing a memory manager to manage the FRAM memory.<br />The data can be single characters, decimal or hex numbers. Examples: a, 0x55, 125,.<br />The data can also be a double quote encased string. Example: &quot;this is a sample string&quot;.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; fram write &lt;address&gt; [&lt;character/number&gt; [&lt;character/number&gt;]]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Write data to the FRAM give a starting address.<br />The data can be single characters, decimal or hex numbers. Examples: a, 0x55, 125,.<br />The data can also be a double quote encased string. Example: &quot;this is a sample string&quot;.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; fram wren&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Sets the write enable latch of the FRAM. Note: WREN = WRite ENable.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; fram wrdi&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Resets the write enable latch of the FRAM. Note: WRDI = WRite DIsable.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; fram rdsr&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Read and report FRAM status register.<br /><br />Status register format:<br /><span class="Element146">BIT DESCRIPTION</span><br /><span class="Element146">7 WPEN - status register write protect.</span><br /><span class="Element146">6..4 not used</span><br /><span class="Element146">3 BP1 - block protect</span><br /><span class="Element146">2 BP0 - block protect</span><br /><span class="Element146">1 WEL - write latch enable</span><br /><span class="Element146">0 0 - fixed as zero</span><br /><br />Please refer to the <span class="Element145">datasheet</span>.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; fram wrsr &lt;status byte&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Write to the FRAM status register.<br /><br />Status register format:<br /><span class="Element146">BIT DESCRIPTION</span><br /><span class="Element146">7 WPEN - status register write protect.</span><br /><span class="Element146">6..4 not used</span><br /><span class="Element146">3 BP1 - block protect</span><br /><span class="Element146">2 BP0 - block protect</span><br /><span class="Element146">1 WEL - write latch enable</span><br /><span class="Element146">0 0 - fixed as zero</span><br /><br />Please refer to the <span class="Element145">datasheet</span>.<br />&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; fram rdid&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+report the FRAM ID register. The FRAM we are using contains such register, most others do not. The output is a 32-bit hex value of the format:<br />&lt;manufacture_id&gt;&lt;continuation code&gt;&lt;product ID MSB&gt;&lt;Product ID LSB&gt;.<br /><br />&lt;manufacture_id&gt; = 0x04 (Fujitsu).<br />&lt;continuation code&gt; = 0x7F (fixed constant).<br />&lt;product ID MSB&gt; = 0x03 ( indicating 64kbit density)<br />&lt;product ID LSB&gt; = 0x02 (proprietary information)<br /><br />Please refer to the <span class="Element145">datasheet</span>.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+<strong>::::::::::: ANALOG STICK :::::::::::</strong>&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+<strong>::::::::::: ANALOG STICK using SPI :::::::::::</strong><br /><strong>Notes:</strong>
+<ol class="Element630">
+<li value="1" class="Element600">Resistors must be installed correctly for Analog Stick to work correctly.</li>
+<li value="2" class="Element600">The &quot;aics&quot; must be set correctly to point to the correct chip select channel.</li>
+</ol>&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; as wakeup&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Exit Sleep Mode. Sends a single byte (0x03) instruction to the ADS1259 to exit low-power SLEEP mode.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; as sleep&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Enter Sleep Mode. Sends a single byte (0x05) instruction to the ADS1259 to enter low-power SLEEP mode&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; as reset&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Reset Registers to Default Values. Sends a single byte (0x07) instruction to the ADS1259 to reset the digital filter cycle and returns all registers to their default values.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; as start&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Start Conversions. Sends a single byte (0x09) instruction to the ADS1259 start conversion. If CONFIG2.PULSE='1' then a single conversion is performed. If CONFIG2.PULSE='0' (default), then conversions continue until the STOP command is received.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; as stop&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Stop Conversions. Sends a single byte (0x0B) instruction to the ADS1259 to stop conversions. If a conversion is in progress it will run to completion and then stop.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; as rdatac&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Read Data Continuous. Sends a single byte (0x10) instruction to the ADS1259 to enable reading data in continuous mode. Disable this mode by sending the SDATAC command and before sending other commands.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; as sdatac&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Stop Read Data Continuous. Sends a single byte (0x11) instruction to the ADS1259 to cancel or stop reading data continuously.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; as rdata&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Read Data. Sends a single byte (0x13) instruction to the ADS1259 to read conversion result (in Stop Read Data Continuous mode).&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; as rreg &lt;start_address&gt; &lt;register_count&gt; [&lt;hex/symbol&gt;]<br /><br />b &lt;type&gt; as rreg all [&lt;hex/symbol&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Read from Register(s). Sends opcode instruction to the ADS1259 and receives ADS1259 register data based on &lt;start_address&gt; and &lt;register_count&gt;&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; as wreg &lt;start_address&gt; &lt;value&gt; [&lt;value&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Write to Register(s). Sends opcode instruction to the ADS1259 and sends one or more bytes to the ADS1259 register(s).&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; as wrn &lt;reg_name&gt; &lt;value&gt; [&lt;reg_name&gt; &lt;value&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Write to one or more ADS1259 registers. There must be a pair of values for each register (i.e. register name and value).&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; as fsc [&lt;<a href="uint32_t.html" target="topic">uint32_t</a> value&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Full scale calibration value, read/write access.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; as ofc [&lt;<a href="uint32_t.html" target="topic">uint32_t</a> value&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Offset calibration, read/write access.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; as rsave &lt;file name&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Save all ADS1259 registers to a file.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; as rload &lt;file name&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Load all ADS1259 registers from file. If file is incorrect, then registers are not disturbed.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b &lt;type&gt; as param &lt;name&gt; [&lt;value&gt;]&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Used to read/write parameter from/to the ADS1259. It is possible to read/write the calibration values, bit-strings or registers.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+<strong>::::::::::: MISC COMMANDS :::::::::::</strong>&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+<strong>::::::::::: MISC COMMANDS - NONE BOARD SPECIFIC :::::::::::</strong>&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b o &lt;address&gt; &lt;data&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Unrestricted I/O write. The data is a byte.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b i &lt;address&gt;&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Unrestricted I/O read. Will return a byte value.&#160;</div></td></tr><tr>
+<td class="Element67" valign="top" width="19%">
+<div class="Element68">
+b [&lt;type&gt;] wait&#160;</div></td><td class="Element67" valign="top" width="81%">
+<div class="Element68">
+Simply waits until any key is pressed.&#160;</div></td></tr></table></div></div>
+</div>
+</div>
+<a name="47726F7570"></a><div class="Element14">
+<a onclick="toggleVisibilityStored(&#39;47726F7570&#39;);" class="a_Element14"><img src="btn_collapse_large.gif" border="0" alt="" title="" id="img47726F7570" />Group</a></div>
+<div id="div47726F7570">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a></p></div>
+</div>
+</div>
+<a name="4C696E6B73"></a><div class="Element14">
+<a onclick="toggleVisibilityStored(&#39;4C696E6B73&#39;);" class="a_Element14"><img src="btn_collapse_large.gif" border="0" alt="" title="" id="img4C696E6B73" />Links</a></div>
+<div id="div4C696E6B73">
+<div class="Element11">
+<div class="Element10">
+<a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic? <a href="#" onclick="sendFeedback('customer.service@apexembeddedsytems.com', 'STX104 Documentation Feedback', 'Project: STD-Bus Test Software Reference Manual%0ATopic ID: Commands%0ATitle: Commands');"> Send feedback! </a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

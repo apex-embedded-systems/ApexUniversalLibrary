@@ -1,0 +1,1 @@
+io=0x300 dac_mode=2

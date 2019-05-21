@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Body Source</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;!!NAVID_IDO_Dataset_Defaults@struct_ido_dataset___ST(16)_SEC_Body_Source.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!FUNCTIONS.html" target="topic">Functions</a> &gt; <a href="IDO_Dataset_Defaults@struct_ido_dataset__.html" target="topic">IDO_Dataset_Defaults Function</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+</td></tr></table><div class="Element39">
+Body Source</div>
+<div class="Element40">
+<a href="IDO_Dataset_Defaults@struct_ido_dataset__.html" target="topic">IDO_Dataset_Defaults Function</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<div class="Element14">
+Body Source</div>
+<div class="Element11">
+<div class="Element10">
+<div class="Element170">
+<a href="#" onclick="CopyElementToClipboard(&#39;code00415&#39;);">Copy Code</a></div>
+<div class="Element13"><div class="Element12" id="code00415"><pre class="Element12"> 1: <strong><span style="color: #008000;">void</span></strong> IDO_Dataset_Defaults( <strong><span style="color: #008000;">struct</span></strong> <a href="ido_dataset.html" target="topic">ido_dataset</a> * ds )
+ 2: {
+ 3: 	<strong><span style="color: #008000;">int</span></strong> index;
+ 4: 
+ 5: 	printf( &quot;Warning - using main IDO48 dataset defaults\n&quot; );
+ 6: 	
+ 7: 	memset( ds, 0, <strong><span style="color: #008000;">sizeof</span></strong>(<strong><span style="color: #008000;">struct</span></strong> <a href="ido_dataset.html" target="topic">ido_dataset</a>) );
+ 8: 	
+ 9: 	ds-&gt;base_address        = 0x0130;
+10: 	
+11: 
+12: 	<strong><span style="color: #008000;">for</span></strong> ( index = 0; index &lt; <a href="REGS_INIT_QTY.html" target="topic">REGS_INIT_QTY</a>; index++ )
+13: 	{
+14: 		ds-&gt;reg_init[index].used     = <strong><span style="color: #008000;">false</span></strong>;
+15: 		ds-&gt;reg_init[index].address  = 0;
+16: 		ds-&gt;reg_init[index].location = IDO_UNDEFINED;
+17: 		ds-&gt;reg_init[index].value    = 0x00;
+18: 	}
+19: }
+</pre></div></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

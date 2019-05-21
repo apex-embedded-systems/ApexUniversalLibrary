@@ -1,0 +1,23 @@
+
+
+
+
+@@Mechanicals
+Summary
+\ \ 
+Description
+The table below lists the locations of key mechanicals of the
+%CARD_NAME%.
+<table>
+\LOCATION   X<p />(milli-inches   Y<p />(milli-inches
+             or mils)              or mils)
+----------  ====================  ====================
+J1 pin-1                          
+J2 pin-1                          
+\                                 
+\                                 
+\                                 
+</table>
+
+
+

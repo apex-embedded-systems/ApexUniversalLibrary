@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Body Source</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;!!NAVID_CMD__SPI_Data_Interpreter@int@int@char__@size_t@size_t__@uint8_t___ST(16)_SEC_Body_Source.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!FUNCTIONS.html" target="topic">Functions</a> &gt; <a href="CMD__SPI_Data_Interpreter@int@int@char__@size_t@size_t__@uint8_t__.html" target="topic">CMD__SPI_Data_Interpreter Function</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+</td></tr></table><div class="Element39">
+Body Source</div>
+<div class="Element40">
+<a href="CMD__SPI_Data_Interpreter@int@int@char__@size_t@size_t__@uint8_t__.html" target="topic">CMD__SPI_Data_Interpreter Function</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<div class="Element14">
+Body Source</div>
+<div class="Element11">
+<div class="Element10">
+<div class="Element170">
+<a href="#" onclick="CopyElementToClipboard(&#39;code00346&#39;);">Copy Code</a></div>
+<div class="Element13"><div class="Element12" id="code00346"><pre class="Element12"> 1: <strong><span style="color: #008000;">static</span></strong> <strong><span style="color: #008000;">int</span></strong> CMD__SPI_Data_Interpreter( 	<strong><span style="color: #008000;">int</span></strong> 		arg_start,  
+ 2: 										<strong><span style="color: #008000;">int</span></strong> 		argc,
+ 3: 										<strong><span style="color: #008000;">char</span></strong> * 		argv[],
+ 4: 										size_t		tx_size,	
+ 5: 										size_t *	tx_count,   
+ 6: 										<a href="uint8_t.html" target="topic">uint8_t</a> * 	tx_buffer   
+ 7: 									)
+ 8: {
+ 9: 	size_t 	arg_qty;
+10: 	size_t	count;
+11: 	<strong><span style="color: #008000;">int</span></strong> 	index_arg;
+12: 	<strong><span style="color: #008000;">int</span></strong>		index_byte;
+13: 	<a href="uint8_t.html" target="topic">uint8_t</a> data_temp;
+14: 	<strong><span style="color: #008000;">char</span></strong> * 	endptr;
+15: 	<strong><span style="color: #008000;">char</span></strong> *  sp;
+16: 
+17: 	arg_qty = (size_t)( argc - arg_start );
+18: 
+19: 	sp         = NULL;
+20: 	index_arg  = arg_start;
+21: 	index_byte = 0;
+22: 	count      = arg_qty;
+23: 	<strong><span style="color: #008000;">while</span></strong> ( ( count != 0 ) &amp;&amp; ( index_byte &lt; tx_size ) )
+24: 	{
+25: 		data_temp = (<a href="uint8_t.html" target="topic">uint8_t</a>) strtol( argv[index_arg], &amp;endptr, 0 );
+26: 		<strong><span style="color: #008000;">if</span></strong> ( endptr == argv[index_arg] )
+27: 		{
+28: 			sp = &amp;(argv[index_arg][0]);
+29: 			<strong><span style="color: #008000;">while</span></strong> ( ( &#39;\0&#39; != *sp ) &amp;&amp; ( index_byte &lt; tx_size ) )
+30: 			{
+31: 				tx_buffer[index_byte] = (<a href="uint8_t.html" target="topic">uint8_t</a>)( *sp );
+32: 				sp++;	index_byte++;
+33: 			}
+34: 			<strong><span style="color: #008000;">if</span></strong> ( &#39;\0&#39; == *sp ) sp = NULL;
+35: 		}
+36: 		<strong><span style="color: #008000;">else</span></strong>
+37: 		{
+38: 			tx_buffer[index_byte] = data_temp;
+39: 			index_byte++;
+40: 			sp = NULL;
+41: 		}
+42: 		count--;	index_arg++;
+43: 	}
+44: 
+45: 	<strong><span style="color: #008000;">if</span></strong> ( count &gt; 0 )
+46: 	{
+47: <strong><span style="color: #008000;">#if</span></strong> defined( __MSDOS__ )
+48: 		printf( &quot;Warning: ignored %d arguments&quot;, count );
+49: <strong><span style="color: #008000;">#else</span></strong>
+50: 		printf( &quot;Warning: ignored %lu arguments&quot;, count );
+51: <strong><span style="color: #008000;">#endif</span></strong>
+52: 		<strong><span style="color: #008000;">if</span></strong> ( NULL != sp )
+53: 		{
+54: 			printf( &quot;, and portion of string argument&quot; );
+55: 		}
+56: 		printf( &quot;\n&quot; );
+57: 	}
+58: 
+59: 	*tx_count = index_byte;
+60: 	<strong><span style="color: #008000;">return</span></strong> SUCCESS;
+61: }
+</pre></div></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

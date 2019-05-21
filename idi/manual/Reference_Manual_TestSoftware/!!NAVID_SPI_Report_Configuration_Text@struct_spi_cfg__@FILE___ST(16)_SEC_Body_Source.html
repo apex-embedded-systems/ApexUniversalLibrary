@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Body Source</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;!!NAVID_SPI_Report_Configuration_Text@struct_spi_cfg__@FILE___ST(16)_SEC_Body_Source.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!FUNCTIONS.html" target="topic">Functions</a> &gt; <a href="SPI_Report_Configuration_Text@struct_spi_cfg__@FILE__.html" target="topic">SPI_Report_Configuration_Text Function</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+</td></tr></table><div class="Element39">
+Body Source</div>
+<div class="Element40">
+<a href="SPI_Report_Configuration_Text@struct_spi_cfg__@FILE__.html" target="topic">SPI_Report_Configuration_Text Function</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<div class="Element14">
+Body Source</div>
+<div class="Element11">
+<div class="Element10">
+<div class="Element170">
+<a href="#" onclick="CopyElementToClipboard(&#39;code00511&#39;);">Copy Code</a></div>
+<div class="Element13"><div class="Element12" id="code00511"><pre class="Element12"> 1: <strong><span style="color: #008000;">int</span></strong> SPI_Report_Configuration_Text( <strong><span style="color: #008000;">struct</span></strong> <a href="spi_cfg.html" target="topic">spi_cfg</a> * cfg, FILE * out )
+ 2: {
+ 3: 	fprintf( out, &quot;################################### SPI Configuration:\n&quot; );
+ 4: 	fprintf( out, &quot;sdio_wrap             = %s\n&quot;, cfg-&gt;sdio_wrap 	    	 ? &quot;true&quot; : &quot;false&quot; );
+ 5: 	fprintf( out, &quot;sdo_polarity          = %s\n&quot;, cfg-&gt;sdo_polarity 		 ? &quot;true&quot; : &quot;false&quot; );
+ 6: 	fprintf( out, &quot;sdi_polarity          = %s\n&quot;, cfg-&gt;sdi_polarity 		 ? &quot;true&quot; : &quot;false&quot; );
+ 7: 	fprintf( out, &quot;sclk_phase            = %s\n&quot;, cfg-&gt;sclk_phase 			 ? &quot;true&quot; : &quot;false&quot; );
+ 8: 	fprintf( out, &quot;sclk_polarity         = %s\n&quot;, cfg-&gt;sclk_polarity 		 ? &quot;true&quot; : &quot;false&quot; );
+ 9: 	fprintf( out, &quot;chip_select_route_ch1 = %s\n&quot;, cfg-&gt;chip_select_route_ch1 ? &quot;true&quot; : &quot;false&quot; );
+10: 	fprintf( out, &quot;chip_select_behavior  = &quot; );
+11: 
+12: 	<strong><span style="color: #008000;">switch</span></strong>( cfg-&gt;chip_select_behavior )
+13: 	{
+14: 		<strong><span style="color: #008000;">case</span></strong> CSB_SOFTWARE:		fprintf( out, &quot;CSB_SOFTWARE&quot; 	);	<strong><span style="color: #008000;">break</span></strong>;
+15: 		<strong><span style="color: #008000;">case</span></strong> CSB_BUFFER:		fprintf( out, &quot;CSB_BUFFER&quot; 		);	<strong><span style="color: #008000;">break</span></strong>;
+16: 		<strong><span style="color: #008000;">case</span></strong> CSB_uint8_t:		fprintf( out, &quot;CSB_uint8_t&quot; 	);	<strong><span style="color: #008000;">break</span></strong>;
+17: 		<strong><span style="color: #008000;">case</span></strong> CSB_uint16_t:		fprintf( out, &quot;CSB_uint16_t&quot; 	);	<strong><span style="color: #008000;">break</span></strong>;
+18: 		<strong><span style="color: #008000;">default</span></strong>:                fprintf( out, &quot;undefined&quot; 		);	<strong><span style="color: #008000;">break</span></strong>;
+19: 	}
+20: 	fprintf( out, &quot;\n&quot; );
+21: 
+22: 	fprintf( out, &quot;end_cycle_delay       = 0x%02X  (%d)\n&quot;, cfg-&gt;end_cycle_delay,     cfg-&gt;end_cycle_delay     );
+23: 	fprintf( out, &quot;half_clock_interval   = 0x%04X  (%d)\n&quot;, cfg-&gt;half_clock_interval, cfg-&gt;half_clock_interval );
+24: 
+25: 	fprintf( out, &quot;clock_hz              = %f Hz\n&quot;, cfg-&gt;clock_hz );
+26: 	fprintf( out, &quot;end_delay_ns          = %f ns\n&quot;, cfg-&gt;end_delay_ns );
+27: 	fprintf( out, &quot;\n&quot; );
+28: 	<strong><span style="color: #008000;">return</span></strong> SUCCESS;
+29: }
+</pre></div></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

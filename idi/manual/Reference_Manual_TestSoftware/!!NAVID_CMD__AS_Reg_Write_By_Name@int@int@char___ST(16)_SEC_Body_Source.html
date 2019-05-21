@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Body Source</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;!!NAVID_CMD__AS_Reg_Write_By_Name@int@int@char___ST(16)_SEC_Body_Source.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!FUNCTIONS.html" target="topic">Functions</a> &gt; <a href="CMD__AS_Reg_Write_By_Name@int@int@char__.html" target="topic">CMD__AS_Reg_Write_By_Name Function</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+</td></tr></table><div class="Element39">
+Body Source</div>
+<div class="Element40">
+<a href="CMD__AS_Reg_Write_By_Name@int@int@char__.html" target="topic">CMD__AS_Reg_Write_By_Name Function</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<div class="Element14">
+Body Source</div>
+<div class="Element11">
+<div class="Element10">
+<div class="Element170">
+<a href="#" onclick="CopyElementToClipboard(&#39;code00283&#39;);">Copy Code</a></div>
+<div class="Element13"><div class="Element12" id="code00283"><pre class="Element12"> 1: <strong><span style="color: #008000;">static</span></strong> <strong><span style="color: #008000;">int</span></strong> CMD__AS_Reg_Write_By_Name( <strong><span style="color: #008000;">int</span></strong> board_id, <strong><span style="color: #008000;">int</span></strong> argc, <strong><span style="color: #008000;">char</span></strong> * argv[] )
+ 2: {
+ 3: 	size_t	count;
+ 4: 	size_t	index;
+ 5: 	size_t	address;
+ 6: 	size_t	value;
+ 7: 	<strong><span style="color: #008000;">int</span></strong>		error_code;
+ 8: 	<a href="uint8_t.html" target="topic">uint8_t</a>	tx_buf[12] = { 0x00 };
+ 9: 	<a href="uint8_t.html" target="topic">uint8_t</a>	rx_buf[12] = { 0x00 };
+10: 
+11: <strong><span style="color: #008000;">#define</span></strong> FUNCTION_NAME__  &quot;CMD__AS_Reg_Write_By_Name&quot;
+12: <strong><span style="color: #008000;">#if</span></strong> ( <a href="IO_TRACE_USE_AS_LOGGING.html" target="topic">IO_TRACE_USE_AS_LOGGING</a> == 1 )
+13: 	<a href="IO_Trace_Log_Function@char__@size_t@enum_IO_TRACE_ENUM@int@int.html" target="topic">IO_Trace_Log_Function</a>( FUNCTION_NAME__, __LINE__, IO_TRACE_AS, board_id, 0 );
+14: <strong><span style="color: #008000;">#endif</span></strong>
+15: <strong><span style="color: #008000;">#undef</span></strong> FUNCTION_NAME__
+16: 
+17: 	<strong><span style="color: #008000;">if</span></strong> ( argc &lt; 2 ) <strong><span style="color: #008000;">return</span></strong> -EC_SYNTAX;   
+18: 
+19: 	index = 0;
+20: 	<strong><span style="color: #008000;">while</span></strong> ( ( argc - index ) &gt; 1 )
+21: 	{
+22: 		<strong><span style="color: #008000;">if</span></strong> ( (argc - index) &gt; 1 )
+23: 		{
+24: 			<strong><span style="color: #008000;">if</span></strong> ( ( argv[index][0] &gt;= &#39;0&#39; ) || ( argv[index][0] &lt;= &#39;9&#39; ) )
+25: 			{ 
+26: 				address  = (size_t) strtol( argv[index], NULL, 0 );
+27: 			}
+28: 			<strong><span style="color: #008000;">else</span></strong>
+29: 			{
+30: 				error_code = <a href="AS_Register_Name_To_Offset@char__.html" target="topic">AS_Register_Name_To_Offset</a>( argv[index] );
+31: 				<strong><span style="color: #008000;">if</span></strong> ( error_code &lt; 0 ) <strong><span style="color: #008000;">return</span></strong> -EC_NOT_FOUND;
+32: 				address = (size_t) error_code;
+33: 			}
+34: 			index++;
+35: 
+36: 			<strong><span style="color: #008000;">if</span></strong> ( ( argc - index ) &gt; 0 )
+37: 			{ 
+38: 				value  = (size_t) strtol( argv[index], NULL, 0 );
+39: 				tx_buf[2] = (<a href="uint8_t.html" target="topic">uint8_t</a>) value;
+40: 				count = 1;
+41: 				error_code = <a href="AS_Registers_Write@int@size_t@size_t@uint8_t__@uint8_t__.html" target="topic">AS_Registers_Write</a>( board_id, address, count, tx_buf, rx_buf );
+42: 			}
+43: 			<strong><span style="color: #008000;">else</span></strong>
+44: 			{
+45: 				<strong><span style="color: #008000;">return</span></strong> -EC_SYNTAX;
+46: 			}
+47: 			index++;
+48: 		}
+49: 		<strong><span style="color: #008000;">else</span></strong>
+50: 		{
+51: 			error_code = -EC_SYNTAX;
+52: 		}
+53: 	} 
+54: 
+55: 	<strong><span style="color: #008000;">if</span></strong> ( (argc - index) &gt; 0 ) error_code = -EC_EXTRA_IGNORED;
+56: 	<strong><span style="color: #008000;">return</span></strong> error_code;
+57: }
+</pre></div></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

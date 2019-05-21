@@ -1,0 +1,299 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Body Source</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;!!NAVID_main@int@char__ST(16)_SEC_Body_Source.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!FUNCTIONS.html" target="topic">Functions</a> &gt; <a href="main@int@char_.html" target="topic">main Function</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+</td></tr></table><div class="Element39">
+Body Source</div>
+<div class="Element40">
+<a href="main@int@char_.html" target="topic">main Function</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<div class="Element14">
+Body Source</div>
+<div class="Element11">
+<div class="Element10">
+<div class="Element170">
+<a href="#" onclick="CopyElementToClipboard(&#39;code00479&#39;);">Copy Code</a></div>
+<div class="Element13"><div class="Element12" id="code00479"><pre class="Element12">  1: <strong><span style="color: #008000;">int</span></strong> main( <strong><span style="color: #008000;">int</span></strong> argc, <strong><span style="color: #008000;">char</span></strong>* argv[] )
+  2: {
+  3: 	
+  4:     
+  5: 	<strong><span style="color: #008000;">int</span></strong>		board_id;
+  6: 	<strong><span style="color: #008000;">int</span></strong> 	error_code;
+  7: 	<strong><span style="color: #008000;">int</span></strong>     index;
+  8:     <strong><span style="color: #008000;">int</span></strong>     argc_new;
+  9:     <strong><span style="color: #008000;">char</span></strong> ** argv_new;
+ 10: 	<strong><span style="color: #008000;">struct</span></strong> <a href="board_dataset.html" target="topic">board_dataset</a> *  dataset;
+ 11: 	
+ 12: 
+ 13: <strong><span style="color: #008000;">#if</span></strong> defined( MAIN_DEBUG )
+ 14: printf( &quot;Main:  Entry\n&quot; );
+ 15: <strong><span style="color: #008000;">#endif</span></strong>
+ 16: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_XFR_DEBUG )
+ 17: global_internal_tx_byte_count = 0;
+ 18: global_internal_rx_byte_count = 0;
+ 19: <strong><span style="color: #008000;">#endif</span></strong>
+ 20: 
+ 21: 
+ 22: 
+ 23: 
+ 24: <strong><span style="color: #008000;"># if</span></strong>(1)
+ 25:     setvbuf(stdout, NULL, _IONBF, 0);
+ 26:     setvbuf(stderr, NULL, _IONBF, 0);
+ 27: <strong><span style="color: #008000;"># endif</span></strong>
+ 28: 
+ 29: 
+ 30: <strong><span style="color: #008000;">#if</span></strong> defined( MAIN_DEBUG )
+ 31: printf( &quot;Main:  1\n&quot; );
+ 32: <strong><span style="color: #008000;">#endif</span></strong>
+ 33: 
+ 34: <strong><span style="color: #008000;">#if</span></strong>(0)
+ 35:     {
+ 36:     	<strong><span style="color: #008000;">char</span></strong> buf[80];
+ 37: 		<strong><span style="color: #008000;">int</span></strong> count = argc;
+ 38: 		<strong><span style="color: #008000;">int</span></strong> index = 0;     
+ 39: 		<strong><span style="color: #008000;">while</span></strong> ( count &gt; 0 )
+ 40: 		{
+ 41: 			printf( &quot;index = %d, str = &lt;%s&gt;\n&quot;, index, argv[index] );
+ 42: 			index++;
+ 43: 			count--;
+ 44: 		}
+ 45: 		<a href="Time_Current_String@char__@size_t.html" target="topic">Time_Current_String</a>( buf, 80 );
+ 46: 		printf( &quot;Current time is:  %s&quot;, buf );
+ 47:     }
+ 48: <strong><span style="color: #008000;">#endif</span></strong>
+ 49: 
+ 50:     
+ 51:     <a href="Main_Versalogic.html" target="topic">Main_Versalogic</a>();
+ 52: 
+ 53: <strong><span style="color: #008000;">#if</span></strong> defined( MAIN_DEBUG )
+ 54: printf( &quot;Main:  2\n&quot; );
+ 55: <strong><span style="color: #008000;">#endif</span></strong>
+ 56: 
+ 57:     error_code				= SUCCESS;
+ 58:     board_id        		= ID_BOARD_UNKNOWN;
+ 59:     <a href="global_board_id.html" target="topic">global_board_id</a> 		= board_id;
+ 60: 
+ 61:     <a href="global_loop_space.html" target="topic">global_loop_space</a>		= <strong><span style="color: #008000;">false</span></strong>;
+ 62: 
+ 63:     <a href="global_io_trace_enable.html" target="topic">global_io_trace_enable</a> 	= <strong><span style="color: #008000;">false</span></strong>;
+ 64: 
+ 65:    	index = 1;
+ 66:    	<strong><span style="color: #008000;">if</span></strong> ( argc &gt; 1 )
+ 67:     {
+ 68: 
+ 69: 
+ 70: 
+ 71: 
+ 72: 
+ 73: 
+ 74: <strong><span style="color: #008000;">#if</span></strong> defined( MAIN_DEBUG )
+ 75: printf( &quot;Main:  3\n&quot; );
+ 76: <strong><span style="color: #008000;">#endif</span></strong>
+ 77: 
+ 78:    		
+ 79: 		argv_new   = &amp;(argv[index]);
+ 80: 		argc_new   = argc - index;
+ 81: 		error_code = <a href="Command_Line_Prefix@int@char_.html" target="topic">Command_Line_Prefix</a>( argc_new, argv_new );
+ 82: 		<strong><span style="color: #008000;">if</span></strong> ( error_code &lt; 0 )  <strong><span style="color: #008000;">goto</span></strong> Main_Termination_Skip_Termination;
+ 83: 		<strong><span style="color: #008000;">else</span></strong>                   index += error_code;
+ 84: 
+ 85: 
+ 86: 
+ 87: 			
+ 88: 			<strong><span style="color: #008000;">switch</span></strong>( <a href="Command_Line_Main__Board_Type_Status@char__@int__.html" target="topic">Command_Line_Main__Board_Type_Status</a>( argv[index], &amp;board_id ) )
+ 89: 			{
+ 90: 				<strong><span style="color: #008000;">case</span></strong> CLM_BTS_NORMAL:	
+ 91: 					<strong><span style="color: #008000;">break</span></strong>;
+ 92: 				<strong><span style="color: #008000;">case</span></strong> CLM_BTS_IMPLIED:
+ 93: 					<a href="global_board_id.html" target="topic">global_board_id</a> = board_id;
+ 94: 					<strong><span style="color: #008000;">goto</span></strong> Main_Initialization_Start;
+ 95: 				<strong><span style="color: #008000;">case</span></strong> CLM_BTS_NOT_REQUIRED:
+ 96: 					<strong><span style="color: #008000;">goto</span></strong> Main_Loop_Start;
+ 97: 			}
+ 98: 
+ 99: 			
+100: 			<strong><span style="color: #008000;">if</span></strong>       ( 0 == <a href="strcmpi.html" target="topic">strcmpi</a>( &quot;idi&quot;, argv[index]) )
+101: 			{
+102: 				board_id 		= ID_IDI48;
+103: 				<a href="global_board_id.html" target="topic">global_board_id</a> = board_id;
+104: 				index++;
+105: 			}
+106: 			<strong><span style="color: #008000;">else</span></strong> <strong><span style="color: #008000;">if</span></strong>  ( 0 == <a href="strcmpi.html" target="topic">strcmpi</a>( &quot;ido&quot;, argv[index]) )
+107: 			{
+108: 				board_id        = ID_IDO48;
+109: 				<a href="global_board_id.html" target="topic">global_board_id</a> = board_id;
+110: 				index++;
+111: 			}
+112: 			<strong><span style="color: #008000;">else</span></strong>
+113: 			{
+114: 				error_code = -EC_BOARD_TYPE;
+115: 				<strong><span style="color: #008000;">goto</span></strong> Main_Termination_Error_Codes_Skip_Termination;
+116: 			}
+117: 
+118: 
+119: Main_Initialization_Start:
+120: <strong><span style="color: #008000;">#if</span></strong> defined( MAIN_DEBUG )
+121: printf( &quot;Main:  Main_Initialization_Start\n&quot; );
+122: <strong><span style="color: #008000;">#endif</span></strong>
+123:    	    error_code = <a href="Initialization@int.html" target="topic">Initialization</a>( board_id );
+124:    	    <strong><span style="color: #008000;">if</span></strong> ( SUCCESS != error_code ) <strong><span style="color: #008000;">goto</span></strong> Main_Termination;
+125: 
+126:    	    dataset    = ( <strong><span style="color: #008000;">struct</span></strong> <a href="board_dataset.html" target="topic">board_dataset</a> * )  <a href="board_definition.html" target="topic">board_definition</a>[board_id].dataset;
+127:    	 	
+128: 
+129: Main_Loop_Start:
+130: <strong><span style="color: #008000;">#if</span></strong> defined( MAIN_DEBUG )
+131: printf( &quot;Main:  Main_Loop_Start\n&quot; );
+132: <strong><span style="color: #008000;">#endif</span></strong>
+133: 		<strong><span style="color: #008000;">do</span></strong>
+134: 		{ 
+135: 			argv_new = &amp;(argv[index]);
+136: 			argc_new = argc - index;
+137: 			error_code = <a href="Command_Line_Main@int@int@char_.html" target="topic">Command_Line_Main</a>( board_id, argc_new, argv_new );
+138: 			<strong><span style="color: #008000;">if</span></strong> ( SUCCESS != error_code ) <strong><span style="color: #008000;">goto</span></strong> Main_Termination_Error_Codes;
+139: 
+140: 			<strong><span style="color: #008000;">switch</span></strong>( board_id )
+141: 			{
+142: 				<strong><span style="color: #008000;">case</span></strong> ID_IDI48:
+143: 					<strong><span style="color: #008000;">if</span></strong> ( -1 == <a href="IDI_Main_Loop_Testing@struct_idi_dataset__.html" target="topic">IDI_Main_Loop_Testing</a>( (<strong><span style="color: #008000;">struct</span></strong> <a href="idi_dataset.html" target="topic">idi_dataset</a> *) dataset ) )
+144: 					{
+145: 						<strong><span style="color: #008000;">goto</span></strong> Main_Termination;
+146: 					}
+147: 					<strong><span style="color: #008000;">break</span></strong>;
+148: 			}
+149: 
+150: 			<strong><span style="color: #008000;">if</span></strong> ( <a href="global_loop_command.html" target="topic">global_loop_command</a> )
+151: 			{
+152: 				<strong><span style="color: #008000;">if</span></strong> ( <a href="global_loop_delay_ms.html" target="topic">global_loop_delay_ms</a> &gt; 0 )
+153: 				{
+154: <strong><span style="color: #008000;">#if</span></strong> defined( __MSDOS__ )
+155: 					delay( <a href="global_loop_delay_ms.html" target="topic">global_loop_delay_ms</a> );
+156: <strong><span style="color: #008000;">#endif</span></strong>
+157: 				}
+158: 
+159: 				<strong><span style="color: #008000;">if</span></strong> ( <a href="global_loop_count.html" target="topic">global_loop_count</a> &gt; 0 )
+160: 				{
+161: 					<a href="global_loop_count_counter.html" target="topic">global_loop_count_counter</a>--;
+162: 					<strong><span style="color: #008000;">if</span></strong> ( 0 == <a href="global_loop_count_counter.html" target="topic">global_loop_count_counter</a> ) <a href="global_loop_command.html" target="topic">global_loop_command</a> = <strong><span style="color: #008000;">false</span></strong>;
+163: 				}
+164: 
+165: 				<strong><span style="color: #008000;">if</span></strong> ( <strong><span style="color: #008000;">true</span></strong> == <a href="global_loop_space.html" target="topic">global_loop_space</a> )
+166: 				{ 
+167: 					<strong><span style="color: #008000;">int</span></strong>  character;
+168: 					<a href="BOOL.html" target="topic">BOOL</a> not_done;
+169: 
+170: 					not_done = <strong><span style="color: #008000;">true</span></strong>;
+171: 					<strong><span style="color: #008000;">do</span></strong>
+172: 					{
+173: 						<strong><span style="color: #008000;">if</span></strong> ( <a href="Character_Get@int__.html" target="topic">Character_Get</a>( &amp;character ) )
+174: 						{
+175: 							<strong><span style="color: #008000;">if</span></strong> ( ' ' == ( (<strong><span style="color: #008000;">char</span></strong>) character) )
+176: 							{ 
+177: 								not_done = <strong><span style="color: #008000;">false</span></strong>;
+178: 							}
+179: 							<strong><span style="color: #008000;">else</span></strong>
+180: 							{ 
+181: 								not_done            = <strong><span style="color: #008000;">false</span></strong>;
+182: 								<a href="global_loop_command.html" target="topic">global_loop_command</a> = <strong><span style="color: #008000;">false</span></strong>;
+183: 							}
+184: 						}
+185: 					} <strong><span style="color: #008000;">while</span></strong>( <strong><span style="color: #008000;">true</span></strong> == not_done );
+186: 				}
+187: 				<strong><span style="color: #008000;">else</span></strong>
+188: 				{
+189: 					<strong><span style="color: #008000;">if</span></strong> ( <a href="Character_Get@int__.html" target="topic">Character_Get</a>( NULL ) ) <a href="global_loop_command.html" target="topic">global_loop_command</a> = <strong><span style="color: #008000;">false</span></strong>;
+190: 				}
+191: 
+192: 				
+193: 			}
+194: 
+195: 		} <strong><span style="color: #008000;">while</span></strong> ( <a href="global_loop_command.html" target="topic">global_loop_command</a> );
+196:     }
+197:    	<strong><span style="color: #008000;">else</span></strong>
+198:    	{ 
+199:    		<a href="Help@BOOL@FILE__.html" target="topic">Help</a>( <strong><span style="color: #008000;">false</span></strong> , stdout );
+200:    		<strong><span style="color: #008000;">goto</span></strong> Main_Termination_Skip_Termination;
+201:    	}
+202: 
+203: Main_Termination:
+204: 
+205: <strong><span style="color: #008000;">#if</span></strong> defined( MAIN_DEBUG )
+206: printf( &quot;Main:  Main_Termination\n&quot; );
+207: <strong><span style="color: #008000;">#endif</span></strong>
+208:    	<a href="Termination@int.html" target="topic">Termination</a>( board_id );
+209: 
+210: Main_Termination_Skip_Termination:
+211: 
+212: <strong><span style="color: #008000;">#if</span></strong> defined( MAIN_DEBUG )
+213: printf( &quot;Main:  Main_Termination_Skip_Termination\n&quot; );
+214: <strong><span style="color: #008000;">#endif</span></strong>
+215: 
+216:    	<strong><span style="color: #008000;">return</span></strong> error_code;
+217: 
+218: Main_Termination_Error_Codes:
+219: 
+220: 	<a href="Termination@int.html" target="topic">Termination</a>( board_id );
+221: 
+222: Main_Termination_Error_Codes_Skip_Termination:
+223: 	printf( &quot;ERROR: %d, %s\n&quot;,  error_code, <a href="EC_Code_To_Human_Readable@EC_ENUM.html" target="topic">EC_Code_To_Human_Readable</a>( error_code ) );
+224: 	<strong><span style="color: #008000;">return</span></strong> error_code;
+225: }
+</pre></div></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

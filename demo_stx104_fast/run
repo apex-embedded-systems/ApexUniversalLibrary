@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd ./_Out_Debug
+make clean
+make all
+./demo_stx104_fast
+

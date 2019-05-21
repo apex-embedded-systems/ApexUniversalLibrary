@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>HTML Template File Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta name="save" content="history" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+
+%%DOC-O-MATIC_SCRIPTS%%
+</head>
+<body onload="onBodyLoad();" onmousedown="onBodyMouseDown();">
+<div style="width: 25%; float: left; vertical-align: top; font-family: verdana,arial,helvetica; font-size: 9pt; padding: 5px; border-right: 1px dotted #999;">
+  <h2>HTML File Template Example</h2>
+  <p>
+    This example demonstrates how the HTML file template feature
+    works. This feature makes it possible to put Doc-O-Matic generated
+    content into your site layout effortlessly. 
+  </p>
+  <h2>Preparation</h2>
+  <p>
+    Prepare a HTML file that includes all resources the Doc-O-Matic
+    generated content will require. This includes the Doc-O-Matic style
+    sheet, the JavaScript file. Also setup body onload and onmousedown 
+    code so the content gets initialized correctly.
+  </p>
+  <p>
+    At any location in the HTML file you place the HTML 
+    content placeholders <strong>&#37;&#37;DOC-O-MATIC_CONTENT&#37;&#37;</strong>. 
+    Doc-O-Matic will insert its content at this location. That means that
+    the content of the template wraps around Doc-O-Matic's content.
+  </p>
+  <p>
+    Additionally you can add the <strong>&#37;&#37;DOC-O-MATIC_SCRIPTS&#37;&#37;</strong>
+    placeholder in the HEAD section of the HTML template. This placeholder
+    will be replaced by HTML code that includes necessary CSS and JavaScript
+    files that Doc-O-Matic generates.
+  </p>
+  <h2>Output Design </h2>
+  <p>
+    There are no limitations as to what kind of content your template
+    can contain. This feature is perfect for seamless integration of
+    Doc-O-Matic output into the design you're already using.
+  </p>
+  <p>
+    For configuration details please see the documentation.
+  </p>
+</div>
+<div style="width: 72%; float: right; vertical-align: top; margin: 0px; border: none; padding: 0px;">
+%%DOC-O-MATIC_CONTENT%%
+</div>
+</body>

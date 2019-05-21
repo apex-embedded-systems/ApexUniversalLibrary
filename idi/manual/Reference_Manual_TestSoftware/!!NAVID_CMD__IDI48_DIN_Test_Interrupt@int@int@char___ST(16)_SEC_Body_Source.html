@@ -1,0 +1,354 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Body Source</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;!!NAVID_CMD__IDI48_DIN_Test_Interrupt@int@int@char___ST(16)_SEC_Body_Source.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!FUNCTIONS.html" target="topic">Functions</a> &gt; <a href="CMD__IDI48_DIN_Test_Interrupt@int@int@char__.html" target="topic">CMD__IDI48_DIN_Test_Interrupt Function</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+</td></tr></table><div class="Element39">
+Body Source</div>
+<div class="Element40">
+<a href="CMD__IDI48_DIN_Test_Interrupt@int@int@char__.html" target="topic">CMD__IDI48_DIN_Test_Interrupt Function</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<div class="Element14">
+Body Source</div>
+<div class="Element11">
+<div class="Element10">
+<div class="Element170">
+<a href="#" onclick="CopyElementToClipboard(&#39;code00314&#39;);">Copy Code</a></div>
+<div class="Element13"><div class="Element12" id="code00314"><pre class="Element12">  1: <strong><span style="color: #008000;">static</span></strong> <strong><span style="color: #008000;">int</span></strong> CMD__IDI48_DIN_Test_Interrupt( <strong><span style="color: #008000;">int</span></strong> board_id, <strong><span style="color: #008000;">int</span></strong> argc, <strong><span style="color: #008000;">char</span></strong> * argv[] )
+  2: {
+  3: 	<strong><span style="color: #008000;">struct</span></strong> <a href="idi_dataset.html" target="topic">idi_dataset</a> *  <a href="idi_dataset.html" target="topic">idi_dataset</a>;
+  4: 	
+  5: 	<strong><span style="color: #008000;">int</span></strong> 				error_code;
+  6: 	<a href="TEST_STATE_ENUM.html" target="topic">TEST_STATE_ENUM</a> 	state;
+  7: 	size_t				group;
+  8: 	size_t				bit;
+  9: 	size_t				index;
+ 10: 	size_t				irq_count_local;
+ 11: 	<a href="uint8_t.html" target="topic">uint8_t</a>				result;
+ 12: 	<a href="uint8_t.html" target="topic">uint8_t</a>				irq_pending_local;
+ 13: 	<a href="uint8_t.html" target="topic">uint8_t</a>				dig[<a href="IDI_DIN_GROUP_QTY.html" target="topic">IDI_DIN_GROUP_QTY</a>];
+ 14: 	<a href="uint8_t.html" target="topic">uint8_t</a>				pending[<a href="IDI_DIN_GROUP_QTY.html" target="topic">IDI_DIN_GROUP_QTY</a>];
+ 15: 	<a href="uint8_t.html" target="topic">uint8_t</a>				mask;
+ 16: 	<a href="BOOL.html" target="topic">BOOL</a>				io_report_backup, io_simulate_backup;
+ 17: 	<a href="BOOL.html" target="topic">BOOL</a>				din_cmplt[<a href="IDI_DIN_QTY.html" target="topic">IDI_DIN_QTY</a>];
+ 18: <strong><span style="color: #008000;">#if</span></strong> defined( <a href="DIN_TEST_DEBUG_PRINT.html" target="topic">DIN_TEST_DEBUG_PRINT</a> )
+ 19: 	<strong><span style="color: #008000;">char</span></strong>            	message[64];
+ 20: 	<strong><span style="color: #008000;">int</span></strong>					cp;
+ 21: 	<strong><span style="color: #008000;">int</span></strong>					state_detect;
+ 22: <strong><span style="color: #008000;">#endif</span></strong>
+ 23: <strong><span style="color: #008000;">#if</span></strong> defined( __MSDOS__ )
+ 24: 	<strong><span style="color: #008000;">unsigned</span></strong> <strong><span style="color: #008000;">int</span></strong>    interrupt_number;
+ 25: 	<strong><span style="color: #008000;">switch</span></strong>( board_id )
+ 26: 	{
+ 27: 		<strong><span style="color: #008000;">case</span></strong> ID_IDI48:
+ 28: 			<a href="idi_dataset.html" target="topic">idi_dataset</a> = ( <strong><span style="color: #008000;">struct</span></strong> <a href="idi_dataset.html" target="topic">idi_dataset</a> * )  <a href="board_definition.html" target="topic">board_definition</a>[board_id].dataset;
+ 29: 			<strong><span style="color: #008000;">break</span></strong>;
+ 30: 		<strong><span style="color: #008000;">default</span></strong>:
+ 31: 			<strong><span style="color: #008000;">return</span></strong> -EC_BOARD;
+ 32: 	}
+ 33: 
+ 34: 	<strong><span style="color: #008000;">if</span></strong> ( argc &gt; 0 )
+ 35: 	{
+ 36: 		interrupt_number = (<strong><span style="color: #008000;">unsigned</span></strong> <strong><span style="color: #008000;">int</span></strong>) strtol( argv[0], NULL, 0 );
+ 37: 	}
+ 38: 	<strong><span style="color: #008000;">else</span></strong>
+ 39: 	{
+ 40: 		interrupt_number = <a href="idi_dataset.html" target="topic">idi_dataset</a>-&gt;irq_number;
+ 41: 	}
+ 42: <strong><span style="color: #008000;">#else</span></strong>
+ 43: 	
+ 44: 	(<strong><span style="color: #008000;">void</span></strong>)			argc;
+ 45: 	(<strong><span style="color: #008000;">void</span></strong>)  		argv;
+ 46: 
+ 47: 	<strong><span style="color: #008000;">switch</span></strong>( board_id )
+ 48: 	{
+ 49: 		<strong><span style="color: #008000;">case</span></strong> ID_IDI48:
+ 50: 			<a href="idi_dataset.html" target="topic">idi_dataset</a> = ( <strong><span style="color: #008000;">struct</span></strong> <a href="idi_dataset.html" target="topic">idi_dataset</a> * )  <a href="board_definition.html" target="topic">board_definition</a>[board_id].dataset;
+ 51: 			<strong><span style="color: #008000;">break</span></strong>;
+ 52: 		<strong><span style="color: #008000;">default</span></strong>:
+ 53: 			<strong><span style="color: #008000;">return</span></strong> -EC_BOARD;
+ 54: 	}
+ 55: <strong><span style="color: #008000;">#endif</span></strong>
+ 56: 
+ 57: 	<a href="IO_Write_U8@int@size_t@int@uint8_t.html" target="topic">IO_Write_U8</a>( board_id, __LINE__, IDI_SPI_CONFIG, 0 );
+ 58: 	io_report_backup   = <a href="idi_dataset.html" target="topic">idi_dataset</a>-&gt;io_report;
+ 59: 	io_simulate_backup = <a href="idi_dataset.html" target="topic">idi_dataset</a>-&gt;io_simulate;
+ 60: 
+ 61: 	<a href="idi_dataset.html" target="topic">idi_dataset</a>-&gt;irq_count_previous = 0;
+ 62: 	<a href="idi_dataset.html" target="topic">idi_dataset</a>-&gt;irq_count          = 0;
+ 63: 
+ 64: 	state             = TEST_STATE_INIT;
+ 65: 	irq_pending_local = 0;
+ 66: 	irq_count_local   = 0;
+ 67: 
+ 68: 
+ 69: 	<strong><span style="color: #008000;">for</span></strong>( group = 0; group &lt; <a href="IDI_DIN_GROUP_QTY.html" target="topic">IDI_DIN_GROUP_QTY</a>; group++ )
+ 70: 	{
+ 71: 		<a href="IDI_DIN_Group_Get@int@size_t@uint8_t__.html" target="topic">IDI_DIN_Group_Get</a>( board_id, group, &amp;(dig[group]) );
+ 72: 		<a href="IO_Write_U8@int@size_t@int@uint8_t.html" target="topic">IO_Write_U8</a>( board_id, __LINE__, IDI_EDGE_GROUP0  + group,  0xFF ); 
+ 73: 		<a href="IO_Write_U8@int@size_t@int@uint8_t.html" target="topic">IO_Write_U8</a>( board_id, __LINE__, IDI_CLEAR_GROUP0 + group,  0xFF ); 
+ 74: 		<a href="IO_Read_U8@int@size_t@int@uint8_t__.html" target="topic">IO_Read_U8</a>( board_id, __LINE__, IDI_PEND_GROUP0 + group, &amp;(pending[group]) );
+ 75: 	}
+ 76: 	<strong><span style="color: #008000;">for</span></strong> ( bit = 0; bit &lt; <a href="IDI_DIN_QTY.html" target="topic">IDI_DIN_QTY</a>; bit++ ) din_cmplt[bit] = <strong><span style="color: #008000;">false</span></strong>;
+ 77: 
+ 78: 	printf( &quot;DIN_INTERRUPT:&quot; );
+ 79: 	<strong><span style="color: #008000;">for</span></strong> ( group = 0; group &lt; <a href="IDI_DIN_GROUP_QTY.html" target="topic">IDI_DIN_GROUP_QTY</a>; group++ )
+ 80: 	{
+ 81: 		<a href="IO_Read_U8@int@size_t@int@uint8_t__.html" target="topic">IO_Read_U8</a>( board_id, __LINE__, IDI_PEND_GROUP0 + group, &amp;(pending[group]) ); 
+ 82: 		<a href="IDI_DIN_Group_Get@int@size_t@uint8_t__.html" target="topic">IDI_DIN_Group_Get</a>( board_id, group, &amp;(dig[group]) );
+ 83: 	}
+ 84: 
+ 85: <strong><span style="color: #008000;">#if</span></strong> defined( __MSDOS__ )
+ 86: 	
+ 87: 	error_code = <a href="IOKern_DOS_IRQ_Request@unsigned_int@IOKERN_TASK_FP@void__.html" target="topic">IOKern_DOS_IRQ_Request</a>( interrupt_number,                		
+ 88: 										 <a href="CMD__IDI48_DIN_Test_Interrupt_Handler@int@void__@struct_pt_regs__.html" target="topic">CMD__IDI48_DIN_Test_Interrupt_Handler</a>,   
+ 89: 										 (<strong><span style="color: #008000;">void</span></strong> *) &amp;board_id						
+ 90: 									   );
+ 91: 	<strong><span style="color: #008000;">if</span></strong> ( SUCCESS != error_code )
+ 92: 	{
+ 93: 		state = TEST_STATE_QUIT;
+ 94: 		<strong><span style="color: #008000;">goto</span></strong> CMD__IDI48_DIN_Test_Interrupt_Terminate;
+ 95: 	}
+ 96: <strong><span style="color: #008000;">#else</span></strong>
+ 97: 	state = TEST_STATE_QUIT;
+ 98: 	error_code = -EC_INTERRUPT_UNAVAILABLE;
+ 99: 	<strong><span style="color: #008000;">goto</span></strong> CMD__IDI48_DIN_Test_Interrupt_Terminate;
+100: <strong><span style="color: #008000;">#endif</span></strong>
+101: 
+102: 	
+103: 	<strong><span style="color: #008000;">for</span></strong> ( group = 0; group &lt; <a href="IDI_DIN_GROUP_QTY.html" target="topic">IDI_DIN_GROUP_QTY</a>; group++ )
+104: 	{
+105: 		<a href="IO_Write_U8@int@size_t@int@uint8_t.html" target="topic">IO_Write_U8</a>( board_id, __LINE__, IDI_INTR_BIT_GROUP0  + group,  0xFF );
+106: 	}
+107: 
+108: 	<a href="idi_dataset.html" target="topic">idi_dataset</a>-&gt;irq_handler_active = <strong><span style="color: #008000;">true</span></strong>;
+109: 
+110: 	<strong><span style="color: #008000;">while</span></strong> ( ( TEST_STATE_QUIT != state ) &amp;&amp; ( TEST_STATE_COMPLETE != state ) )
+111: 	{ 
+112: 
+113: 		<strong><span style="color: #008000;">switch</span></strong>( state )
+114: 		{
+115: 			<strong><span style="color: #008000;">case</span></strong> TEST_STATE_INIT: 
+116: 				<strong><span style="color: #008000;">for</span></strong> ( group = 0; group &lt; <a href="IDI_DIN_GROUP_QTY.html" target="topic">IDI_DIN_GROUP_QTY</a>; group++ )
+117: 				{
+118: 					<a href="IDI_DIN_Group_Get@int@size_t@uint8_t__.html" target="topic">IDI_DIN_Group_Get</a>( board_id, group, &amp;(dig[group]) );
+119: 				}
+120: 				<strong><span style="color: #008000;">if</span></strong> ( <strong><span style="color: #008000;">true</span></strong> == <a href="CMD__IDI48_DIN_Helper_All_Values_False@uint8_t__@size_t.html" target="topic">CMD__IDI48_DIN_Helper_All_Values_False</a>( dig, <a href="IDI_DIN_GROUP_QTY.html" target="topic">IDI_DIN_GROUP_QTY</a> ) )
+121: 				{
+122: 					state = TEST_STATE_READY;
+123: 					printf( &quot; READY&quot; );
+124: 				}
+125: 				<strong><span style="color: #008000;">for</span></strong> ( group = 0; group &lt; <a href="IDI_DIN_GROUP_QTY.html" target="topic">IDI_DIN_GROUP_QTY</a>; group++ ) <a href="IO_Write_U8@int@size_t@int@uint8_t.html" target="topic">IO_Write_U8</a>( board_id, __LINE__, IDI_CLEAR_GROUP0 + group, 0xFF );
+126: 				<strong><span style="color: #008000;">break</span></strong>;
+127: 			<strong><span style="color: #008000;">case</span></strong> TEST_STATE_READY:		
+128: <strong><span style="color: #008000;">#if</span></strong> defined( <a href="DIN_TEST_DEBUG_PRINT.html" target="topic">DIN_TEST_DEBUG_PRINT</a> )
+129: 				cp = 0;
+130: 				strcpy( message, &quot;&quot; );
+131: 				state_detect = 2;
+132: 				printf( &quot;\nPENDING:&quot; );
+133: 				<strong><span style="color: #008000;">for</span></strong> ( group = 0; group &lt; <a href="IDI_DIN_GROUP_QTY.html" target="topic">IDI_DIN_GROUP_QTY</a>; group++ )
+134: 				{
+135: 					printf( &quot; 0x%02X&quot;, pending[group] );
+136: 				}
+137: <strong><span style="color: #008000;">#else</span></strong>
+138: 				printf( &quot; &quot; );
+139: <strong><span style="color: #008000;">#endif</span></strong>
+140: 				state = TEST_STATE_ACTIVE;
+141: 				<strong><span style="color: #008000;">break</span></strong>;
+142: 			<strong><span style="color: #008000;">case</span></strong> TEST_STATE_ACTIVE:		
+143: 
+144: 				<strong><span style="color: #008000;">if</span></strong> ( <strong><span style="color: #008000;">true</span></strong> == <a href="Character_Get@int__.html" target="topic">Character_Get</a>( NULL ) ) state = TEST_STATE_QUIT;
+145: 
+146: <strong><span style="color: #008000;">#if</span></strong> defined( __MSDOS__ )
+147: 				disable();  
+148: <strong><span style="color: #008000;">#endif</span></strong>
+149: 				irq_count_local = <a href="idi_dataset.html" target="topic">idi_dataset</a>-&gt;irq_count;
+150: 				<strong><span style="color: #008000;">for</span></strong> ( group = 0; group &lt; <a href="IDI_DIN_GROUP_QTY.html" target="topic">IDI_DIN_GROUP_QTY</a>; group++ )
+151: 				{
+152: 					pending[group] = <a href="idi_dataset.html" target="topic">idi_dataset</a>-&gt;isr_pending_list[group];
+153: 					<strong><span style="color: #008000;">if</span></strong> ( 0 != pending[group] ) irq_pending_local++;
+154: 				}
+155: <strong><span style="color: #008000;">#if</span></strong> defined( __MSDOS__ )
+156: 				enable();
+157: <strong><span style="color: #008000;">#endif</span></strong>
+158: 
+159: 				<strong><span style="color: #008000;">if</span></strong> ( irq_count_local != <a href="idi_dataset.html" target="topic">idi_dataset</a>-&gt;irq_count_previous )
+160: 				{
+161: 					<strong><span style="color: #008000;">if</span></strong> ( irq_count_local &gt; <a href="idi_dataset.html" target="topic">idi_dataset</a>-&gt;irq_count_previous )
+162: 					{
+163: 						index = irq_count_local - <a href="idi_dataset.html" target="topic">idi_dataset</a>-&gt;irq_count_previous;
+164: 					}
+165: 					<strong><span style="color: #008000;">else</span></strong>
+166: 					{ 
+167: 						index = UINT_MAX - <a href="idi_dataset.html" target="topic">idi_dataset</a>-&gt;irq_count_previous;
+168: 						index = index + irq_count_local + 1;
+169: 					}
+170: 					<a href="idi_dataset.html" target="topic">idi_dataset</a>-&gt;irq_count_previous = irq_count_local;
+171: 					irq_count_local = index;
+172: 				}
+173: 				<strong><span style="color: #008000;">else</span></strong>
+174: 				{
+175: 					irq_count_local   = 0; 
+176: 					irq_pending_local = 0;
+177: 				}
+178: 
+179: 				<strong><span style="color: #008000;">if</span></strong> ( irq_count_local &gt; 0 )
+180: 				{
+181: <strong><span style="color: #008000;">#if</span></strong> defined( <a href="DIN_TEST_DEBUG_PRINT.html" target="topic">DIN_TEST_DEBUG_PRINT</a> )
+182: cp += sprintf( &amp;(message[cp]), &quot; {%2d}&quot;, (<strong><span style="color: #008000;">int</span></strong>) irq_count_local );
+183: <strong><span style="color: #008000;">#endif</span></strong>
+184: 					<strong><span style="color: #008000;">for</span></strong> ( group = 0; group &lt; <a href="IDI_DIN_GROUP_QTY.html" target="topic">IDI_DIN_GROUP_QTY</a>; group++ )
+185: 					{
+186: 						<strong><span style="color: #008000;">if</span></strong> ( 0x00 != pending[group] )
+187: 						{ 
+188: 							mask = 0x01;
+189: 							<strong><span style="color: #008000;">for</span></strong> ( bit = 0; bit &lt; <a href="IDI_DIN_GROUP_SIZE.html" target="topic">IDI_DIN_GROUP_SIZE</a>; bit++ )
+190: 							{
+191: 								index = bit + group * <a href="IDI_DIN_GROUP_SIZE.html" target="topic">IDI_DIN_GROUP_SIZE</a>;
+192: 								<strong><span style="color: #008000;">if</span></strong> ( 0x00 != (mask &amp; pending[group]) )
+193: 								{ 
+194: 									<strong><span style="color: #008000;">if</span></strong> ( <strong><span style="color: #008000;">false</span></strong> == din_cmplt[index] )
+195: 									{
+196: 										din_cmplt[index] = <strong><span style="color: #008000;">true</span></strong>;
+197: <strong><span style="color: #008000;">#if</span></strong> defined( <a href="DIN_TEST_DEBUG_PRINT.html" target="topic">DIN_TEST_DEBUG_PRINT</a> )
+198: cp += sprintf( &amp;(message[cp]), &quot; [%2d]&quot;, (<strong><span style="color: #008000;">int</span></strong>) index );
+199: state_detect = 1;
+200: <strong><span style="color: #008000;">#else</span></strong>
+201: 										printf( &quot;.&quot; );
+202: <strong><span style="color: #008000;">#endif</span></strong>
+203: 									}
+204: 								}
+205: 								mask = mask &lt;&lt; 1;
+206: 							}
+207: 						}
+208: 					}
+209: 				}
+210: <strong><span style="color: #008000;">#if</span></strong> defined( <a href="DIN_TEST_DEBUG_PRINT.html" target="topic">DIN_TEST_DEBUG_PRINT</a> )
+211: <strong><span style="color: #008000;">if</span></strong> ( state_detect &lt; 3 )
+212: {
+213: 	printf( &quot;\nPENDING:&quot; );
+214: 	<strong><span style="color: #008000;">for</span></strong> ( group = 0; group &lt; <a href="IDI_DIN_GROUP_QTY.html" target="topic">IDI_DIN_GROUP_QTY</a>; group++ )
+215: 	{
+216: 		printf( &quot; 0x%02X&quot;, pending[group] );
+217: 	}
+218: 	printf( &quot;   &quot; );
+219: 	printf( &quot;%s&quot;, message );
+220: 	cp = 0;
+221: 	state_detect++; 
+222: }
+223: strcpy( message, &quot;&quot; );
+224: <strong><span style="color: #008000;">#endif</span></strong>
+225: 				result = <strong><span style="color: #008000;">true</span></strong>;
+226: 				<strong><span style="color: #008000;">for</span></strong> ( bit = 0; bit &lt; <a href="IDI_DIN_QTY.html" target="topic">IDI_DIN_QTY</a>; bit++ ) result = result &amp; din_cmplt[bit];
+227: 				<strong><span style="color: #008000;">if</span></strong> ( <strong><span style="color: #008000;">true</span></strong> == result ) state = TEST_STATE_COMPLETE;
+228: 				<strong><span style="color: #008000;">break</span></strong>;
+229: 			<strong><span style="color: #008000;">case</span></strong> TEST_STATE_COMPLETE:		
+230: <strong><span style="color: #008000;">#if</span></strong> defined( <a href="DIN_TEST_DEBUG_PRINT.html" target="topic">DIN_TEST_DEBUG_PRINT</a> )
+231: 				strcpy( message, &quot;&quot; );
+232: 				printf( &quot;\nPENDING:&quot; );
+233: 				<strong><span style="color: #008000;">for</span></strong> ( group = 0; group &lt; <a href="IDI_DIN_GROUP_QTY.html" target="topic">IDI_DIN_GROUP_QTY</a>; group++ )
+234: 				{
+235: 					printf( &quot; 0x%02X&quot;, pending[group] );
+236: 				}
+237: 				printf( &quot;   &quot; );
+238: 				printf( &quot;\n&quot; );
+239: <strong><span style="color: #008000;">#endif</span></strong>
+240: 				<strong><span style="color: #008000;">break</span></strong>;
+241: 			<strong><span style="color: #008000;">case</span></strong> TEST_STATE_QUIT:		
+242: 				<strong><span style="color: #008000;">break</span></strong>;
+243: 			<strong><span style="color: #008000;">default</span></strong>: 
+244: 				<strong><span style="color: #008000;">break</span></strong>;
+245: 		}
+246: 		<strong><span style="color: #008000;">if</span></strong> ( <strong><span style="color: #008000;">true</span></strong> == <a href="Character_Get@int__.html" target="topic">Character_Get</a>( NULL ) )
+247: 		{
+248: 			state = TEST_STATE_QUIT;
+249: 		}
+250: 	}
+251: 
+252: 	
+253: 	<strong><span style="color: #008000;">for</span></strong> ( group = 0; group &lt; <a href="IDI_DIN_GROUP_QTY.html" target="topic">IDI_DIN_GROUP_QTY</a>; group++ )
+254: 	{
+255: 		<a href="IO_Write_U8@int@size_t@int@uint8_t.html" target="topic">IO_Write_U8</a>( board_id, __LINE__, IDI_INTR_BIT_GROUP0  + group,  0x00 );
+256: 	}
+257: 
+258: <strong><span style="color: #008000;">#if</span></strong> defined( __MSDOS__ )
+259: 	<a href="IOKern_DOS_IRQ_Free@unsigned_int.html" target="topic">IOKern_DOS_IRQ_Free</a>( <a href="idi_dataset.html" target="topic">idi_dataset</a>-&gt;irq_number );
+260: 	<a href="idi_dataset.html" target="topic">idi_dataset</a>-&gt;irq_handler_active = <strong><span style="color: #008000;">false</span></strong>;
+261: <strong><span style="color: #008000;">#endif</span></strong>
+262: 
+263: CMD__IDI48_DIN_Test_Interrupt_Terminate:
+264: 
+265: 	<a href="idi_dataset.html" target="topic">idi_dataset</a>-&gt;io_report   = io_report_backup;
+266: 	<a href="idi_dataset.html" target="topic">idi_dataset</a>-&gt;io_simulate = io_simulate_backup;
+267: 
+268: 	<strong><span style="color: #008000;">if</span></strong> ( TEST_STATE_QUIT == state )
+269: 	{
+270: 		printf( &quot; FAIL&quot; );		error_code = EC_TEST_FAIL;
+271: 	}
+272: 	<strong><span style="color: #008000;">else</span></strong>
+273: 	{
+274: 		printf( &quot; PASS&quot; );		error_code = SUCCESS;
+275: 	}
+276: 
+277: 	printf( &quot;\n&quot; );
+278: 
+279: 	<strong><span style="color: #008000;">return</span></strong> error_code;
+280: }
+</pre></div></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

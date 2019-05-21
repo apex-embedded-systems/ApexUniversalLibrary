@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\auldrv">
+      <UniqueIdentifier>{86ee5f70-ba76-486e-96ba-73691e2bd439}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\devices">
+      <UniqueIdentifier>{f33ce91d-1136-493d-9251-faefd6c08cf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\devices\dev_stx104">
+      <UniqueIdentifier>{f0d1db96-15a3-44dd-94da-d5ee8c1d77db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\devices\dev_tracer">
+      <UniqueIdentifier>{e7861007-3f58-4fb3-8364-667aada2bc4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\devices">
+      <UniqueIdentifier>{9681b350-2983-423b-86d8-22c0e289f13c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\devices\dev_stx104">
+      <UniqueIdentifier>{7daf3a6a-3038-4d40-8358-12f961622bd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\devices\dev_tracere">
+      <UniqueIdentifier>{35898877-ba91-42b3-82b4-61dc8722f4dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\components">
+      <UniqueIdentifier>{f67aac23-65d1-4628-9b94-dac0adb27430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\components">
+      <UniqueIdentifier>{c43dee5a-0d57-4559-957a-0e6b9117434e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\components\i8255m0">
+      <UniqueIdentifier>{f4d3e25b-e4eb-4eb2-996e-ca261cb6b593}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\components\i8254">
+      <UniqueIdentifier>{95ec3a11-2bf9-4dc7-966e-9b77857d40c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\components\i8255m0">
+      <UniqueIdentifier>{cd85cc8f-e235-4839-92a5-d6b546f36878}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\components\i8254">
+      <UniqueIdentifier>{3fe4a21f-1abe-405f-b082-27d97c562447}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\components\indirect">
+      <UniqueIdentifier>{01b8d7e4-1d5d-4726-8714-19dc82b012cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\components\indirect">
+      <UniqueIdentifier>{72cbf031-d7fb-4b9a-b253-cbe12a60f4c2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="..\test\aul_hwdef.txt" />
+    <None Include="aul_lib.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="WishList.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\devices\stx104\dev_stx104.c">
+      <Filter>Source Files\devices\dev_stx104</Filter>
+    </ClCompile>
+    <ClCompile Include="..\devices\stx104\dev_stx104_ao.c">
+      <Filter>Source Files\devices\dev_stx104</Filter>
+    </ClCompile>
+    <ClCompile Include="..\devices\stx104\dev_stx104_di.c">
+      <Filter>Source Files\devices\dev_stx104</Filter>
+    </ClCompile>
+    <ClCompile Include="..\devices\stx104\dev_stx104_do.c">
+      <Filter>Source Files\devices\dev_stx104</Filter>
+    </ClCompile>
+    <ClCompile Include="..\devices\stx104\dev_stx104_index.c">
+      <Filter>Source Files\devices\dev_stx104</Filter>
+    </ClCompile>
+    <ClCompile Include="..\devices\stx104\dev_stx104_gen.c">
+      <Filter>Source Files\devices\dev_stx104</Filter>
+    </ClCompile>
+    <ClCompile Include="..\devices\stx104\dev_stx104_spi.c">
+      <Filter>Source Files\devices\dev_stx104</Filter>
+    </ClCompile>
+    <ClCompile Include="..\devices\stx104\dev_stx104_ai.c">
+      <Filter>Source Files\devices\dev_stx104</Filter>
+    </ClCompile>
+    <ClCompile Include="..\devices\stx104\dev_stx104_trg.c">
+      <Filter>Source Files\devices\dev_stx104</Filter>
+    </ClCompile>
+    <ClCompile Include="..\aul\aul.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\aul\aul_hwdef.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\error.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\mem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\module.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\reg\reg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\status.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\str_safe\str_safe.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\devices\stx104\dev_stx104_int.c">
+      <Filter>Source Files\devices\dev_stx104</Filter>
+    </ClCompile>
+    <ClCompile Include="..\acgr\acgr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\io\io_win32_lib_gen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\io\io_linux_lib_sim.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\io\io_linux_lib_gen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\cmd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\debug.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\io\io.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\io\io_win32_lib_sim.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\auldrv\auldrv.c">
+      <Filter>Source Files\auldrv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\io\io_linux_drv_gen_x86.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="auldll.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\devices\tracere\dev_tracere.c">
+      <Filter>Source Files\devices\dev_tracere</Filter>
+    </ClCompile>
+    <ClCompile Include="..\components\i8254\cmp_i8254.c">
+      <Filter>Source Files\components\i8254</Filter>
+    </ClCompile>
+    <ClCompile Include="..\components\i8255m0\cmp_i8255m0.c">
+      <Filter>Source Files\components\i8255m0</Filter>
+    </ClCompile>
+    <ClCompile Include="..\devmgr\devmgr.c">
+      <Filter>Source Files\devices</Filter>
+    </ClCompile>
+    <ClCompile Include="..\devices\dev_avail.c">
+      <Filter>Source Files\devices</Filter>
+    </ClCompile>
+    <ClCompile Include="..\components\cmp_avail.c">
+      <Filter>Source Files\components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cmpmgr\cmpmgr.c">
+      <Filter>Source Files\components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\aul\general_test.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\components\indirect\cmp_indirect.c">
+      <Filter>Source Files\components\indirect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\aul\aul_general.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="aul_lib.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\shared\typeuser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\aul\aul.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\aul\aul_hwdef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\aul\aul_hwdef_status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\aul\aul_status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\callconv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\compiler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\io\io.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\io\io_cmd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\io\io_status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\ioctl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\mem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\module.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\pstdint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\reg\reg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\status_macros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\str_safe\str_safe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\target.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\typebase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\typebool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\ts_svn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\ts_ct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\module_macros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\acgr\acgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\acgr\acgr_cmd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\acgr\acgr_status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\cmd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\io\io_private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\io\io_shared.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\aul\aul_shared.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\module_shared.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\aul\aul_public.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\sysval.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\auldrv\auldrv_cmd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\auldrv\auldrv_status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\mem_status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\components\i8254\cmp_i8254.h">
+      <Filter>Header Files\components\i8254</Filter>
+    </ClInclude>
+    <ClInclude Include="..\components\i8254\cmp_i8254_status.h">
+      <Filter>Header Files\components\i8254</Filter>
+    </ClInclude>
+    <ClInclude Include="..\components\i8254\cmp_i8254_cmd.h">
+      <Filter>Header Files\components\i8254</Filter>
+    </ClInclude>
+    <ClInclude Include="..\components\i8254\cmp_i8254_reg.h">
+      <Filter>Header Files\components\i8254</Filter>
+    </ClInclude>
+    <ClInclude Include="..\components\i8255m0\cmp_i8255m0.h">
+      <Filter>Header Files\components\i8255m0</Filter>
+    </ClInclude>
+    <ClInclude Include="..\components\i8255m0\cmp_i8255m0_status.h">
+      <Filter>Header Files\components\i8255m0</Filter>
+    </ClInclude>
+    <ClInclude Include="..\components\i8255m0\cmp_i8255m0_cmd.h">
+      <Filter>Header Files\components\i8255m0</Filter>
+    </ClInclude>
+    <ClInclude Include="..\components\i8255m0\cmp_i8255m0_reg.h">
+      <Filter>Header Files\components\i8255m0</Filter>
+    </ClInclude>
+    <ClInclude Include="..\devices\dev_avail.h">
+      <Filter>Header Files\devices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\devmgr\devmgr_status.h">
+      <Filter>Header Files\devices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\devices\dev_avail_cmd.h">
+      <Filter>Header Files\devices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\devices\dev_avail_devices.h">
+      <Filter>Header Files\devices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\devices\dev_avail_module.h">
+      <Filter>Header Files\devices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\devices\dev_avail_status.h">
+      <Filter>Header Files\devices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\device.h">
+      <Filter>Header Files\devices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\device_list.h">
+      <Filter>Header Files\devices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\devmgr\devmgr.h">
+      <Filter>Header Files\devices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\devices\stx104\dev_stx104.h">
+      <Filter>Header Files\devices\dev_stx104</Filter>
+    </ClInclude>
+    <ClInclude Include="..\devices\stx104\dev_stx104_status.h">
+      <Filter>Header Files\devices\dev_stx104</Filter>
+    </ClInclude>
+    <ClInclude Include="..\devices\stx104\dev_stx104_cmd.h">
+      <Filter>Header Files\devices\dev_stx104</Filter>
+    </ClInclude>
+    <ClInclude Include="..\devices\stx104\dev_stx104_index.h">
+      <Filter>Header Files\devices\dev_stx104</Filter>
+    </ClInclude>
+    <ClInclude Include="..\devices\tracere\dev_tracere.h">
+      <Filter>Header Files\devices\dev_tracer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\devices\tracere\dev_tracere_status.h">
+      <Filter>Header Files\devices\dev_tracer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\devices\tracere\dev_tracere_cmd.h">
+      <Filter>Header Files\devices\dev_tracer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\cmd_macros.h">
+      <Filter>Header Files\components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cmpmgr\cmpmgr_status.h">
+      <Filter>Header Files\components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\components\cmp_avail.h">
+      <Filter>Header Files\components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\components\cmp_avail_cmd.h">
+      <Filter>Header Files\components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\components\cmp_avail_module.h">
+      <Filter>Header Files\components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\components\cmp_avail_status.h">
+      <Filter>Header Files\components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cmpmgr\cmpmgr.h">
+      <Filter>Header Files\components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\components\indirect\cmp_indirect.h">
+      <Filter>Header Files\components\indirect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\components\indirect\cmp_indirect_status.h">
+      <Filter>Header Files\components\indirect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\components\indirect\cmp_indirect_cmd.h">
+      <Filter>Header Files\components\indirect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\components\indirect\cmp_indirect_reg.h">
+      <Filter>Header Files\components\indirect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\aul\aul_general.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

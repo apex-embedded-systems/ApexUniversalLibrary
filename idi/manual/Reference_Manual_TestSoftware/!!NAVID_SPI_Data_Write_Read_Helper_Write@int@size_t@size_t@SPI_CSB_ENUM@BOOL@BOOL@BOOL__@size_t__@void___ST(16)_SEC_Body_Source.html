@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Body Source</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;!!NAVID_SPI_Data_Write_Read_Helper_Write@int@size_t@size_t@SPI_CSB_ENUM@BOOL@BOOL@BOOL__@size_t__@void___ST(16)_SEC_Body_Source.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!FUNCTIONS.html" target="topic">Functions</a> &gt; <a href="SPI_Data_Write_Read_Helper_Write@int@size_t@size_t@SPI_CSB_ENUM@BOOL@BOOL@BOOL__@size_t__@void__.html" target="topic">SPI_Data_Write_Read_Helper_Write Function</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+</td></tr></table><div class="Element39">
+Body Source</div>
+<div class="Element40">
+<a href="SPI_Data_Write_Read_Helper_Write@int@size_t@size_t@SPI_CSB_ENUM@BOOL@BOOL@BOOL__@size_t__@void__.html" target="topic">SPI_Data_Write_Read_Helper_Write Function</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<div class="Element14">
+Body Source</div>
+<div class="Element11">
+<div class="Element10">
+<div class="Element170">
+<a href="#" onclick="CopyElementToClipboard(&#39;code00505&#39;);">Copy Code</a></div>
+<div class="Element13"><div class="Element12" id="code00505"><pre class="Element12">  1: <strong><span style="color: #008000;">static</span></strong> <strong><span style="color: #008000;">void</span></strong> SPI_Data_Write_Read_Helper_Write(	<strong><span style="color: #008000;">int</span></strong>				board_id,
+  2: 												size_t		 	object_size,
+  3: 												size_t			object_total_count,
+  4: 												<a href="SPI_CSB_ENUM.html" target="topic">SPI_CSB_ENUM</a>	csb,
+  5: 												<a href="BOOL.html" target="topic">BOOL</a>			active_tx,
+  6: 												<a href="BOOL.html" target="topic">BOOL</a> 			commit_valid,
+  7: 												<a href="BOOL.html" target="topic">BOOL</a> * 			commit_ready,
+  8: 												size_t *		index_tx,
+  9: 												<strong><span style="color: #008000;">const</span></strong> <strong><span style="color: #008000;">void</span></strong> * 	tx_buffer
+ 10: 										   )
+ 11: {
+ 12: 	<a href="BOOL.html" target="topic">BOOL</a> 			tx_full;
+ 13: 	<a href="BOOL.html" target="topic">BOOL</a> 			tx_empty;
+ 14: 	<strong><span style="color: #008000;">int</span></strong>				reg_symbol;
+ 15: 	size_t 			tx_bytes_available;
+ 16: 	size_t			object_qty;
+ 17: 	size_t			object_remaining;
+ 18: 	size_t			index_object;
+ 19: 	size_t			index;
+ 20: 	size_t  		index_byte;
+ 21: 
+ 22: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_XFR_DEBUG )
+ 23: 	<strong><span style="color: #008000;">int</span></strong>				reg_tx_status, reg_rx_status;
+ 24: 	<a href="uint8_t.html" target="topic">uint8_t</a>			reg_tx_status_value, reg_rx_status_value;
+ 25: <strong><span style="color: #008000;">#endif</span></strong>
+ 26: 
+ 27: 	<strong><span style="color: #008000;">const</span></strong> <a href="uint8_t.html" target="topic">uint8_t</a>  	tx_dummy_value = 0x00;
+ 28: 
+ 29: 
+ 30: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_XFR_DEBUG )
+ 31: printf( &quot;  SPI_Data_Write_Read_Helper_Write: &quot; );
+ 32: <strong><span style="color: #008000;">#endif</span></strong>
+ 33: 
+ 34: <strong><span style="color: #008000;">#define</span></strong> FUNCTION_NAME__  &quot;SPI_Data_Write_Read_Helper_Write&quot;
+ 35: <strong><span style="color: #008000;">#if</span></strong> ( <a href="IO_TRACE_USE_SPI_LOGGING.html" target="topic">IO_TRACE_USE_SPI_LOGGING</a> == 1 )
+ 36: 	<a href="IO_Trace_Log_Function@char__@size_t@enum_IO_TRACE_ENUM@int@int.html" target="topic">IO_Trace_Log_Function</a>( FUNCTION_NAME__, __LINE__, IO_TRACE_SPI, board_id, 0 );
+ 37: <strong><span style="color: #008000;">#endif</span></strong>
+ 38: <strong><span style="color: #008000;">#undef</span></strong> FUNCTION_NAME__
+ 39: 
+ 40: 	<strong><span style="color: #008000;">if</span></strong> ( <strong><span style="color: #008000;">false</span></strong> == commit_valid ) 
+ 41: 	{
+ 42: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_XFR_DEBUG )
+ 43: printf( &quot; GO&quot; );
+ 44: <strong><span style="color: #008000;">#endif</span></strong>
+ 45: 		<strong><span style="color: #008000;">if</span></strong> ( <strong><span style="color: #008000;">false</span></strong> == *commit_ready )
+ 46: 		{ 
+ 47: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_XFR_DEBUG )
+ 48: printf( &quot;, FILL&quot; );
+ 49: <strong><span style="color: #008000;">#endif</span></strong>
+ 50: 			
+ 51: 			<a href="SPI_Status_Write_FIFO_Status@int@BOOL__@BOOL__@size_t__.html" target="topic">SPI_Status_Write_FIFO_Status</a>( board_id, &amp;tx_full, &amp;tx_empty, &amp;tx_bytes_available );
+ 52: 			<strong><span style="color: #008000;">if</span></strong> ( tx_bytes_available &gt;= object_size )
+ 53: 			{	
+ 54: 				object_qty = tx_bytes_available / object_size; 
+ 55: 				object_remaining = object_total_count - *index_tx;
+ 56: 				<strong><span style="color: #008000;">if</span></strong> ( object_qty &gt; object_remaining )
+ 57: 				{ 
+ 58: 					object_qty = object_total_count - *index_tx;
+ 59: 				}
+ 60: 
+ 61: 				<strong><span style="color: #008000;">if</span></strong> ( CSB_BUFFER   == csb )
+ 62: 				{ 
+ 63: 					<strong><span style="color: #008000;">if</span></strong> ( object_qty &gt;= 1 ) object_qty = 1;
+ 64: 				}
+ 65: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_DEBUG )
+ 66: printf( &quot;  SPI_Data_Write_Read_Helper_Write: TX object_qty = %d\n&quot;, (<strong><span style="color: #008000;">int</span></strong>) object_qty );
+ 67: <strong><span style="color: #008000;">#endif</span></strong>
+ 68: 				<strong><span style="color: #008000;">switch</span></strong> ( board_id )
+ 69: 				{
+ 70: 					<strong><span style="color: #008000;">case</span></strong> ID_IDI48:
+ 71: 						reg_symbol = (<strong><span style="color: #008000;">int</span></strong>) IDI_SPI_DATA;
+ 72: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_XFR_DEBUG )
+ 73: 						reg_tx_status = IDI_SPI_TX_STATUS;
+ 74: 						reg_rx_status = IDI_SPI_RX_STATUS;
+ 75: <strong><span style="color: #008000;">#endif</span></strong>
+ 76: 						<strong><span style="color: #008000;">break</span></strong>;
+ 77: 					<strong><span style="color: #008000;">case</span></strong> ID_IDO48:
+ 78: 						reg_symbol = (<strong><span style="color: #008000;">int</span></strong>) IDO_SPI_DATA;
+ 79: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_XFR_DEBUG )
+ 80: 						reg_tx_status = IDO_SPI_TX_STATUS;
+ 81: 						reg_rx_status = IDO_SPI_RX_STATUS;
+ 82: <strong><span style="color: #008000;">#endif</span></strong>
+ 83: 						<strong><span style="color: #008000;">break</span></strong>;
+ 84: 				}
+ 85: 
+ 86: 				<strong><span style="color: #008000;">if</span></strong> ( active_tx )
+ 87: 				{
+ 88: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_DEBUG )
+ 89: printf( &quot;  SPI_Data_Write_Read_Helper_Write: TX active\n&quot; );
+ 90: <strong><span style="color: #008000;">#endif</span></strong>
+ 91: 
+ 92: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_XFR_DEBUG )
+ 93: printf( &quot;, DSTATUS:&quot; );
+ 94: <strong><span style="color: #008000;">#endif</span></strong>
+ 95: 					<strong><span style="color: #008000;">for</span></strong> ( index_object = 0; index_object &lt; object_qty; index_object++ )
+ 96: 					{
+ 97: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_DEBUG )
+ 98: printf( &quot;  SPI_Data_Write_Read_Helper_Write: TX bytes:&quot; );
+ 99: <strong><span style="color: #008000;">#endif</span></strong>
+100: 						index_byte = *index_tx * object_size;
+101: 						<strong><span style="color: #008000;">for</span></strong> ( index = 0; index &lt; object_size; index++ )
+102: 						{
+103: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_DEBUG )
+104: printf( &quot; 0x%02X&quot;, ((<a href="uint8_t.html" target="topic">uint8_t</a> *) tx_buffer)[index_byte + index] );
+105: <strong><span style="color: #008000;">#endif</span></strong>
+106: 							<a href="IO_Write_U8@int@size_t@int@uint8_t.html" target="topic">IO_Write_U8</a>( board_id, __LINE__, reg_symbol, ((<a href="uint8_t.html" target="topic">uint8_t</a> *) tx_buffer)[index_byte + index] );
+107: 
+108: 
+109: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_XFR_DEBUG )
+110: global_internal_tx_byte_count++;
+111: <strong><span style="color: #008000;"># if</span></strong> defined( __MSDOS__ )
+112: delay( 200  );  
+113: <strong><span style="color: #008000;">#endif</span></strong>
+114: <a href="IO_Read_U8@int@size_t@int@uint8_t__.html" target="topic">IO_Read_U8</a>( board_id, __LINE__, reg_tx_status, &amp;reg_tx_status_value );
+115: <a href="IO_Read_U8@int@size_t@int@uint8_t__.html" target="topic">IO_Read_U8</a>( board_id, __LINE__, reg_rx_status, &amp;reg_rx_status_value );
+116: printf( &quot; [0x%02X.0x%02X]&quot;, reg_tx_status_value, reg_rx_status_value );
+117: <strong><span style="color: #008000;">#endif</span></strong>
+118: 
+119: 
+120: 						}
+121: 						*index_tx = *index_tx + 1;
+122: 					}
+123: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_DEBUG )
+124: printf( &quot;\n&quot; );
+125: <strong><span style="color: #008000;">#endif</span></strong>
+126: 				}
+127: 				<strong><span style="color: #008000;">else</span></strong>
+128: 				{
+129: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_DEBUG )
+130: printf( &quot;  SPI_Data_Write_Read_Helper_Write: TX inactive\n&quot; );
+131: <strong><span style="color: #008000;">#endif</span></strong>
+132: 
+133: 
+134: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_XFR_DEBUG )
+135: printf( &quot;, NSTATUS:&quot; );
+136: <strong><span style="color: #008000;">#endif</span></strong>
+137: 					<strong><span style="color: #008000;">for</span></strong> ( index_object = 0; index_object &lt; object_qty; index_object++ )
+138: 					{
+139: 						
+140: 						<strong><span style="color: #008000;">for</span></strong> ( index = 0; index &lt; object_size; index++ )
+141: 						{
+142: 							<a href="IO_Write_U8@int@size_t@int@uint8_t.html" target="topic">IO_Write_U8</a>( board_id, __LINE__, reg_symbol, tx_dummy_value ); 
+143: 
+144: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_XFR_DEBUG )
+145: global_internal_tx_byte_count++;
+146: <strong><span style="color: #008000;"># if</span></strong> defined( __MSDOS__ )
+147: delay( 200  );  
+148: <strong><span style="color: #008000;">#endif</span></strong>
+149: <a href="IO_Read_U8@int@size_t@int@uint8_t__.html" target="topic">IO_Read_U8</a>( board_id, __LINE__, reg_tx_status, &amp;reg_tx_status_value );
+150: <a href="IO_Read_U8@int@size_t@int@uint8_t__.html" target="topic">IO_Read_U8</a>( board_id, __LINE__, reg_rx_status, &amp;reg_rx_status_value );
+151: printf( &quot; [0x%02X.0x%02X]&quot;, reg_tx_status_value, reg_rx_status_value );
+152: <strong><span style="color: #008000;">#endif</span></strong>
+153: 
+154: 						}
+155: 						*index_tx = *index_tx + 1;
+156: 					}
+157: 
+158: 				}
+159: 				*commit_ready = <strong><span style="color: #008000;">true</span></strong>;
+160: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_XFR_DEBUG )
+161: printf( &quot;, object_qty=%u, tx_bytes_available=%u, object_remaining=%u, object_size=%u&quot;, object_qty, tx_bytes_available, object_remaining, object_size );
+162: printf( &quot;, index_tx=%u&quot;, *index_tx );
+163: <strong><span style="color: #008000;">#endif</span></strong>
+164: 
+165: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_DEBUG )
+166: printf( &quot;SPI_Data_Write_Read_Helper_Write TX request\n&quot; );
+167: <strong><span style="color: #008000;">#endif</span></strong>
+168: 			}
+169: 			<strong><span style="color: #008000;">else</span></strong>
+170: 			{
+171: 				
+172: printf( &quot;, FULL&quot; );
+173: 			}
+174: 		}
+175: 		<strong><span style="color: #008000;">else</span></strong>
+176: 		{
+177: 			
+178: printf( &quot;, FULL&quot; );
+179: 		}
+180: 	}
+181: 	<strong><span style="color: #008000;">else</span></strong>
+182: 	{ 
+183: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_DEBUG )
+184: printf( &quot;SPI_Data_Write_Read_Helper_Write TX ack\n&quot; );
+185: <strong><span style="color: #008000;">#endif</span></strong>
+186: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_XFR_DEBUG )
+187: printf( &quot; ACK&quot; );
+188: <strong><span style="color: #008000;">#endif</span></strong>
+189: 		*commit_ready = <strong><span style="color: #008000;">false</span></strong>;
+190: 	}
+191: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_XFR_DEBUG )
+192: printf( &quot;\n&quot; );
+193: <strong><span style="color: #008000;">#endif</span></strong>
+194: }
+</pre></div></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

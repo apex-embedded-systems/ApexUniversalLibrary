@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Body Source</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;!!NAVID_CMD__AS_Parameter@int@int@char___ST(16)_SEC_Body_Source.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!FUNCTIONS.html" target="topic">Functions</a> &gt; <a href="CMD__AS_Parameter@int@int@char__.html" target="topic">CMD__AS_Parameter Function</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+</td></tr></table><div class="Element39">
+Body Source</div>
+<div class="Element40">
+<a href="CMD__AS_Parameter@int@int@char__.html" target="topic">CMD__AS_Parameter Function</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<div class="Element14">
+Body Source</div>
+<div class="Element11">
+<div class="Element10">
+<div class="Element170">
+<a href="#" onclick="CopyElementToClipboard(&#39;code00280&#39;);">Copy Code</a></div>
+<div class="Element13"><div class="Element12" id="code00280"><pre class="Element12">  1: <strong><span style="color: #008000;">static</span></strong> <strong><span style="color: #008000;">int</span></strong> CMD__AS_Parameter( <strong><span style="color: #008000;">int</span></strong> board_id, <strong><span style="color: #008000;">int</span></strong> argc, <strong><span style="color: #008000;">char</span></strong> * argv[] )
+  2: {
+  3: 	<strong><span style="color: #008000;">int</span></strong> 		error_code = SUCCESS;
+  4:     <strong><span style="color: #008000;">int</span></strong>     	argc_new;
+  5:     <strong><span style="color: #008000;">char</span></strong> ** 	argv_new;
+  6: 	<strong><span style="color: #008000;">int</span></strong> 		index;
+  7: 	<a href="uint8_t.html" target="topic">uint8_t</a>		tx_buf[12]   = { 0x00 };
+  8: 	<a href="uint8_t.html" target="topic">uint8_t</a>		rx_buf[12]   = { 0x00 };
+  9: 
+ 10: 	<strong><span style="color: #008000;">if</span></strong> ( argc &gt;= 2 )
+ 11: 	{ 
+ 12: 		<strong><span style="color: #008000;">if</span></strong> ( 0 == <a href="strcmpi.html" target="topic">strcmpi</a>( &quot;ofc&quot;, argv[0] )  )
+ 13: 		{ 
+ 14: 			argv_new = &amp;(argv[1]);
+ 15: 			argc_new = argc - 1;
+ 16: 			error_code = <a href="CMD__AS_Calibration_Offset@int@int@char__.html" target="topic">CMD__AS_Calibration_Offset</a>( board_id, argc_new, argv_new );
+ 17: 		}
+ 18: 		<strong><span style="color: #008000;">else</span></strong> <strong><span style="color: #008000;">if</span></strong> ( 0 == <a href="strcmpi.html" target="topic">strcmpi</a>( &quot;fsc&quot;, argv[0] )  )
+ 19: 		{ 
+ 20: 			argv_new = &amp;(argv[1]);
+ 21: 			argc_new = argc - 1;
+ 22: 			error_code = <a href="CMD__AS_Calibration_Gain@int@int@char__.html" target="topic">CMD__AS_Calibration_Gain</a>( board_id, argc_new, argv_new );
+ 23: 		}
+ 24: 		<strong><span style="color: #008000;">else</span></strong> <strong><span style="color: #008000;">if</span></strong> ( ( index = <a href="AS_Register_Name_To_Offset@char__.html" target="topic">AS_Register_Name_To_Offset</a>( argv[0] ) ) &gt;= 0 )
+ 25: 		{ 
+ 26: 			error_code = <a href="CMD__AS_Reg_Write_By_Name@int@int@char__.html" target="topic">CMD__AS_Reg_Write_By_Name</a>( board_id, argc, argv );
+ 27: 		}
+ 28: 		<strong><span style="color: #008000;">else</span></strong> <strong><span style="color: #008000;">if</span></strong> ( ( index = <a href="Bit_String_Index_By_Name@struct_bit_string_info__@char__.html" target="topic">Bit_String_Index_By_Name</a>( <a href="as_bit_string.html" target="topic">as_bit_string</a>, argv[0] ) ) &gt;= 0 )
+ 29: 		{ 
+ 30: 			<strong><span style="color: #008000;">struct</span></strong> 	<a href="bit_string_info.html" target="topic">bit_string_info</a> * 	bsd; 
+ 31: 			size_t  					temp;
+ 32: 			<a href="uint8_t.html" target="topic">uint8_t</a>						mask = 0;
+ 33: 			bsd = &amp;(<a href="as_bit_string.html" target="topic">as_bit_string</a>[index]);
+ 34: 			error_code = <a href="AS_Registers_Read@int@size_t@size_t@uint8_t__@uint8_t__.html" target="topic">AS_Registers_Read</a>( board_id, bsd-&gt;register_offset, 1, tx_buf, rx_buf );
+ 35: 			
+ 36: 			<strong><span style="color: #008000;">for</span></strong> ( temp = 0; temp &lt; bsd-&gt;bit_width; temp++ ) mask = ( mask &lt;&lt; 1 ) | 0x01;
+ 37: 			temp = (size_t) strtol( argv[1], NULL, 0 );
+ 38: 			temp = temp &amp; mask;
+ 39: 			temp = temp &lt;&lt; bsd-&gt;bit_offset;
+ 40: 			rx_buf[2] = rx_buf[2] &amp; ~( mask &lt;&lt; bsd-&gt;bit_offset );
+ 41: 			tx_buf[2] = rx_buf[2] | ( (<a href="uint8_t.html" target="topic">uint8_t</a>) temp );
+ 42: 			error_code = <a href="AS_Registers_Write@int@size_t@size_t@uint8_t__@uint8_t__.html" target="topic">AS_Registers_Write</a>( board_id, bsd-&gt;register_offset, 1, tx_buf, rx_buf );
+ 43: 		}
+ 44: 		<strong><span style="color: #008000;">else</span></strong>
+ 45: 		{
+ 46: 			error_code = -EC_NOT_FOUND;
+ 47: 		}
+ 48: 	}
+ 49: 	<strong><span style="color: #008000;">else</span></strong> <strong><span style="color: #008000;">if</span></strong> ( argc &lt; 1 )
+ 50: 	{ 
+ 51: 		argv_new = &amp;(argv[1]);
+ 52: 		argc_new = argc - 1;
+ 53: 		printf( &quot;Calibration offset: &quot; );
+ 54: 		error_code = <a href="CMD__AS_Calibration_Offset@int@int@char__.html" target="topic">CMD__AS_Calibration_Offset</a>( board_id, argc_new, argv_new );
+ 55: 		<strong><span style="color: #008000;">if</span></strong> ( error_code &lt; 0 ) <strong><span style="color: #008000;">goto</span></strong> CMD__AS_PARAMETER_END;
+ 56: 		printf( &quot;Calibration gain: &quot; );
+ 57: 		error_code = <a href="CMD__AS_Calibration_Gain@int@int@char__.html" target="topic">CMD__AS_Calibration_Gain</a>( board_id, argc_new, argv_new );
+ 58: 		<strong><span style="color: #008000;">if</span></strong> ( error_code &lt; 0 ) <strong><span style="color: #008000;">goto</span></strong> CMD__AS_PARAMETER_END;
+ 59: 		printf( &quot;Registers:\n&quot; );
+ 60: 		<strong><span style="color: #008000;">for</span></strong> ( index = 0; index &lt; AS_ADS1259_REGISTER_QTY; index++ )
+ 61: 		{
+ 62: 			error_code = <a href="CMD__AS_RReg@int@int@char__.html" target="topic">CMD__AS_RReg</a>( board_id, 1, &amp;(<a href="as_register_name.html" target="topic">as_register_name</a>[index]) );
+ 63: 			<strong><span style="color: #008000;">if</span></strong> ( error_code &lt; 0 ) <strong><span style="color: #008000;">goto</span></strong> CMD__AS_PARAMETER_END;
+ 64: 		}
+ 65: 
+ 66: 		printf( &quot;Bit String Parameters:\n&quot; );
+ 67: 		index = 0;
+ 68: 		<strong><span style="color: #008000;">while</span></strong> ( NULL != <a href="as_bit_string.html" target="topic">as_bit_string</a>[index].name )
+ 69: 		{
+ 70: 			<strong><span style="color: #008000;">struct</span></strong> 	<a href="bit_string_info.html" target="topic">bit_string_info</a> * 	bsd; 
+ 71: 			size_t  					i;
+ 72: 			<a href="uint8_t.html" target="topic">uint8_t</a>						mask = 0;
+ 73: 			bsd = &amp;(<a href="as_bit_string.html" target="topic">as_bit_string</a>[index]);
+ 74: 			error_code = <a href="AS_Registers_Read@int@size_t@size_t@uint8_t__@uint8_t__.html" target="topic">AS_Registers_Read</a>( board_id, bsd-&gt;register_offset, 1, tx_buf, rx_buf );
+ 75: 			<strong><span style="color: #008000;">if</span></strong> ( error_code &lt; 0 ) <strong><span style="color: #008000;">goto</span></strong> CMD__AS_PARAMETER_END;
+ 76: 			
+ 77: 			<strong><span style="color: #008000;">for</span></strong> ( i = 0; i &lt; bsd-&gt;bit_width; i++ ) mask = ( mask &lt;&lt; 1 ) | 0x01;
+ 78: 			rx_buf[2] = rx_buf[2] &gt;&gt; bsd-&gt;bit_offset;
+ 79: 			rx_buf[2] = rx_buf[2] &amp; mask;
+ 80: 			printf( &quot; %8s = %d\n&quot;, bsd-&gt;name, (<strong><span style="color: #008000;">int</span></strong>) rx_buf[2] );
+ 81: 
+ 82: 			index++;
+ 83: 		}
+ 84: 	}
+ 85: 	<strong><span style="color: #008000;">else</span></strong>
+ 86: 	{ 
+ 87: 		<strong><span style="color: #008000;">if</span></strong> ( 0 == <a href="strcmpi.html" target="topic">strcmpi</a>( &quot;ofc&quot;, argv[0] )  )
+ 88: 		{ 
+ 89: 			argv_new = &amp;(argv[1]);
+ 90: 			argc_new = argc - 1;
+ 91: 			error_code = <a href="CMD__AS_Calibration_Offset@int@int@char__.html" target="topic">CMD__AS_Calibration_Offset</a>( board_id, argc_new, argv_new );
+ 92: 		}
+ 93: 		<strong><span style="color: #008000;">else</span></strong> <strong><span style="color: #008000;">if</span></strong> ( 0 == <a href="strcmpi.html" target="topic">strcmpi</a>( &quot;fsc&quot;, argv[0] )  )
+ 94: 		{ 
+ 95: 			argv_new = &amp;(argv[1]);
+ 96: 			argc_new = argc - 1;
+ 97: 			error_code = <a href="CMD__AS_Calibration_Gain@int@int@char__.html" target="topic">CMD__AS_Calibration_Gain</a>( board_id, argc_new, argv_new );
+ 98: 		}
+ 99: 		<strong><span style="color: #008000;">else</span></strong> <strong><span style="color: #008000;">if</span></strong> ( ( index = <a href="AS_Register_Name_To_Offset@char__.html" target="topic">AS_Register_Name_To_Offset</a>( argv[0] ) ) &gt;= 0 )
+100: 		{ 
+101: 			error_code = <a href="CMD__AS_RReg@int@int@char__.html" target="topic">CMD__AS_RReg</a>( board_id, argc, argv );
+102: 		}
+103: 		<strong><span style="color: #008000;">else</span></strong> <strong><span style="color: #008000;">if</span></strong> ( ( index = <a href="Bit_String_Index_By_Name@struct_bit_string_info__@char__.html" target="topic">Bit_String_Index_By_Name</a>( <a href="as_bit_string.html" target="topic">as_bit_string</a>, argv[0] ) ) &gt;= 0 )
+104: 		{ 
+105: 			<strong><span style="color: #008000;">struct</span></strong> 	<a href="bit_string_info.html" target="topic">bit_string_info</a> * 	bsd; 
+106: 			size_t  					i;
+107: 			<a href="uint8_t.html" target="topic">uint8_t</a>						mask = 0;
+108: 			bsd = &amp;(<a href="as_bit_string.html" target="topic">as_bit_string</a>[index]);
+109: 			error_code = <a href="AS_Registers_Read@int@size_t@size_t@uint8_t__@uint8_t__.html" target="topic">AS_Registers_Read</a>( board_id, bsd-&gt;register_offset, 1, tx_buf, rx_buf );
+110: 			<strong><span style="color: #008000;">if</span></strong> ( error_code &lt; 0 ) <strong><span style="color: #008000;">goto</span></strong> CMD__AS_PARAMETER_END;
+111: 			
+112: 			<strong><span style="color: #008000;">for</span></strong> ( i = 0; i &lt; bsd-&gt;bit_width; i++ ) mask = ( mask &lt;&lt; 1 ) | 0x01;
+113: 			rx_buf[2] = rx_buf[2] &gt;&gt; bsd-&gt;bit_offset;
+114: 			rx_buf[2] = rx_buf[2] &amp; mask;
+115: 			printf( &quot;%8s = %d\n&quot;, bsd-&gt;name, (<strong><span style="color: #008000;">int</span></strong>) rx_buf[2] );
+116: 		}
+117: 		<strong><span style="color: #008000;">else</span></strong>
+118: 		{
+119: 			error_code = -EC_NOT_FOUND;
+120: 		}
+121: 	}
+122: CMD__AS_PARAMETER_END:
+123: 	<strong><span style="color: #008000;">return</span></strong> error_code;
+124: }
+</pre></div></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

@@ -1,0 +1,3 @@
+/demo_basic/demo_basic.doxyfile
+/lib_report/lib_report.doxyfile
+/idi/idi.doxyfile

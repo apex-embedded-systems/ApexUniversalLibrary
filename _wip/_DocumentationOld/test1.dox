@@ -1,0 +1,18 @@
+/**
+\page test1 The Test Pag 1 documentation
+\tableofcontents
+<h1>This is a simple example of a mainpage you can create yourself.</h1>
+\section sec_1 Section 1
+Place this inside of a file called `mainpage.dox` and use doxygen.
+\subsection subsection1 The first subsection
+  Text.
+  \subsection subsection2 The second subsection
+  More text.
+
+
+If you specified `INPUT` or `FILE_PATTERNS` in your Doxyfile please
+add `.dox` to your file patterns or `mainpage.dox` to your INPUT files.
+\section sec_2 Section 2
+Test br <br /><br />
+Test
+*/

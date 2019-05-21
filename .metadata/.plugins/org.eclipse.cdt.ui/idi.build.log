@@ -1,0 +1,48 @@
+17:40:07 **** Incremental Build of configuration Debug for project idi ****
+make all 
+Building file: ../src/idi.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/idi.d" -MT"src/idi.d" -o "src/idi.o" "../src/idi.c"
+../src/idi.c: In function 'CMD__IDO48_DO_All':
+../src/idi.c:10464:7: warning: variable 'error_code' set but not used [-Wunused-but-set-variable]
+  int  error_code;         /* used primarily for debug purposes */
+       ^
+../src/idi.c: In function 'CMD__IDO48_DO_Channel':
+../src/idi.c:10492:7: warning: variable 'error_code' set but not used [-Wunused-but-set-variable]
+  int  error_code;         /* used primarily for debug purposes */
+       ^
+../src/idi.c: In function 'CMD__IDO48_DO_Group':
+../src/idi.c:10523:7: warning: variable 'error_code' set but not used [-Wunused-but-set-variable]
+  int  error_code; /* used primarily for debugging */
+       ^
+../src/idi.c: In function 'CMD__IDI48_DIN_Test_Value':
+../src/idi.c:10700:12: warning: variable 'file_name' set but not used [-Wunused-but-set-variable]
+  char *    file_name;
+            ^
+../src/idi.c: In function 'CMD__IDI48_DIN_All':
+../src/idi.c:11743:7: warning: variable 'error_code' set but not used [-Wunused-but-set-variable]
+  int  error_code;         /* used primarily for debug purposes */
+       ^
+../src/idi.c: In function 'CMD__IDI48_DIN_Channel':
+../src/idi.c:11804:7: warning: variable 'error_code' set but not used [-Wunused-but-set-variable]
+  int  error_code;         /* used primarily for debug purposes */
+       ^
+../src/idi.c: In function 'CMD__IDI48_DIN_Group':
+../src/idi.c:11827:7: warning: variable 'error_code' set but not used [-Wunused-but-set-variable]
+  int  error_code; /* used primarily for debugging */
+       ^
+Finished building: ../src/idi.c
+ 
+Building file: ../src/stopwatch.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/stopwatch.d" -MT"src/stopwatch.d" -o "src/stopwatch.o" "../src/stopwatch.c"
+Finished building: ../src/stopwatch.c
+ 
+Building target: idi
+Invoking: Cross GCC Linker
+gcc  -o "idi"  ./src/idi.o ./src/stopwatch.o   
+Finished building target: idi
+ 
+
+17:40:09 Build Finished (took 2s.72ms)
+

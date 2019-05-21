@@ -1,0 +1,6 @@
+09:28:10 **** Incremental Build of configuration _Out_Debug for project demo_stx104_simple ****
+make all 
+makefile:31: *** multiple target patterns.  Stop.
+
+09:28:11 Build Finished (took 92ms)
+

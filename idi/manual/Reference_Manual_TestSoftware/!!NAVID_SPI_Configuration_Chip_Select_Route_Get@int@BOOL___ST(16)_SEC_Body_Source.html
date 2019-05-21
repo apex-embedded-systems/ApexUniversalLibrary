@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Body Source</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;!!NAVID_SPI_Configuration_Chip_Select_Route_Get@int@BOOL___ST(16)_SEC_Body_Source.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!FUNCTIONS.html" target="topic">Functions</a> &gt; <a href="SPI_Configuration_Chip_Select_Route_Get@int@BOOL__.html" target="topic">SPI_Configuration_Chip_Select_Route_Get Function</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+</td></tr></table><div class="Element39">
+Body Source</div>
+<div class="Element40">
+<a href="SPI_Configuration_Chip_Select_Route_Get@int@BOOL__.html" target="topic">SPI_Configuration_Chip_Select_Route_Get Function</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<div class="Element14">
+Body Source</div>
+<div class="Element11">
+<div class="Element10">
+<div class="Element170">
+<a href="#" onclick="CopyElementToClipboard(&#39;code00495&#39;);">Copy Code</a></div>
+<div class="Element13"><div class="Element12" id="code00495"><pre class="Element12"> 1: <strong><span style="color: #008000;">int</span></strong> SPI_Configuration_Chip_Select_Route_Get( <strong><span style="color: #008000;">int</span></strong> board_id, <a href="BOOL.html" target="topic">BOOL</a> * cs_to_channel1 )
+ 2: {
+ 3: 	<a href="uint8_t.html" target="topic">uint8_t</a>   	scratch;
+ 4: 	<a href="uint8_t.html" target="topic">uint8_t</a>		mask = 0x40;
+ 5: 
+ 6: <strong><span style="color: #008000;">#define</span></strong> FUNCTION_NAME__  &quot;SPI_Configuration_Chip_Select_Route_Get&quot;
+ 7: <strong><span style="color: #008000;">#if</span></strong> ( <a href="IO_TRACE_USE_SPI_LOGGING.html" target="topic">IO_TRACE_USE_SPI_LOGGING</a> == 1 )
+ 8: 	<a href="IO_Trace_Log_Function@char__@size_t@enum_IO_TRACE_ENUM@int@int.html" target="topic">IO_Trace_Log_Function</a>( FUNCTION_NAME__, __LINE__, IO_TRACE_SPI, board_id, 0 );
+ 9: <strong><span style="color: #008000;">#endif</span></strong>
+10: <strong><span style="color: #008000;">#undef</span></strong> FUNCTION_NAME__
+11: 
+12: 	<strong><span style="color: #008000;">if</span></strong> ( <a href="SPI_IsNotPresent@int.html" target="topic">SPI_IsNotPresent</a>( board_id ) ) <strong><span style="color: #008000;">return</span></strong> -EC_SPI_NOT_FOUND;
+13: 
+14: 	<strong><span style="color: #008000;">switch</span></strong> ( board_id )
+15: 	{
+16: 		<strong><span style="color: #008000;">case</span></strong> ID_IDI48:	<a href="IO_Read_U8@int@size_t@int@uint8_t__.html" target="topic">IO_Read_U8</a>( board_id, __LINE__, IDI_SPI_CONFIG, &amp;scratch );	<strong><span style="color: #008000;">break</span></strong>;
+17: 		<strong><span style="color: #008000;">case</span></strong> ID_IDO48:	<a href="IO_Read_U8@int@size_t@int@uint8_t__.html" target="topic">IO_Read_U8</a>( board_id, __LINE__, IDO_SPI_CONFIG, &amp;scratch );	<strong><span style="color: #008000;">break</span></strong>;
+18: 	}
+19: 
+20: 	<strong><span style="color: #008000;">if</span></strong> ( scratch &amp; mask ) *cs_to_channel1 = <strong><span style="color: #008000;">true</span></strong>;
+21: 	<strong><span style="color: #008000;">else</span></strong>                  *cs_to_channel1 = <strong><span style="color: #008000;">false</span></strong>;
+22: 
+23: 	<strong><span style="color: #008000;">return</span></strong> SUCCESS;
+24: }
+</pre></div></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

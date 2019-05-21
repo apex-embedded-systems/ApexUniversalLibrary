@@ -1,0 +1,42 @@
+#!/bin/bash
+
+#
+# Apex Embedded Systems
+# Summit board driver module build and load script
+#
+
+#
+# User modify depending on location of files
+#
+SUMMIT_DIR="/media/sf_vb_shares/aes_drv"
+export SUMMIT_DIR
+
+cd $SUMMIT_DIR/drv_summit
+make
+
+#
+# Make sure we are root
+#
+if [[ $EUID -ne 0 ]]; then
+	echo "NOTICE: this script must be run as root" 1>&2
+	exit 1
+fi
+
+#
+#find the root group
+#
+if grep '^staff:' /etc/group > /dev/null; then
+    group="staff"
+else
+    group="wheel"
+fi
+
+#
+# remove the module if it is already loaded
+#
+./summit_unload
+
+#
+# install the module
+#
+./summit_load

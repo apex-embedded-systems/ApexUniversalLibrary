@@ -1,0 +1,161 @@
+#!/bin/bash
+
+# Apex Universal Library
+# Apex Embedded Systems
+#
+# @file   fixup_aes_ws
+# @brief  deployment
+#
+# "$Date: 2015-04-17 19:12:24 -0500 (Fri, 17 Apr 2015) $"
+
+
+############### CUSTOMER SPECIFIC CODE REMOVAL FLAGS ####################
+
+#REMOVE_EGS=0
+REMOVE_EGS=1
+REMOVE_INTERNAL=1
+
+
+###################### SOURCE & DESTINATION FOLDER #########################
+
+SRC="aes_eclipse"
+DST="aes_ws"
+
+###################### COPY FOLDERS #########################
+
+FOLDERSCOPY="demo_basic
+demo_multiple_boards
+demo_stx104_fast
+demo_stx104_simple
+Demo_GUI
+drv_aul_sim
+drv_aul_x86
+lib_report
+documentation
+aul_tree"
+
+for f in $FOLDERSCOPY
+do
+	echo "##==> copy folder '$f' to '$DST' target folder"
+	cd ~/$SRC/$f
+	find . -depth -print | cpio -panVd ~/$DST/$f
+done 
+
+
+###################### REMOVE UNWANTED #########################
+
+FOLDERSREMOVE="array
+aul_lib_dll
+demo
+AppTestDLL
+_Out_Executable_AulTest_Debug
+WinDriver
+test"
+
+echo "##==> house clean target aul_tree of misc unwanted folders and files"
+cd ~/$DST/aul_tree
+
+rm -rf "./Unique IDs.ods"
+
+for f in $FOLDERSREMOVE
+do
+	echo "##==> removing folder '$f' in target"
+	rm -rf ./$f
+done 
+
+echo "##==> removing misc win32 related files"
+rm -rf ./io/io_win32_lib_gen.c
+rm -rf ./io/io_win32_lib_sim.c
+
+echo "##==> removing misc internal GUI documentation images"
+cd ~/$DST/Demo_GUI/Documentation
+rm -rf *.docx
+rm -rf Quick_Start*.jpg
+rm -rf MainFotm.PNG
+rm -rf MainForm2.PNG
+rm -rf STXMainForm.PNG
+
+echo "##==> removing unreleased components and related internal documentation"
+cd ~/$DST/aul_tree/components
+rm -rf ./cmp_template
+rm -rf ./ltc2449_spi
+rm -rf ./pdo_spi
+rm -rf ./spich
+rm -rf ./syscon_0x8001
+rm -rf ./980061
+rm -rf Component_Theory_Of_Operation.odt
+
+echo "##==> removing unrelated projects within the workspace"
+cd ~/$DST
+rm -rf ./idi  
+
+
+###################### REMOVE ANY CUSTOMER SPECIFIC #################
+# this removes all references to any customer specific components/devices.
+
+#TODO: pass in component name and have it do it all
+
+echo "##==> removing private customer related information within documents and files"
+if [ $REMOVE_EGS -eq 1 ]; then
+  cd  ~/$DST/aul_tree/components
+  sed -i '/<EGS_BEGIN>/,/<EGS_END>/d' cmp_avail_cmd.h
+  sed -i '/<EGS_BEGIN>/,/<EGS_END>/d' cmp_avail_module.h
+  sed -i '/<EGS_BEGIN>/,/<EGS_END>/d' cmp_avail_status.h 
+  sed -i '/<EGS_BEGIN>/,/<EGS_END>/d' cmp_avail.c
+  sed -i '/<EGS_BEGIN>/,/<EGS_END>/d' cmp_avail.h
+  cd ~/$DST/aul_tree/devices/stx104
+  sed -i '/<EGS_BEGIN>/,/<EGS_END>/d' dev_stx104.c
+  sed -i '/<EGS_BEGIN>/,/<EGS_END>/d' dev_stx104.h
+  cd ~/$DST/aul_tree/auldrv
+  sed -i '/<EGS_BEGIN>/,/<EGS_END>/d' auldrv.c
+  rm  -rf ./egs
+  cd ~/$DST/drv_aul_x86
+  sed -i '/<EGS_BEGIN>/,/<EGS_END>/d' load
+  sed -i '/<EGS_BEGIN>/,/<EGS_END>/d' unload
+  cd ~/$DST/aul_tree/drv_aul_sim
+  sed -i '/<EGS_BEGIN>/,/<EGS_END>/d' load
+  sed -i '/<EGS_BEGIN>/,/<EGS_END>/d' unload
+fi 
+
+#
+# http://www.cyberciti.biz/faq/bash-loop-over-file/
+# http://stackoverflow.com/questions/2437452/how-to-get-the-list-of-files-in-a-directory-in-a-shell-script
+#
+echo "##==> removing internally related information within documents and files"
+
+if [ $REMOVE_INTERNAL -eq 1 ]; then 
+  cd ~/$DST/aul_tree/devices/stx104
+  sed -i '/<INTERNAL_BEGIN>/,/<INTERNAL_END>/d' dev_stx104.c
+  sed -i '/<INTERNAL_BEGIN>/,/<INTERNAL_END>/d' dev_stx104.h
+  cd ~/$DST/drv_aul_x86
+  sed -i '/<INTERNAL_BEGIN>/,/<INTERNAL_END>/d' README.txt
+fi
+
+# work in progress specific to hardware scanning.
+#/*<HWSCAN_BEGIN>*/
+#/*<HWSCAN_END>*/
+
+# Documentation:  will this work with Doxygen?
+#/*<INTERNAL_BEGIN>*/
+#/*<INTERNAL_END>*/
+
+###################### REMOVE ANY REMAINING DATA #########################
+
+echo "##==> Remove all the dmesg.txt"
+cd ~/$DST
+find . -name "dmesg.txt" -type f -delete
+
+echo "##==> Remove all subversion information directories"
+cd ~/$DST
+find . -depth -name ".svn" -exec rm -fr {} \;
+#rm -rf `find . -type d -name .svn`
+
+
+###################### ARCHIVE DST FOLDER #########################
+TIMESTAMP=`$(date +"%Y%m%d%H%M%S")`
+echo "##==> Archiving driver/library/applications"
+tar -zcvf ~/share/aes-$TIMESTAMP.tar.gz ~/$DST
+
+
+
+

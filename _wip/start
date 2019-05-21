@@ -1,0 +1,3 @@
+#!/bin/bash
+#sensible-browser ./aul_tree/html/index.html
+xdg-open ./aul_tree/html/index.html

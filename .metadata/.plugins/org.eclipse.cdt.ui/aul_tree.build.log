@@ -1,0 +1,9 @@
+12:04:26 **** Build of configuration _Out_Library_Shared_Use_Simulator for project aul_tree ****
+make all 
+Building file: ../str_safe/str_safe.c
+Invoking: GCC C Compiler
+gcc -D_DEBUG -DAUL_LIBRARY_SHARED_SIMULATOR_DEBUG -O0 -g3 -Wall -Wextra -c -fmessage-length=0 -MMD -MP -MF"str_safe/str_safe.d" -MT"str_safe/str_safe.d" -o "str_safe/str_safe.o" "../str_safe/str_safe.c"
+Command canceled
+
+12:04:27 Build Cancelled (took 535ms)
+

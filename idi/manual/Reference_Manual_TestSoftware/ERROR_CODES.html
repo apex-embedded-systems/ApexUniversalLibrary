@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>ERROR_CODES Macro</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;ERROR_CODES.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!MACROS.html" target="topic">Macros</a> &gt; <a href="ERROR_CODES.html" target="topic">ERROR_CODES Macro</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+<div class="Element90">
+<a href="EC_HUMAN_READABLE_TERMINATE.html" target="topic"><img src="btn_prev_midblue.gif" border="0" alt="Previous" title="Previous" onmouseover="switchImage(this, &#39;btn_prev_midblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_prev_midblue.gif&#39;);" /></a><a href="!!MACROS.html" target="topic"><img src="btn_up_midblue.gif" border="0" alt="Up" title="Up" onmouseover="switchImage(this, &#39;btn_up_midblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_up_midblue.gif&#39;);" /></a><a href="false.html" target="topic"><img src="btn_next_midblue.gif" border="0" alt="Next" title="Next" onmouseover="switchImage(this, &#39;btn_next_midblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_next_midblue.gif&#39;);" /></a></div>
+</td></tr></table><div class="Element5">
+ERROR_CODES Macro</div>
+<div class="Element7">
+<a href="idi_c.html" target="topic">idi.c</a> | <a href="!!MACROS.html" target="topic">Macros</a></div>
+<div class="Element731">
+<div class="Element730">
+<a onclick="ToggleAllElements(&#39;46696C65,4465736372697074696F6E,47726F7570,4C696E6B73&#39;, &#39;linkToggleAllElements&#39;, &#39;imgToggleAllElements&#39;, &#39;Collapse All&#39;, &#39;Expand All&#39;);"><img src="btn_collapse.gif" border="0" alt="" title="" id="imgToggleAllElements" /></a><a id="linkToggleAllElements" onclick="ToggleAllElements(&#39;46696C65,4465736372697074696F6E,47726F7570,4C696E6B73&#39;, &#39;linkToggleAllElements&#39;, &#39;imgToggleAllElements&#39;, &#39;Collapse All&#39;, &#39;Expand All&#39;);">Collapse All</a></div>
+</div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<a name="432B2B"></a><div class="Element99">
+C++</div>
+<div class="Element101"><div class="Element100"><pre class="Element100"><strong><span style="color: #008000;">#define</span></strong> <strong><span style="color: #660000;">ERROR_CODES</span></strong>(_) \
+    <em><span style="color: #0000FF;">/*    enum_symbol             		   code		human readable        	   */</span></em> \
+        _( SUCCESS,                            0,        &quot;&quot;                            ) \
+        _( EC_BUFFER_TOO_LARGE,            1,      &quot;buffer too large&quot;            ) \
+        _( EC_DIRECTION,                    2,      &quot;direction&quot;                    ) \
+        _( EC_PARAMETER,                    3,      &quot;parameter&quot;                    ) \
+        _( EC_NOT_FOUND,                    4,        &quot;not found&quot;                    ) \
+        _( EC_PARAMETER_MISSING,            5,        &quot;missing parameter&quot;            ) \
+        _( EC_SYNTAX,                        6,        &quot;syntax error&quot;                ) \
+        _( EC_HEX_DUMP_COUNT,                7,        &quot;hex dump count&quot;            ) \
+        _( EC_INIT_FILE,                    8,        &quot;write init file failed&quot;    ) \
+        _( EC_BANK,                            9,        &quot;bank not found&quot;            ) \
+        <em><span style="color: #0000FF;">/* EC_BUSY emulates a similar Linux error */</span></em>\
+        _( EC_APP_TERMINATE,               10,      &quot;terminated by user&quot;        ) \
+        _( EC_APP_TERMINATE_CTRLC,         11,      &quot;terminated by ctrl-c&quot;        ) \
+        _( EC_NOT_IMPLEMENTED,               12,        &quot;function not implemented&quot;  ) \
+        _( EC_CHANNEL,                     13,      &quot;channel range&quot;             ) \
+        _( EC_MISSING_DATA,                   14,        &quot;missing data&quot;                ) \
+        _( EC_BUSY,                           16,        &quot;interrupt busy&quot;            ) \
+        _( EC_INTERRUPT_UNAVAILABLE,       21,        &quot;interrupt not available&quot;    ) \
+        <em><span style="color: #0000FF;">/* was EC_INTR_ERROR was EC_EINVAL to emulate Linux behavior */</span></em>\
+        _( EC_INTR_ERROR,                  22,        &quot;interrupt error&quot;           ) \
+        _( EC_SPI_ECD_OUT_OF_RANGE,       40,    &quot;SPI ECD range&quot;                ) \
+        _( EC_SPI_HALF_CLOCK_OUT_OF_RANGE, 41,        &quot;SPI half clock range&quot;        ) \
+        _( EC_SPI_CSB_OUT_OF_RANGE,       42,        &quot;SPI CSB range&quot;                ) \
+        _( EC_SPI_NOT_FOUND,               43,        &quot;SPI not found&quot;                ) \
+        _( EC_SPI_BUFFER_SIZE_ODD,         44,        &quot;buffer size odd&quot;            ) \
+        _( EC_SPI_BUFFER_SIZE,               45,        &quot;buffer size out of range&quot;    ) \
+        _( EC_SPI_OBJECT_SIZE,               46,        &quot;spi tx/rx object size&quot;        ) \
+        _( EC_SPI_BUFFER_MISMATCH,           47,        &quot;spi buffer mismatch&quot;        ) \
+        _( EC_SPI_BUFFERS_NULL,           48,        &quot;spi tx/rx buffers null&quot;    ) \
+        _( EC_FRAM_ADDRESS_RANGE,           49,        &quot;fram address range&quot;        ) \
+        _( EC_TEST_FAIL,                   50,        &quot;test fail&quot;                ) \
+        _( EC_BOARD,                       51,        &quot;board invalid&quot;                ) \
+        _( EC_BOARD_TYPE,                   52,        &quot;board type invalid&quot;        ) \
+        _( EC_REGISTER_ADDRESS_EXCEEDED,   53,        &quot;register address exceeded&quot; ) \
+        _( EC_EXTRA_IGNORED,               54,        &quot;extra ignored&quot;            ) \
+        _( EC_FILE_ERROR,                   55,        &quot;file open error&quot;            ) \
+        _( EC_MODE_LEGACY,                   56,        &quot;S/W set to legacy mode&quot;    )</pre></div></div>
+<a name="46696C65"></a><div class="Element14">
+<a onclick="toggleVisibilityStored(&#39;46696C65&#39;);" class="a_Element14"><img src="btn_collapse_large.gif" border="0" alt="" title="" id="img46696C65" />File</a></div>
+<div id="div46696C65">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="idi_c.html" target="topic">idi.c</a></p></div>
+</div>
+</div>
+<a name="4465736372697074696F6E"></a><div class="Element14">
+<a onclick="toggleVisibilityStored(&#39;4465736372697074696F6E&#39;);" class="a_Element14"><img src="btn_collapse_large.gif" border="0" alt="" title="" id="img4465736372697074696F6E" />Description</a></div>
+<div id="div4465736372697074696F6E">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+brief An organized error code listing. This macro is used to build the complete error code enumeration list.</p></div>
+</div>
+</div>
+<a name="47726F7570"></a><div class="Element14">
+<a onclick="toggleVisibilityStored(&#39;47726F7570&#39;);" class="a_Element14"><img src="btn_collapse_large.gif" border="0" alt="" title="" id="img47726F7570" />Group</a></div>
+<div id="div47726F7570">
+<div class="Element11">
+<div class="Element10">
+<p class="Element10">
+<a href="!!MACROS.html" target="topic">Macros</a></p></div>
+</div>
+</div>
+<a name="4C696E6B73"></a><div class="Element14">
+<a onclick="toggleVisibilityStored(&#39;4C696E6B73&#39;);" class="a_Element14"><img src="btn_collapse_large.gif" border="0" alt="" title="" id="img4C696E6B73" />Links</a></div>
+<div id="div4C696E6B73">
+<div class="Element11">
+<div class="Element10">
+<a href="idi_c.html" target="topic">idi.c</a>, <a href="!!MACROS.html" target="topic">Macros</a></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr><tr><td width="100%">
+<div class="Element97">
+What do you think about this topic? <a href="#" onclick="sendFeedback('customer.service@apexembeddedsytems.com', 'STX104 Documentation Feedback', 'Project: STD-Bus Test Software Reference Manual%0ATopic ID: ERROR_CODES%0ATitle: ERROR_CODES Macro');"> Send feedback! </a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

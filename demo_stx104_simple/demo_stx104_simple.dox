@@ -1,0 +1,128 @@
+/**
+@page simple_menu   Menu
+The menu presented to the user.
+
+The menu structure is found at stx104_simple_menu_list.  The menu
+is updated by running the function STX104_Simple_Main_Loop() and 
+within that function is Menu_Command().
+
+@code
+-------------------------------
+  < < <  M E N U  > > >
+-------------------------------
+ Library Revision:            14120109
+ Driver Revision:             14052816, *** WARNING DEBUG ACTIVE ***
+ Hardware Firmware Revision:  0000
+---- analog inputs -----
+ 0-9,a-f) channel select (0-15)
+       u) print values in hexadecimal
+       v) print values in volts (uncal)
+       w) +10.0V   range (PGA = 00)
+       x)  +5.0V   range (PGA = 01)
+       y)  +2.5V   range (PGA = 10)
+       z)  +1.25V  range (PGA = 11)
+---- analog outputs -----
+       o) write to channel-a
+       p) write to channel-b
+---- digital outputs -----
+       g) write to all
+     h-k) write to channel (DO0 to DO3)
+---- other -----
+       r) redraw menu
+       F) Status and configuration report to 'report.txt'
+       R) Status and configuration report to console
+       q) quit this demo
+PRESS KEY TO SELECT MENU ITEM>
+DI = Digital in.   AI = Analog in
+Polarity: BIP/UNI. Input: SE/DIF. FR = frames read.
+
+
+/    DI:1111 AI:UNI DIF 1.25V  CH00: 0x0000     FR:       0
+@endcode
+
+
+@page simple_report   Report
+Typical report format.
+@code
+======================================= REPORT FILE
+Date:   Tue Dec  2 15:34:57 2014
+
+Status: stx104 board level:
+   Driver: name = mod_auldrv, revision = 14052816
+           *** NOTICE ***
+           DRIVER IN DEBUG MODE: DATA BANDWIDTH LIMITED & KERNEL LOG BLOATING POSSIBLE
+  Library: name = libauldebug.a, revision = 14120109
+  Library: process ID           = 1889
+  stx104_firmware_revision      = STX104_REVISION_071604
+  Jumpers: hardware
+    M0_mode                     = installed
+    M1_mode                     = installed
+    M2_dacs_16bits              = installed (16-bit data)
+    M3_moving_average_filter    = installed
+    M4_address_10bit_mode       = installed (10-bit CPU address)
+    DMA_ch3                     = installed (DMA3, DMA is deprecated)
+    CLK_1mhz                    = installed (8254  1MHz clock, legacy)
+    J9_ai_unipolar              = installed (Unipolar inputs)
+    J8_ai_differential          = installed (Differential inputs)
+  Mode summary:
+    DAS1602 compatibility and FIFO status
+     registers visible (single interrupt 
+     per ADC-burst completion)
+  Trigger active                = true 
+  Interrupt enabled             = false
+Configuration: analog inputs:
+  first channel                 = 15
+  last channel                  = 15
+  gain                          = 1.25V 
+  burst_timer_ns (intra-sample) = 4975 nS (priority: burst_timer_sec)
+  frame_timer_ns                = 0 nS
+  burst_timer_sec (intra-sample)= 1.073742e+02 Sec
+  frame_timer_sec               = 0.000000e+00 Sec (used: frame_timer_ns)
+  frame_maximum                 = 4294967295
+  moving_average_filter         = true 
+  sync_aift_to_trigger_start    = true 
+  sync_aifc_to_trigger_start    = true 
+  use_triggering_subsystem      = true 
+  high_speed_pre_queue_fifo     = true 
+  strobe_source                 = AISS_DIN3_FE
+  encoding                      = AI_ENCODING_STRAIGHT_BINARY
+Configuration: digital inputs:
+  deglitch_200ns                = true 
+  swap_din1_and_din3            = true 
+  polarity.din0                 = true 
+  polarity.din1                 = true 
+  polarity.din2                 = true 
+  polarity.din3                 = true 
+Configuration: digital outputs:
+  polarity.dout0                = true 
+  polarity.dout1                = true 
+  polarity.dout2                = true 
+  polarity.dout3                = true 
+  polarity.ct_out0              = true 
+  polarity.ct_out2              = true 
+  polarity.sshp                 = true 
+Configuration: triggering subsystem:
+  enabled                       = true 
+  start_mode                    = 
+  start_sync_source             = TSS_DIN3_FE
+  stop_source                   = ETS_DIN3_FE
+  start_source                  = STS_DIN3_FE
+  delay_ns                      = 4294967271 (priority: delay_sec)
+  delay_sec                     = 1.073742e+02 Sec
+Configuration: interrupts:
+  threshold                     = 4294967295
+  threshold_source              = ITS_DIN3_FE
+  blocks_per_interrupt          = BLOCK_1
+  source_a                      = ISA_DIN3_FE
+  source_b                      = ISB_DIN3_FE
+  callback_source_a              = 0x(nil) (null)
+  callback_source_b              = 0x(nil) (null)
+  callback_fifo_blk              = 0x(nil) (null)
+  callback_source_a_user_dataset	= 0x(nil) (null)
+  callback_source_b_user_dataset	= 0x(nil) (null)
+  callback_fifo_blk_user_dataset	= 0x(nil) (null)
+  threshold_sync_to_triggering   = true 
+  
+  
+@endcode
+*/

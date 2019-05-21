@@ -1,0 +1,26 @@
+21:15:52 **** Build of configuration _Out_Debug for project lib_report ****
+make all 
+Building file: ../lib_report.c
+Invoking: GCC C Compiler
+gcc -D_DEBUG=1 -I../../aul_tree -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib_report.d" -MT"lib_report.d" -o "lib_report.o" "../lib_report.c"
+In file included from ../../aul_tree/aul/../shared/status.h:37:0,
+                 from ../../aul_tree/aul/aul_public.h:31,
+                 from ../lib_report.c:80:
+../../aul_tree/aul/../shared/../shared/compiler.h:83:11: note: #pragma message: aul_tree: compiler.h __linux__ application layer
+ #  pragma message ( "aul_tree: compiler.h __linux__ application layer" )
+           ^
+In file included from ../../aul_tree/aul/aul_public.h:35:0,
+                 from ../lib_report.c:80:
+../../aul_tree/aul/../shared/debug.h:49:10: note: #pragma message: aul_tree: debug.c COMPILER_APPLICATION
+ # pragma message  ( "aul_tree: debug.c COMPILER_APPLICATION" )
+          ^
+Finished building: ../lib_report.c
+ 
+Building target: lib_report
+Invoking: GCC C Linker
+gcc -L../../aul_tree/_Out_Library_Static_Application_Debug -o "lib_report"  ./lib_report.o   -lauldebug
+Finished building target: lib_report
+ 
+
+21:15:53 Build Finished (took 1s.517ms)
+

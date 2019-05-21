@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D79EA0E-8DDE-4334-8E56-99BD223AA607}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>csharp_forms_workspace</RootNamespace>
+    <AssemblyName>csharp_forms_workspace</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ads7817\frm_ads7817_cfg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ads7817\frm_ads7817_cfg.Designer.cs">
+      <DependentUpon>frm_ads7817_cfg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ads7817\frm_ads7817_flow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ads7817\frm_ads7817_flow.Designer.cs">
+      <DependentUpon>frm_ads7817_flow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="espec_ect2\espec_ect2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="espec_ect2\espec_ect2.Designer.cs">
+      <DependentUpon>espec_ect2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ltc2449\frm_ltc2449_cfg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ltc2449\frm_ltc2449_cfg.Designer.cs">
+      <DependentUpon>frm_ltc2449_cfg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PowerDigitalOutputs\frm_pdo_cfg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PowerDigitalOutputs\frm_pdo_cfg.Designer.cs">
+      <DependentUpon>frm_pdo_cfg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PowerDigitalOutputs\frm_pdo_flow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PowerDigitalOutputs\frm_pdo_flow.Designer.cs">
+      <DependentUpon>frm_pdo_flow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ltc2449\frm_ltc2449_flow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ltc2449\frm_ltc2449_flow.Designer.cs">
+      <DependentUpon>frm_ltc2449_flow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="spich\frm_spich_cfg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="spich\frm_spich_cfg.Designer.cs">
+      <DependentUpon>frm_spich_cfg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="spich\frm_spich_flow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="spich\frm_spich_flow.Designer.cs">
+      <DependentUpon>frm_spich_flow.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ads7817\frm_ads7817_cfg.resx">
+      <DependentUpon>frm_ads7817_cfg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ads7817\frm_ads7817_flow.resx">
+      <DependentUpon>frm_ads7817_flow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="espec_ect2\espec_ect2.resx">
+      <DependentUpon>espec_ect2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ltc2449\frm_ltc2449_cfg.resx">
+      <DependentUpon>frm_ltc2449_cfg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ltc2449\frm_ltc2449_flow.resx">
+      <DependentUpon>frm_ltc2449_flow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PowerDigitalOutputs\frm_pdo_cfg.resx">
+      <DependentUpon>frm_pdo_cfg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PowerDigitalOutputs\frm_pdo_flow.resx">
+      <DependentUpon>frm_pdo_flow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="spich\frm_spich_cfg.resx">
+      <DependentUpon>frm_spich_cfg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="spich\frm_spich_flow.resx">
+      <DependentUpon>frm_spich_flow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ads7817\Ads7817_Readme.txt" />
+    <Content Include="espec_ect2\Espec_Ect2_Readme.txt" />
+    <Content Include="ltc2449\Ltc2449_Readme.txt" />
+    <Content Include="spich\spich_Readme.txt" />
+    <Content Include="TopLevel_Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Logging\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

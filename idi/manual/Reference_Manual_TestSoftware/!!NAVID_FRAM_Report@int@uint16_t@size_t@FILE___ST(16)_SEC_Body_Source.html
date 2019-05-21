@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Body Source</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Doc-O-Matic" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="STYLESHEET" href="default.css" type="text/css" />
+
+<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="Element700" onload="onBodyLoadEx(&#39;frames.html&#39;, &#39;topic&#39;, &#39;!!NAVID_FRAM_Report@int@uint16_t@size_t@FILE___ST(16)_SEC_Body_Source.html&#39;);" onmousedown="onBodyMouseDown();">
+
+<!-- Begin Popups -->
+
+<!-- End Popups -->
+
+<!-- Begin Page Header -->
+<div class="Element710" id="areafixed">
+<div class="Element94">
+<em>You are here:</em> <a href="C_Test_Code_-_DOS.html" target="topic">C Test Code - DOS</a> &gt; Symbol Reference &gt; <a href="!!FUNCTIONS.html" target="topic">Functions</a> &gt; <a href="FRAM_Report@int@uint16_t@size_t@FILE__.html" target="topic">FRAM_Report Function</a></div>
+<div class="Element92">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="33%">
+<div class="Element1">
+STD-Bus Test Software Reference Manual</div>
+</td><td width="34%">
+<div class="Element2">
+<a href="contents.html" target="tocidx"><img src="btn_globals_contents_darkblue.gif" border="0" alt="Contents" title="Contents" onmouseover="switchImage(this, &#39;btn_globals_contents_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_contents_darkblue.gif&#39;);" /></a><a href="idx.html" target="tocidx"><img src="btn_globals_index_darkblue.gif" border="0" alt="Index" title="Index" onmouseover="switchImage(this, &#39;btn_globals_index_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_index_darkblue.gif&#39;);" /></a><a href="index.html" target="topic"><img src="btn_globals_home_darkblue.gif" border="0" alt="Home" title="Home" onmouseover="switchImage(this, &#39;btn_globals_home_darkblue_hover.gif&#39;);" onmouseout="switchImage(this, &#39;btn_globals_home_darkblue.gif&#39;);" /></a></div>
+</td><td width="33%">
+</td></tr></table><div class="Element39">
+Body Source</div>
+<div class="Element40">
+<a href="FRAM_Report@int@uint16_t@size_t@FILE__.html" target="topic">FRAM_Report Function</a></div>
+</div>
+</div>
+
+<!-- End Page Header -->
+
+<!-- Begin Client Area -->
+<div class="Element720" id="areascroll">
+<div class="Element721">
+
+<!-- Begin Page Content -->
+<a name="PageContent"></a><div class="Element58">
+<div class="Element14">
+Body Source</div>
+<div class="Element11">
+<div class="Element10">
+<div class="Element170">
+<a href="#" onclick="CopyElementToClipboard(&#39;code00389&#39;);">Copy Code</a></div>
+<div class="Element13"><div class="Element12" id="code00389"><pre class="Element12"> 1: <strong><span style="color: #008000;">int</span></strong> FRAM_Report( <strong><span style="color: #008000;">int</span></strong> board_id, <a href="uint16_t.html" target="topic">uint16_t</a> address, size_t length, FILE * out )
+ 2: {
+ 3: 	<strong><span style="color: #008000;">int</span></strong>			error_code;
+ 4: 	<strong><span style="color: #008000;">const</span></strong> <strong><span style="color: #008000;">int</span></strong>	block_size = HEX_DUMP_BYTES_PER_LINE;
+ 5: 	size_t		block_count;
+ 6: 	size_t		block_remainder;
+ 7: 	<strong><span style="color: #008000;">struct</span></strong> <a href="board_dataset.html" target="topic">board_dataset</a> *  dataset    = ( <strong><span style="color: #008000;">struct</span></strong> <a href="board_dataset.html" target="topic">board_dataset</a> * )  <a href="board_definition.html" target="topic">board_definition</a>[board_id].dataset;
+ 8: 
+ 9: <strong><span style="color: #008000;">#define</span></strong> FUNCTION_NAME__  &quot;FRAM_Report&quot;
+10: <strong><span style="color: #008000;">#if</span></strong> ( <a href="IO_TRACE_USE_FRAM_LOGGING.html" target="topic">IO_TRACE_USE_FRAM_LOGGING</a> == 1 )
+11: 	<a href="IO_Trace_Log_Function@char__@size_t@enum_IO_TRACE_ENUM@int@int.html" target="topic">IO_Trace_Log_Function</a>( FUNCTION_NAME__, __LINE__, IO_TRACE_FRAM, board_id, 0 );
+12: <strong><span style="color: #008000;">#endif</span></strong>
+13: <strong><span style="color: #008000;">#undef</span></strong> FUNCTION_NAME__
+14: 
+15: <strong><span style="color: #008000;">#if</span></strong> defined( SPI_PRINT_XFR_DEBUG )
+16: 	fprintf( out, &quot;FRAM using SPI CS channel %d\n&quot;, dataset-&gt;fram_cs_default ? 1 : 0 );
+17: <strong><span style="color: #008000;">#endif</span></strong>
+18: 
+19: 	block_count = ((size_t) length) / block_size;
+20: 	block_remainder = ((size_t) length) - ( block_count * block_size );
+21: 
+22: 	<strong><span style="color: #008000;">while</span></strong> ( block_count &gt; 0 )
+23: 	{ 
+24: 		error_code = <a href="FRAM__Memory_Read@int@uint16_t@size_t@uint8_t__.html" target="topic">FRAM__Memory_Read</a>( board_id, address, block_size, dataset-&gt;spi.fram_block );
+25: 		<strong><span style="color: #008000;">if</span></strong> ( SUCCESS != error_code ) <strong><span style="color: #008000;">goto</span></strong> FRAM_Report_Error_Exit;
+26: 		error_code = <a href="Hex_Dump_Line@uint16_t@size_t@uint8_t__@FILE__.html" target="topic">Hex_Dump_Line</a>( address, block_size, dataset-&gt;spi.fram_block, out );
+27: 		<strong><span style="color: #008000;">if</span></strong> ( SUCCESS != error_code ) <strong><span style="color: #008000;">goto</span></strong> FRAM_Report_Error_Exit;
+28: 		address += block_size;
+29: 		block_count--;
+30: 	}
+31: 
+32: 	<strong><span style="color: #008000;">if</span></strong> ( block_remainder &gt; 0 )
+33: 	{ 
+34: 		error_code = <a href="FRAM__Memory_Read@int@uint16_t@size_t@uint8_t__.html" target="topic">FRAM__Memory_Read</a>( board_id, address, block_remainder, dataset-&gt;spi.fram_block );
+35: 		<strong><span style="color: #008000;">if</span></strong> ( SUCCESS != error_code ) <strong><span style="color: #008000;">goto</span></strong> FRAM_Report_Error_Exit;
+36: 		error_code = <a href="Hex_Dump_Line@uint16_t@size_t@uint8_t__@FILE__.html" target="topic">Hex_Dump_Line</a>( address, block_remainder, dataset-&gt;spi.fram_block, out );
+37: 		<strong><span style="color: #008000;">if</span></strong> ( SUCCESS != error_code ) <strong><span style="color: #008000;">goto</span></strong> FRAM_Report_Error_Exit;
+38: 	}
+39: 
+40: 	<strong><span style="color: #008000;">return</span></strong> SUCCESS;
+41: 
+42: FRAM_Report_Error_Exit:
+43: 
+44: <strong><span style="color: #008000;">#define</span></strong> FUNCTION_NAME__  &quot;FRAM_Report&quot;
+45: <strong><span style="color: #008000;">#if</span></strong> ( <a href="IO_TRACE_USE_FRAM_LOGGING.html" target="topic">IO_TRACE_USE_FRAM_LOGGING</a> == 1 )
+46: 	<a href="IO_Trace_Log_Function@char__@size_t@enum_IO_TRACE_ENUM@int@int.html" target="topic">IO_Trace_Log_Function</a>( FUNCTION_NAME__, __LINE__, IO_TRACE_FRAM, board_id, error_code );
+47: <strong><span style="color: #008000;">#endif</span></strong>
+48: <strong><span style="color: #008000;">#undef</span></strong> FUNCTION_NAME__
+49: 
+50: 	<strong><span style="color: #008000;">return</span></strong> error_code;
+51: }
+</pre></div></div>
+</div>
+</div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<div class="Element93">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr><td width="100%">
+<div class="Element3">
+Copyright © 2015 by Apex Embedded Systems.  All rights reserved.   Updated on Tuesday, September 01, 2015.</div>
+</td></tr><tr><td width="100%">
+<div class="Element4">
+<a href="contents.html" target="tocidx">Contents</a> | <a href="idx.html" target="tocidx">Index</a> | <a href="index.html" target="topic">Home</a></div>
+</td></tr></table></div>
+
+<!-- End Page Footer -->
+</div>
+</div>
+
+<!-- End Client Area -->
+</body></html>

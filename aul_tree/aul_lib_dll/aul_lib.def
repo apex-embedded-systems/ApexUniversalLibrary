@@ -1,0 +1,142 @@
+;
+; Apex Embedded Systems
+;
+; Apex Embedded Systems
+; $Date: 2014-06-27 20:40:23 -0500 (Fri, 27 Jun 2014) $
+;
+LIBRARY aul_lib_dll
+;DESCRIPTION "AES Universal Driver Library"
+EXPORTS
+	AUL_Device_Open
+	AUL_Device_Close
+	AUL_Device_List_Get
+	AUL_Device_Logical_Get
+
+	AUL_Initialization
+	AUL_Termination
+
+	AUL_Last_Error_Get
+	AUL_Error_Last_Get
+	AUL_Error_String
+	AUL_Revision_Sys_File
+
+	AUL_Driver_Name
+	AUL_Driver_Revision
+	AUL_Driver_Is_Debug_Active
+	AUL_Library_Name
+	AUL_Library_Revision
+	AUL_Library_Is_Debug_Active
+	AUL_Library_Process_Id_Get
+	
+	ACGR_Report_CSV_Module
+	ACGR_Report_CSV_Command
+	ACGR_Report_CSV_Status
+	ACGR_Source_File_Command_Enumeration
+	ACGR_Source_File_Status_Enumeration
+	ACGR_Source_File_Integrity
+	ACGR_Integrity_Test
+	ACGR_Source_File_Device_Logical_Enumeration
+
+	STX104_DO_CFG_Set
+	STX104_DO_CFG_Get
+	STX104_DO_All_Set
+	STX104_DO_All_Get
+	STX104_DO_Set
+	STX104_DO_Get
+
+	STX104_DI_CFG_Set
+	STX104_DI_CFG_Get
+	STX104_DI_All_Get
+	STX104_DI_Get
+
+	STX104_AO_All_Set
+	STX104_AO_Set
+
+	STX104_Trg_CFG_Set
+	STX104_Trg_CFG_Get
+	STX104_Trg_Active_Get 
+	STX104_Trg_Software_Start
+	STX104_Trg_Software_Stop
+	STX104_Trg_Software_Sync
+
+	STX104_AI_Config_Initialize
+	STX104_AI_CFG_Set
+	STX104_AI_CFG_Get
+	STX104_AI_Raw_To_Volts
+	STX104_AI_Strobe
+	STX104_AI_Aquisition_Restart
+	STX104_AI_Frames_Get
+	STX104_AI_Frame_Count_Get
+	STX104_AI_FIFO_Data_Count_Get
+	
+	STX104_Gen_Revision_Get
+	STX104_Gen_Jumpers_Get
+
+;	STX104_Int_CFG_Set
+;	STX104_Int_CFG_Get
+;	STX104_Int_Enable_Set
+;	STX104_Int_Enable_Get
+
+	STX104_SPI_CFG_Set
+	STX104_SPI_CFG_Get
+	STX104_SPI_Active_Set
+	STX104_SPI_Active_Get
+	STX104_SPI_Chip_Select_Commit_Set
+	STX104_SPI_Chip_Select_Commit_Get
+	STX104_SPI_Status_Get
+	STX104_SPI_Receive
+	STX104_SPI_Transmit
+	STX104_SPI_Transceiver_Blocking
+
+	Tracere_DIO_Config_Set
+	Tracere_DIO_Config_Get
+
+	Tracere_CT_Config_Set
+	Tracere_CT_Config_Get
+
+	Tracere_Intr_Config_Set
+	Tracere_Intr_Config_Get
+
+	Tracere_Config_Set
+	Tracere_Config_Get
+
+	Tracere_DIO_Port_Set
+	Tracere_DIO_Port_Get
+
+	Tracere_DIO_Bit_Set
+	Tracere_DIO_Bit_Get
+
+	Tracere_LED_Set
+	Tracere_LED_Get
+
+	Tracere_DIO_Config_Initialize
+	Tracere_CT_Config_Initialize
+	Tracere_Intr_Config_Initialize
+	Tracere_Config_Initialize
+
+	Tracere_I8254_Control_Create
+	Tracere_I8254_Count_Freq_Hz
+	Tracere_I8254_Count_Time_Sec
+	Tracere_I8254_Do_Freq_Hz
+	Tracere_I8254_Control_Extract
+
+	Tracere_DIO_Bit_Connector_Pin_Name_Get
+	Tracere_CT_CLock_Name_Get
+	Tracere_CT_Count_Get
+
+; deprecate
+	Tracere_I8254_Transfer
+
+; Must be at AUL level because we need to know which board it is intended.
+	AUL_I8254_Transfer
+	AUL_I8254_Transfer_Array
+
+;
+; I8254 helper functions
+;
+	I8254_Control_Create
+	I8254_Control_Extract
+	I8254_Count_Time_Sec
+	I8254_Do_Freq_Hz
+
+
