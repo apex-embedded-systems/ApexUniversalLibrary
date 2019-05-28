@@ -1,6 +1,0 @@
-14:57:27 **** Build of configuration _Out_Debug for project demo_stx104_fast ****
-make all 
-makefile:31: *** multiple target patterns.  Stop.
-
-14:57:27 Build Finished (took 73ms)
-

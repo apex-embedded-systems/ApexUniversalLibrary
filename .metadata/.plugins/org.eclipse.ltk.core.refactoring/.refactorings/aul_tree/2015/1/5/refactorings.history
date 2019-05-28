@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;aul_tree/application/application_status.h&apos; to &apos;app_status.h&apos;" description="Rename resource &apos;application_status.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="application/application_status.h" name="app_status.h" stamp="1422396096015" updateReferences="true"/>
-</session>

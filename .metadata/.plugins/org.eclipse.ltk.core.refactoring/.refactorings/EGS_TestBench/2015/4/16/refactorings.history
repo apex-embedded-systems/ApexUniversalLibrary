@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;EGS_TestBench/EGS_TestBench&apos; to &apos;EGS_TestBench.c&apos;" description="Rename resource &apos;EGS_TestBench&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="EGS_TestBench" name="EGS_TestBench.c" stamp="1429283160430" updateReferences="true"/>
-</session>
