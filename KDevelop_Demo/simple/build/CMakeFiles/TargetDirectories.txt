@@ -1,1 +1,0 @@
-/home/mike/workspace/KDevelop_Demo/simple/build/CMakeFiles/simple.dir

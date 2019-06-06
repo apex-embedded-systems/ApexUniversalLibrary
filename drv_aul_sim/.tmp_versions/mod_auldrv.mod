@@ -1,2 +1,0 @@
-/home/mike/aes_eclipse/drv_aul_sim/mod_auldrv.ko
-/home/mike/aes_eclipse/drv_aul_sim/../aul_tree/str_safe/str_safe.o /home/mike/aes_eclipse/drv_aul_sim/../aul_tree/shared/debug.o /home/mike/aes_eclipse/drv_aul_sim/../aul_tree/shared/error.o /home/mike/aes_eclipse/drv_aul_sim/../aul_tree/shared/status.o /home/mike/aes_eclipse/drv_aul_sim/../aul_tree/shared/mem.o /home/mike/aes_eclipse/drv_aul_sim/../aul_tree/io/io.o /home/mike/aes_eclipse/drv_aul_sim/../aul_tree/io/io_linux_lib_sim.o /home/mike/aes_eclipse/drv_aul_sim/auldrv.o

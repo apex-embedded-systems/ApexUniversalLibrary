@@ -1,1 +1,0 @@
-/usr/bin/gcc  -g    CMakeFiles/simple.dir/home/mike/workspace/aul_tree/demo/demo_basic.o  -o simple -rdynamic ../../../aul_tree/_Out_Library_Static_Application_Debug/libauldebug.a 
