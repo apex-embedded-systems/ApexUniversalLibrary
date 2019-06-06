@@ -1,0 +1,1 @@
+cmd_/home/mike/aes_eclipse/drv_aul_x86/mod_auldrv.ko := ld -r -m elf_i386 -T /usr/src/linux-headers-3.2.0-4-common/scripts/module-common.lds --build-id  -o /home/mike/aes_eclipse/drv_aul_x86/mod_auldrv.ko /home/mike/aes_eclipse/drv_aul_x86/mod_auldrv.o /home/mike/aes_eclipse/drv_aul_x86/mod_auldrv.mod.o

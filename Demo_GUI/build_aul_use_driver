@@ -1,0 +1,14 @@
+#!/bin/bash
+#For more detailed information see the ReadMe file in this directory
+#PURPOSE
+#This script performs the actions required to compile and deploy the AUL general IO project for use with the C# Mono STX104 Demo Application
+#USE OF THIS LIBRARY REQUIRES DRIVER AND HARDWARE TO BE INSTALLED.
+#Running this script eliminates the need to perform the steps below from the command line.
+
+
+#This creates the simulator library package eliminating the requirement for having the STX104 driver and harware installed.
+cd ../aul_tree/_Out_Library_Shared_Use_Driver
+make clean
+make all
+#Copy the dynamic library to the usr/lib directory for consumption in the STX104 Demo Application.
+sudo cp libaul.so /usr/lib

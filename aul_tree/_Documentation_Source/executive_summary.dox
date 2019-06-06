@@ -1,0 +1,198 @@
+/**
+\page summary  Top Level Summary
+
+This software code base is composed of two major portions:  the library and the driver.  
+The library operates within application space and can be built as either a shared library 
+or statically linked to the user application.  The driver portion operates within kernel space.
+
+This entire code base is an Eclipse workspace.  It is possible to compile and run all of the code within without Eclipse.  Running the demos using the Eclipse
+debugger (gnu debugger) one can single step through the code and get a deeper understanding of what is going on.    
+
+Installation and setup of Eclipse is discussed here.
+
+<h2>Driver</h2>
+The driver portion contains only operations required within the kernel space.  The purpose of the kernel driver
+is the following:
+1. Using insmod, initialize the hardware (if any) and establish necessary hardware information.
+2. Establish I/O and interrupt space from the OS.  In this case we use udev (Google Udev for further details).
+3. Perform actual I/O transactions and manage interrupt operations.
+
+Kernel driver installation and OS preparedness information can be found in the 
+<a href="../../../drv_aul_x86/README.txt">README.txt</a> within the "drv_aul_x86" folder.  It is time well spent reviewing this 
+document in detail as it will answer lots of questions.
+
+<h2>Library</h2>
+The purpose of the application-space library is the following:
+1. provide a consistent API interface to the users application regardless of driver/library updates
+and modifications.  As this code base grows we absolutely need a method to manage growth and the library
+is what makes that work.
+2. Additional diagnostics and debugging.  The library does a lot of error checking with respect to 
+board configuration data and so on.  It will provide error codes as well as human readable error information 
+as to what a specific error code means, exactly.  Nothing more frustrating that getting an error code
+and have no clue as to its underlying meaning.
+3. Revision handling.  As hardware and software evolve customers need ways to verify revision information.  There
+are APIs available to report revision information so that one can verify exact revisions of library and driver.
+Please refer to the Lib_report demo to see this in action.  Note that this portion of the code is still evolving.
+4. Layers of abstraction.  As we move forward, we will be adding layers of abstraction to provide even more generic
+API interfacing regardless of attached hardware.  
+5. Hardware definitions are embodied within the library. 
+
+<h2>Demos</h2>
+Several demos exist to aid in the understanding of this code base from a user perspective.
+
+<table>
+
+<caption align="top">Table 1.  Demo Brief Descriptions</caption>
+
+<!-- table heading -->
+<tr><th>Folder</th><th>Description</th></tr>
+
+<tr> 
+<td>demo_GUI					</td>
+<td>
+GUI demo, written in C# and run using Mono, provides basic testing of all boards supported by AES library/driver. 
+We plan to add more boards to this code base.
+
+Refer to <a href="../../../Demo_GUI/Documentation/STX104_Quick_Start_Linux.pdf"> "STX104_Quick_Start_Linux.pdf"</a> found
+within the "Demo_GUI/Documentation" folder to get this up and running for the STX104.
+
+Refer to <a href="../../../Demo_GUI/Documentation/Tracer_Quick_Start_Linux.pdf"> "Tracer_Quick_Start_Linux.pdf"</a> found
+within the "Demo_GUI/Documentation" folder to get this up and running for the Tracer-E.
+
+Example STX104 session with all configuration and data flow windows open: 
+<a href="../../../Demo_GUI/Documentation/STX104_GUIdemo.png"> STX104 GUI demo screen shot</a>
+
+Example Tracer-E session with all configuration and data flow windows open: 
+<a href="../../../Demo_GUI/Documentation/Tracere_GUIdemo.png"> Tracer GUI demo screen shot</a>
+
+</td>
+</tr>
+
+<tr> 
+<td>demo_basic			</td>
+<td>
+Very simple C example of initializing the library/driver, opening a device, 
+closing a device, and terminating the library/driver.  This runs in a terminal. 
+
+Note: "initializing" the driver portion is not the same as insmod of the driver.  
+What we mean here is that the library and driver talk and decide if things are 
+setup correctly and pass information between them in terms of insmod information.
+
+There are several ways we can compile run and exercise this demo code: (i) at the terminal and (ii) using Eclipse using debugger.
+Below is a simple case of compiling and running the demo in a terminal.
+<CODE>
+
+    user@Ubuntu32vb:~/aes_eclipse/demo_basic/_Out_Debug$ make all        <-- compile the code.
+    user@Ubuntu32vb:~/aes_eclipse/demo_basic/_Out_Debug$ ./Demo_Basic    <-- run the code.
+    
+</CODE>
+
+
+
+<a href="../../demo_basic/html/demo__basic_8c.html#a0ddf1224851353fc92bfbff6f499fa97"> Demo_Basic Documentation</a>
+
+</td>
+</tr>
+
+<tr> 
+<td>demo_multiple_boards		</td>
+<td>
+Another simple C example.  In this case we open and close both a Tracer and STX104
+board.
+
+Below is an example of compiling and running the demo in a terminal.
+<CODE>
+
+    user@Ubuntu32vb:~/aes_eclipse/demo_multiple_boards/_Out_Debug$ make all                 <-- compile the code.
+    user@Ubuntu32vb:~/aes_eclipse/demo_multiple_boards/_Out_Debug$ ./demo_multiple_boards   <-- run the code.
+    
+</CODE>
+
+
+<a href="../../demo_multiple_boards/html/demo__multiple__boards_8c.html#a0ddf1224851353fc92bfbff6f499fa97"> Demo_Multiple_Boards documentation</a>
+</td>
+</tr>
+
+<tr> 
+<td>demo_stx104_simple		</td>
+<td>
+This program runs in a terminal.  It presents a menu from which one can exercise 
+the STX104 hardware functions.  There exists a command which can produce a 
+<a href="../../demo_stx104_simple/html/simple_report.html"> report</a>
+which lists out all the parameters including library and driver revision information
+all of which can be real handy when trying to understand configuration.
+
+Below is an example of compiling and running the demo in a terminal.
+<CODE>
+
+    user@Ubuntu32vb:~/aes_eclipse/demo_stx104_simple/_Out_Debug$ make all                <-- compile the code.
+    user@Ubuntu32vb:~/aes_eclipse/demo_stx104_simple/_Out_Debug$ ./demo_stx104_simple    <-- run the code.
+    
+</CODE>
+
+<a href="../../demo_stx104_simple/html/stx104__simple_8c.html#a0ddf1224851353fc92bfbff6f499fa97"> Demo_STX104_Simple Documentation</a> 
+</td>
+</tr>
+
+<tr> 
+<td>demo_stx104_fast	</td>
+<td>
+This demo demonstrates high speed data collection using the STX104.  This too runs in a
+ terminal and presents a menu. 
+ 
+ Below is an example of compiling and running the demo in a terminal.
+<CODE>
+
+    user@Ubuntu32vb:~/aes_eclipse/demo_stx104_fast/_Out_Debug$ make all              <-- compile the code.
+    user@Ubuntu32vb:~/aes_eclipse/demo_stx104_fast/_Out_Debug$ ./demo_stx104_fast    <-- run the code.
+    
+</CODE>
+ 
+ <a href="../../demo_stx104_fast/html/stx104__fast_8c.html#a0ddf1224851353fc92bfbff6f499fa97">Demo_STX104_Fast Documentation</a>
+ 
+</td>
+</tr>
+
+<tr> 
+<td>lib_report		</td>
+<td>
+Demo that illustrates reporting abilities within the library/driver.  It produces the
+following reports:
+- Library name and revision
+- Human readable summary list of all modules within the library <a href="../../../lib_report/aul_module_list.csv"> "aul_module_list.csv"</a>.
+- Human readable list of all IOCTL commands within the library and driver space <a href="../../../lib_report/aul_command_list.csv">"aul_command_list.csv"</a>.
+- Enumerated list of all IOCTL commands <a href="../../../lib_report/aul_command_enum.h">"aul_command_enum.h"</a> which can be used by applications.
+- Enumerated list of all error/status codes <a href="../../../lib_report/aul_status_enum.h">"aul_status_enum.h"</a> which can be used by applications.
+- List of all logical devices available <a href="../../../lib_report/aul_device_logical_enum.h">"aul_device_logical_enum.h"</a> which can be used by applications.
+- List of all internal revision information <a href="../../../lib_report/aul_integrity.c">"aul_integrity.c"</a>.
+
+The library has been designed with the notion of software "modules".   What we mean here is that major
+functional sections are broken into separate modules that can be added or removed.  The concept is that
+it offers additional structures for managing the code base.  
+
+Below is an example of compiling and running the demo in a terminal.
+<CODE>
+
+    user@Ubuntu32vb:~/aes_eclipse/lib_report/_Out_Debug$ make all        <-- compile the code.
+    user@Ubuntu32vb:~/aes_eclipse/lib_report/_Out_Debug$ ./lib_report    <-- run the code.
+    
+</CODE>
+
+
+<a href="../../lib_report/html/lib__report_8c.html#adedb285b02c41bde2158ded9cc9fd7ac">Library Reporting Documentation</a>
+</td>
+</tr>
+
+</table>
+
+
+
+
+
+
+----
+
+\image html aes_logo.png   
+<a HREF="http://apexembedded.com">Apex Embedded Systems LLC</a> :: 116 Owen Rd :: Monona, WI 53716  ::  Voice: 608-256-0767  ::  customer.service@apexembeddedsystems.com 
+
+*/

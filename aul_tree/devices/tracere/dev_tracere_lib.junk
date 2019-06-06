@@ -1,0 +1,164 @@
+#ifndef DEVICE_TRACERE_LIB
+#define DEVICE_TRACERE_LIB
+/********************************************************************************
+_____________________________________________________________________________  
+Description:
+
+_____________________________________________________________________________
+Purpose:
+
+_____________________________________________________________________________
+Remark:
+
+
+_____________________________________________________________________________
+Example:
+
+_____________________________________________________________________________
+Copyright Notice:
+    
+	COPYRIGHT NOTICE Copyright (c) 2014 by Apex Embedded Systems. All rights 
+	reserved. This document is the confidential property of Apex Embedded 
+	Systems Any reproduction or dissemination is prohibited unless specifically 
+	authorized in writing.
+
+_____________________________________________________________________________
+License:
+
+_____________________________________________________________________________
+TODO:
+
+
+*********************************************************************************/
+
+
+#include "../../shared/typebase.h"	 /* uint8_t, uint16_t, etc */
+#include "../../shared/typebool.h"
+#include "../../shared/callconv.h"
+#include "../../devmgr/devmgr.h"   /* device_definition_type */
+#include "../../components/i8255m0/cmp_i8255m0.h"
+#include "../../components/i8254/cmp_i8254.h"
+
+/*******************************************************************/
+/*******************************************************************/
+/*******************************************************************/
+
+/*******************************************************************/
+#ifdef __cplusplus
+extern "C" {
+#endif
+/*******************************************************************/
+
+#ifndef __KERNEL__
+
+/* Digital I/O (DIO) configuration */
+AUL_DLL_API int AULCALLCONV Tracere_DIO_Config_Set( int board, tracere_dio_cfg_type * config );
+AUL_DLL_API int AULCALLCONV Tracere_DIO_Config_Get( int board, tracere_dio_cfg_type * config );
+
+/* Counter/Timer (CT) configurations */
+AUL_DLL_API int AULCALLCONV Tracere_CT_Config_Set( int board, tracere_ct_cfg_type * config );
+AUL_DLL_API int AULCALLCONV Tracere_CT_Config_Get( int board, tracere_ct_cfg_type * config );
+
+/* Interrupt (Intr) configuration */
+AUL_DLL_API int AULCALLCONV Tracere_Intr_Config_Set( int board, tracere_intr_cfg_type * config );
+AUL_DLL_API int AULCALLCONV Tracere_Intr_Config_Get( int board, tracere_intr_cfg_type * config );
+
+/* All configuration rolled into one */
+AUL_DLL_API int AULCALLCONV Tracere_Config_Set( int board, tracere_cfg_type * config );
+AUL_DLL_API int AULCALLCONV Tracere_Config_Get( int board, tracere_cfg_type * config );
+
+/* use to initialize configuration parameters */
+AUL_DLL_API int AULCALLCONV Tracere_DIO_Config_Initialize( tracere_dio_cfg_type * config );
+AUL_DLL_API int AULCALLCONV Tracere_CT_Config_Initialize( tracere_ct_cfg_type * config );
+AUL_DLL_API int AULCALLCONV Tracere_Intr_Config_Initialize( tracere_intr_cfg_type * config );
+AUL_DLL_API int AULCALLCONV Tracere_Config_Initialize( tracere_cfg_type * config );
+
+
+AUL_DLL_API int AULCALLCONV Tracere_Restart( int board, TRACERE_RESTART_ENUM value );
+
+AUL_DLL_API int AULCALLCONV Tracere_DIO_Port_Set( int board, int channel, uint8_t   value );
+AUL_DLL_API int AULCALLCONV Tracere_DIO_Port_Get( int board, int channel, uint8_t * value );
+
+AUL_DLL_API int AULCALLCONV Tracere_DIO_Bit_Set( int board, int channel, BOOL   value );
+AUL_DLL_API int AULCALLCONV Tracere_DIO_Bit_Get( int board, int channel, BOOL * value );
+
+AUL_DLL_API int AULCALLCONV Tracere_DIO_Bit_Connector_Pin_Name_Get( int channel, const char ** pin_name );
+
+AUL_DLL_API int AULCALLCONV Tracere_LED_Set( int board, TRACERE_LED_ENUM   value );
+AUL_DLL_API int AULCALLCONV Tracere_LED_Get( int board, TRACERE_LED_ENUM * value );
+
+/* Counter/Timer (CT) helper functions */
+AUL_DLL_API int AULCALLCONV Tracere_I8254_Control_Create( I8254_CHANNEL_ENUM	channel,				
+														  I8254_RW_ENUM			rw,	
+														  I8254_MODE_ENUM		mode,
+														  I8254_TYPE_ENUM		bcd,
+														  uint8_t *				i8254_control_word
+														);
+
+AUL_DLL_API int AULCALLCONV Tracere_I8254_Control_Extract( I8254_CHANNEL_ENUM	channel,
+														   I8254_RW_ENUM *		rw,	
+														   I8254_MODE_ENUM *	mode,
+														   I8254_TYPE_ENUM *	bcd,
+											  			   uint8_t 				i8254_control_word
+														);
+
+
+AUL_DLL_API int AULCALLCONV Tracere_I8254_Do_Freq_Hz( uint8_t control  /* i8254 control word	*/ );
+
+
+AUL_DLL_API int AULCALLCONV Tracere_I8254_Count_Freq_Hz(	double		requested_hz,		/* requested freq		*/
+														double		clock_external_hz,	/* default, used if not CTn_nMHz			*/
+														int			ct_clock_source,	/* TRACERE_CLK_CTn_4MHZ _10MHZ _20MHZ _40MHZ */
+														int			channel,			/* CT channel			*/
+														uint8_t		control,			/* i8254 control word	*/
+														uint16_t *	initial_count,		/* i8254 count to load	*/
+														double *    actual_hz,			/* actual output frequency     */
+														double *    error_actual		/* computed error, x100 to get percentage */
+													);
+
+AUL_DLL_API int AULCALLCONV Tracere_I8254_Count_Time_Sec(	double		requested_sec,		/* requested freq		*/
+															double		clock_external_hz,	/* default, used if not CTn_nMHz		*/
+															int			ct_clock_source,	/* TRACERE_CLK_CTn_4MHZ _10MHZ _20MHZ _40MHZ */
+															int			channel,			/* CT channel			*/
+															uint8_t		control,			/* i8254 control word	*/
+															uint16_t *	initial_count,		/* i8254 count to load	*/
+															double *    actual_sec,			/* actual output time interval     */
+															double *    error_actual		/* computed error, x100 to get percentage */
+														);
+
+AUL_DLL_API int AULCALLCONV Tracere_I8254_Control_Extract( I8254_CHANNEL_ENUM	channel,
+														   I8254_RW_ENUM *		rw,	
+														   I8254_MODE_ENUM *	mode,
+														   I8254_TYPE_ENUM *	bcd,
+														   uint8_t 				i8254_control_word
+														);
+
+AUL_DLL_API int AULCALLCONV Tracere_CT_CLock_Name_Get( tracere_ct_cfg_type * ct_cfg, int ct_channel, const char ** clock_name );
+
+AUL_DLL_API int AULCALLCONV Tracere_I8254_Transfer( int board, i8254_ct_xfr_type * cxfr );
+
+/* Counter/Timer (CT) data flow functions */
+AUL_DLL_API int AULCALLCONV Tracere_CT_Count_Get( int board, int channel, uint16_t * value );
+
+
+#if(0)
+
+AUL_DLL_API int AULCALLCONV Tracer_CT_Write( int board, int channel, uint16_t   value );
+AUL_DLL_API int AULCALLCONV Tracer_CT_Read(  int board, int channel, uint16_t * value ); 
+AUL_DLL_API int AULCALLCONV Tracer_CT_Back(  int board, int channel, uint16_t * value );
+#endif
+
+
+#endif
+
+/*******************************************************************/
+
+
+extern device_definition_type device_tracere_definition;
+
+/*******************************************************************/
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* DEVICE_TRACERE_LIB */
