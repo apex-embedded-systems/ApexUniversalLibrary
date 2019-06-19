@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['reg_5finitialize',['Reg_Initialize',['../reg_8c.html#a0a204fc7ac92e5c7089b127c773167a0',1,'Reg_Initialize(void):&#160;reg.c'],['../reg_8h.html#a0a204fc7ac92e5c7089b127c773167a0',1,'Reg_Initialize(void):&#160;reg.c']]],
+  ['reg_5fread',['Reg_Read',['../reg_8c.html#a8a4ee3d660ef16a8fd71c0d87ce36582',1,'Reg_Read(REGISTER_TYPE register_table[], size_t offset, int iod, size_t reg_id, char *buf, size_t buf_len):&#160;reg.c'],['../reg_8h.html#a8a4ee3d660ef16a8fd71c0d87ce36582',1,'Reg_Read(REGISTER_TYPE register_table[], size_t offset, int iod, size_t reg_id, char *buf, size_t buf_len):&#160;reg.c']]],
+  ['reg_5ftable_5finitialize',['Reg_Table_Initialize',['../reg_8c.html#af1bc222f4057c6db80d6c94effc00c5a',1,'Reg_Table_Initialize(REGISTER_TYPE table[]):&#160;reg.c'],['../reg_8h.html#af1bc222f4057c6db80d6c94effc00c5a',1,'Reg_Table_Initialize(REGISTER_TYPE table[]):&#160;reg.c']]],
+  ['reg_5ftable_5foffset_5frange',['Reg_Table_Offset_Range',['../reg_8c.html#a95c5c3264a973b0aeb3858239400f8cf',1,'Reg_Table_Offset_Range(REGISTER_TYPE register_table[], size_t *start, size_t *end, size_t *length):&#160;reg.c'],['../reg_8h.html#a95c5c3264a973b0aeb3858239400f8cf',1,'Reg_Table_Offset_Range(REGISTER_TYPE register_table[], size_t *start, size_t *end, size_t *length):&#160;reg.c']]],
+  ['reg_5fterminate',['Reg_Terminate',['../reg_8c.html#a32e0385ff27ebce8b3b6a4fe17e531cf',1,'Reg_Terminate(void):&#160;reg.c'],['../reg_8h.html#a32e0385ff27ebce8b3b6a4fe17e531cf',1,'Reg_Terminate(void):&#160;reg.c']]],
+  ['reg_5fwrite',['Reg_Write',['../reg_8c.html#abe6294ebc9633bb81521154f579d0fb7',1,'Reg_Write(REGISTER_TYPE register_table[], size_t offset, int iod, size_t reg_id, char *buf, size_t buf_len):&#160;reg.c'],['../reg_8h.html#abe6294ebc9633bb81521154f579d0fb7',1,'Reg_Write(REGISTER_TYPE register_table[], size_t offset, int iod, size_t reg_id, char *buf, size_t buf_len):&#160;reg.c']]]
+];
